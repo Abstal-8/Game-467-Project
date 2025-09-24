@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,23 +9,9 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public Camera mainCam;
 
-    private void Awake()
-    {
-        if (Instance != null)
-        {
-            Destroy(player);
-            Destroy(mainCam);
-            Destroy(gameObject);
-            return;
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            DontDestroyOnLoad(player);
-            DontDestroyOnLoad(mainCam);
-        }
-    }
+
+
+    
 
 
 }
