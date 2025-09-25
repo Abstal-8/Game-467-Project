@@ -765,6 +765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d93478e2a6bf3e24280e86f5484e0412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lpanel: {fileID: 0}
+  rpanel: {fileID: 0}
 --- !u!1 &2008733796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1694,7 @@ GameObject:
   - component: {fileID: 6930654908876596309}
   - component: {fileID: 3198417216055772272}
   - component: {fileID: 328941727605743422}
+  - component: {fileID: 9194836953242154418}
   m_Layer: 0
   m_Name: Entrance
   m_TagString: Untagged
@@ -1699,6 +1702,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9194836953242154418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9194836953242154417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02b9e2f6e817b7439e1625144c26bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 4
 --- !u!81 &9208385308796534102
 AudioListener:
   m_ObjectHideFlags: 0

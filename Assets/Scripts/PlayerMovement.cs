@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    float _xDir;
-    float _yDir;
+    
     [SerializeField] float moveSpeed;
-    private Vector2 _moveDir;
     private Rigidbody2D rb;
+    Vector2 input;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,13 +18,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float _xDir = Input.GetAxis("Horizontal");
-        float _yDir = Input.GetAxis("Vertical");
-        _moveDir = new Vector2(_xDir, _yDir).normalized;
+        input.x = Input.GetAxis("Horizontal");
+        input.y = Input.GetAxis("Vertical");
+        input.Normalize();
     }
 
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(_moveDir.x * moveSpeed, _moveDir.y * moveSpeed);
+        rb.linearVelocity = input * moveSpeed;
     }
 }
