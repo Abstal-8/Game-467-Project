@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,8 +6,9 @@ using UnityEngine;
 public class Item : ScriptableObject
 {
     public Inventory inventory;
-    public GameObject itemObject;
+    public GameObject itemPrefab;
     public Sprite itemSprite;
+    public String itemName;
     public bool _isKeyitem;
     public bool _inInventory;
 
@@ -15,12 +17,12 @@ public class Item : ScriptableObject
     // Potentially could add: animation, sound, ... 
     
 
-    protected virtual void Use()
+    public virtual void Use()
     {
-
+        Debug.Log("Item has been used!");
     }
 
-    protected void Equip()
+    public void Equip()
     {
         inventory.onAddToInv += Equip;
         inventory.AddToInventory(this);

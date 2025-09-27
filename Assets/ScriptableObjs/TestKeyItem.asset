@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e028cf15682ce0744a9e7a9c0b836fa3, type: 3}
-  m_Name: TestItem
+  m_Name: TestKeyItem
   m_EditorClassIdentifier: 
   inventory: {fileID: 11400000, guid: 2fa289ee9e3a050458bd2505d0af2f6e, type: 2}
-  itemObject: {fileID: 4917458360932594064, guid: 3a4f18d4f9537eb43b78032ff37dd811, type: 3}
-  itemSprite: {fileID: -2413806693520163455, guid: 6cfadfe9e882e284d980c0b741888674, type: 3}
+  itemPrefab: {fileID: 0}
+  itemSprite: {fileID: 7482667652216324306, guid: e1e03813d328a4447bf903a6b4d0fb2f, type: 3}
   _isKeyitem: 0
   _inInventory: 0

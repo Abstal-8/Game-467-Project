@@ -130,7 +130,6 @@ GameObject:
   - component: {fileID: 1780637132}
   - component: {fileID: 1780637131}
   - component: {fileID: 1780637130}
-  - component: {fileID: 1780637129}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -138,22 +137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1780637129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1780637128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a72fcaadf455846a33458c3d96ffa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  promptUI: {fileID: 0}
-  onInteract:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!58 &1780637130
 CircleCollider2D:
   m_ObjectHideFlags: 0
