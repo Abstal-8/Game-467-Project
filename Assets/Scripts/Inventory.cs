@@ -1,7 +1,6 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-using UnityEngine.InputSystem;
 
 [CreateAssetMenu(fileName = "Inventory", menuName = "ScriptableObjects/Inventory", order = 1)]
 public class Inventory : ScriptableObject
@@ -13,16 +12,20 @@ public class Inventory : ScriptableObject
 
     
     */
-    public List<Item> Key_items = new List<Item>();
+
+    
     public Action onAddToInv;
+
+       public List<Item> Key_items;
+
+
 
     public void AddToInventory(Item item)
     {
-        if (item != null)
+        if (item != null && !item.inInventory)
         {
             Key_items.Add(item);
         }
-        onAddToInv?.Invoke();
     }
 
     

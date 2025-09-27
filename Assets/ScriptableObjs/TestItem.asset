@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e028cf15682ce0744a9e7a9c0b836fa3, type: 3}
   m_Name: TestItem
   m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: 2fa289ee9e3a050458bd2505d0af2f6e, type: 2}
   itemPrefab: {fileID: 4917458360932594064, guid: 3a4f18d4f9537eb43b78032ff37dd811, type: 3}
   itemSprite: {fileID: -2413806693520163455, guid: 6cfadfe9e882e284d980c0b741888674, type: 3}
   itemName: 
   isKeyitem: 0
-  inInventory: 0
