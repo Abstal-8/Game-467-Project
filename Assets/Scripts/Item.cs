@@ -9,13 +9,22 @@ public class Item : ScriptableObject
     public GameObject itemPrefab;
     public Sprite itemSprite;
     public String itemName;
-    public bool _isKeyitem;
-    public bool _inInventory;
+    public bool isKeyitem;
+    public bool inInventory;
 
 
     // private bool _isUsed; Consumables and other usable items
     // Potentially could add: animation, sound, ... 
-    
+
+    void OnEnable()
+    {
+        inventory.onAddToInv += InvCheck;
+    }
+
+    void OnDisable()
+    {
+        inventory.onAddToInv -= InvCheck;
+    }
 
     public virtual void Use()
     {
@@ -24,12 +33,12 @@ public class Item : ScriptableObject
 
     public void Equip()
     {
-        inventory.onAddToInv += Equip;
         inventory.AddToInventory(this);
+    }
 
-        _inInventory = true;
-        inventory.onAddToInv -= Equip;
-
+    private void InvCheck()
+    {
+        inInventory = true;
     }
 
 }

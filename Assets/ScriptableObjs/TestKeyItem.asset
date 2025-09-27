@@ -15,5 +15,6 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 2fa289ee9e3a050458bd2505d0af2f6e, type: 2}
   itemPrefab: {fileID: 0}
   itemSprite: {fileID: 7482667652216324306, guid: e1e03813d328a4447bf903a6b4d0fb2f, type: 3}
-  _isKeyitem: 0
-  _inInventory: 0
+  itemName: 
+  isKeyitem: 0
+  inInventory: 0
