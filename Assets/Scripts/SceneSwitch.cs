@@ -3,13 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    public string sceneName;
+    [SerializeField] string sceneName;
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public void SwitchScene()
     {
-        if (collision.gameObject.tag == "Player")
+        if (!string.IsNullOrEmpty(sceneName))
         {
             SceneManager.LoadScene(sceneName);
-        } 
+        }
+        else
+        {
+            Debug.LogWarning("SceneSwitch: No scene name set!");
+        }
     }
 }
