@@ -25,6 +25,7 @@ public class Inventory : ScriptableObject
         if (item != null && !item.inInventory)
         {
             Key_items.Add(item);
+            Debug.Log("[Inventory] Added item: " + item.itemName);
         }
     }
 
