@@ -121,7 +121,6 @@ NavMeshSettings:
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &451110277
 PrefabInstance:
-<<<<<<< HEAD
 --- !u!1 &155826146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,8 +1038,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> 42d44504e834aef3df542de1525731cbd1b397ae
 --- !u!114 &233115295747268185
 MonoBehaviour:
   m_ObjectHideFlags: 0
