@@ -1433,21 +1433,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a72fcaadf455846a33458c3d96ffa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProximityInteraction
-  promptUI: {fileID: 1587218509}
+  promptUI: {fileID: 0}
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 5743f9e7ca792a44b927ccfce4ffe3a2, type: 3}
-        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
-        m_MethodName: set_name
-        m_Mode: 5
+      - m_Target: {fileID: 1632046652}
+        m_TargetAssemblyTypeName: CellUnlock, Assembly-CSharp
+        m_MethodName: TryOpen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Key
-          m_BoolArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!61 &1632046650
 BoxCollider2D:
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   inventory: {fileID: 11400000, guid: 2fa289ee9e3a050458bd2505d0af2f6e, type: 2}
   requiredKey: {fileID: 11400000, guid: 8ea916aca2c3546428d858162194c004, type: 2}
   prox: {fileID: 0}
-  promptLabel: {fileID: 1587218511}
+  promptLabel: {fileID: 0}
   familiar: {fileID: 5462317}
 --- !u!1 &1722286008
 GameObject:
@@ -2018,7 +2018,7 @@ MonoBehaviour:
   requiredKey: {fileID: 11400000, guid: 8ea916aca2c3546428d858162194c004, type: 2}
   prox: {fileID: 0}
   promptLabel: {fileID: 0}
-  familiar: {fileID: 0}
+  familiar: {fileID: 5462317}
 --- !u!1001 &4724744928942257523
 PrefabInstance:
   m_ObjectHideFlags: 0
