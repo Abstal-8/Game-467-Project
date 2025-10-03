@@ -13,10 +13,9 @@ public class Inventory : ScriptableObject
     
     */
 
-    
-    public Action onAddToInv;
 
-       public List<Item> Key_items;
+    public Action onAddToInv;
+    public List<Item> Key_items;
 
 
 
@@ -34,6 +33,11 @@ public class Inventory : ScriptableObject
         return Key_items.Contains(item);
     }
 
-    
+    // TESTING PURPOSES ONLY
+    void OnApplicationQuit()
+    {
+        Key_items = null;
+    }
+
 
 }

@@ -15,6 +15,11 @@ public class Item : ScriptableObject
     // private bool _isUsed; Consumables and other usable items
     // Potentially could add: animation, sound, ... 
 
+    // TESTING PURPOSES ONLY
+    void OnApplicationQuit()
+    {
+        inInventory = false;
+    }
 
 
 }

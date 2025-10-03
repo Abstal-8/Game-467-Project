@@ -6,17 +6,30 @@ public class CamFollow : MonoBehaviour
     private Camera _cam; 
     public GameObject player;
 
+    Vector2 camFollow;
+    Vector2 playerTarget;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         _cam = GetComponent<Camera>();
     }
 
     // Update is called once per frame
+
+    void Update()
+    {
+        camFollow = new(_cam.transform.position.x, _cam.transform.position.y);
+        playerTarget = new(player.transform.position.x, player.transform.position.y);
+    }
     void LateUpdate()
     {
         Vector2 camVelo = _cam.velocity;
-        _cam.transform.position = Vector2.SmoothDamp(_cam.transform.position, player.transform.position, ref camVelo, 0.001f);
+
+        camFollow = Vector2.SmoothDamp(camFollow, playerTarget, ref camVelo, 0.001f);
+
+        _cam.transform.position = new(camFollow.x, camFollow.y, _cam.transform.position.z);
+        
     }
 }
