@@ -16,7 +16,6 @@ public class Familiar_Movement : MonoBehaviour
     void Awake()
 
     {
-        
             rb = GetComponent<Rigidbody2D>();
             rb.bodyType = RigidbodyType2D.Kinematic;   // not effected by physics 
             if (!target)
@@ -26,18 +25,15 @@ public class Familiar_Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!target) return;
+        if (!freed || !target) return; // <- do nothing until freed
 
         Vector2 desired = (Vector2)target.position + offset;
-        Vector2 next = Vector2.SmoothDamp(
-            rb.position,
-            desired,
-            ref velocity,
-            smoothTime,
-            maxSpeed,
-            Time.fixedDeltaTime
-        );
-
+        Vector2 next = Vector2.SmoothDamp(rb.position, desired, ref velocity, smoothTime, maxSpeed, Time.fixedDeltaTime);
         rb.MovePosition(next);
+    }
+    public void FreeFamiliar()
+    {
+        freed = true;
+        enabled = true; // in case the component starts disabled
     }
 }

@@ -28,7 +28,11 @@ public class Inventory : ScriptableObject
             Debug.Log("[Inventory] Added item: " + item.itemName);
         }
     }
-
+    public bool HasItem(Item item)
+    {
+        return Key_items.Contains(item);
+    }
+    
     
 
 }

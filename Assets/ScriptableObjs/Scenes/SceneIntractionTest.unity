@@ -145,7 +145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5462316}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0916fa4a182a4a04fb0c086273bb2837, type: 3}
   m_Name: 
@@ -1340,6 +1340,7 @@ GameObject:
   - component: {fileID: 1632046650}
   - component: {fileID: 1632046649}
   - component: {fileID: 1632046651}
+  - component: {fileID: 1632046652}
   m_Layer: 0
   m_Name: Cell
   m_TagString: Untagged
@@ -1436,16 +1437,16 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5462317}
-        m_TargetAssemblyTypeName: Familiar_Movement, Assembly-CSharp
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 11500000, guid: 5743f9e7ca792a44b927ccfce4ffe3a2, type: 3}
+        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
+        m_MethodName: set_name
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Key
           m_BoolArgument: 1
         m_CallState: 2
 --- !u!61 &1632046650
@@ -1540,6 +1541,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1632046652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632046646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5743f9e7ca792a44b927ccfce4ffe3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CellUnlock
+  inventory: {fileID: 11400000, guid: 2fa289ee9e3a050458bd2505d0af2f6e, type: 2}
+  requiredKey: {fileID: 11400000, guid: 8ea916aca2c3546428d858162194c004, type: 2}
+  prox: {fileID: 0}
+  promptLabel: {fileID: 1587218511}
+  familiar: {fileID: 5462317}
 --- !u!1 &1722286008
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,6 +1893,7 @@ GameObject:
   - component: {fileID: 2142464764}
   - component: {fileID: 2142464763}
   - component: {fileID: 2142464767}
+  - component: {fileID: 2142464768}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Player
@@ -1939,7 +1958,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 1
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -1983,6 +2002,23 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2142464768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142464762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5743f9e7ca792a44b927ccfce4ffe3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CellUnlock
+  inventory: {fileID: 11400000, guid: 2fa289ee9e3a050458bd2505d0af2f6e, type: 2}
+  requiredKey: {fileID: 11400000, guid: 8ea916aca2c3546428d858162194c004, type: 2}
+  prox: {fileID: 0}
+  promptLabel: {fileID: 0}
+  familiar: {fileID: 0}
 --- !u!1001 &4724744928942257523
 PrefabInstance:
   m_ObjectHideFlags: 0
