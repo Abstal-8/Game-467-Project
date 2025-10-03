@@ -1,3 +1,4 @@
+using UnityEditor.Rendering.Universal;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 [RequireComponent(typeof(Rigidbody2D))] // Component Needs a RigidBody2D on game object to work
@@ -8,17 +9,22 @@ public class Familiar_Movement : MonoBehaviour
     [SerializeField] Vector2 offset = new Vector2(-1f, 0f); // direction it follows
     [SerializeField] float smoothTime = 0.12f;  // How quickly the familiar reacts, lower = snappier, higher = floatier
     [SerializeField] float maxSpeed = 12f;
-
+    [SerializeField] bool freed = false;
 
     Rigidbody2D rb;
     Vector2 velocity;
     void Awake()
+
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.bodyType = RigidbodyType2D.Kinematic;   // not effected by physics 
-        if (!target)
-            target = GameObject.FindGameObjectWithTag("Player")?.transform; // if no object is assigned player will look for a player tag instead 
+        if (freed)
+        {
+            rb = GetComponent<Rigidbody2D>();
+            rb.bodyType = RigidbodyType2D.Kinematic;   // not effected by physics 
+            if (!target)
+                target = GameObject.FindGameObjectWithTag("Player")?.transform; // if no object is assigned player will look for a player tag instead 
+        }
     }
+
     void FixedUpdate()
     {
         if (!target) return;
