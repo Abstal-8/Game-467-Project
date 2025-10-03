@@ -1,6 +1,7 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 [CreateAssetMenu(fileName = "Inventory", menuName = "ScriptableObjects/Inventory", order = 1)]
 public class Inventory : ScriptableObject
@@ -33,11 +34,9 @@ public class Inventory : ScriptableObject
         return Key_items.Contains(item);
     }
 
-    // TESTING PURPOSES ONLY
-    void OnApplicationQuit()
+    public void InventoryReset()
     {
-        Key_items = null;
+        Key_items.Clear();
     }
-
 
 }
