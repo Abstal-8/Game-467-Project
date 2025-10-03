@@ -16,14 +16,13 @@ public class Familiar_Movement : MonoBehaviour
     void Awake()
 
     {
-        if (freed)
-        {
+        
             rb = GetComponent<Rigidbody2D>();
             rb.bodyType = RigidbodyType2D.Kinematic;   // not effected by physics 
             if (!target)
                 target = GameObject.FindGameObjectWithTag("Player")?.transform; // if no object is assigned player will look for a player tag instead 
         }
-    }
+    
 
     void FixedUpdate()
     {
