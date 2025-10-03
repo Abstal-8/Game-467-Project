@@ -16,3 +16,4 @@ MonoBehaviour:
   itemSprite: {fileID: -2413806693520163455, guid: 6cfadfe9e882e284d980c0b741888674, type: 3}
   itemName: 
   isKeyitem: 0
+  inInventory: 0
