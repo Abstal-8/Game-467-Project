@@ -853,7 +853,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjectManager
   inventorySO: {fileID: 11400000, guid: 2fa289ee9e3a050458bd2505d0af2f6e, type: 2}
   itemSO: {fileID: 11400000, guid: 7feb5d57b401ed04bb9eda7bdd382b29, type: 2}
-  _performDataClear: 0
+  _performDataClear: 1
 --- !u!4 &1986162162
 Transform:
   m_ObjectHideFlags: 0
