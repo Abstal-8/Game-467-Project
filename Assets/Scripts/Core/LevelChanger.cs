@@ -1,4 +1,6 @@
+using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelChanger : MonoBehaviour {
 
@@ -10,4 +12,39 @@ public class LevelChanger : MonoBehaviour {
 
     [SerializeField]
     private Transform _spawnPoint;
+
+    [SerializeField]
+    private PlayerIdentities player;
+
+
+//will start the plyaer on spawn point always. Please note findobjectoftype isn't the most
+    //efficient way, but it is the simplest for what we are trying to do.
+    private void Start()
+    {
+        if (_connection == LevelConnection.ActiveConnection)
+        {
+            player.transform.position = _spawnPoint.position;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        var player = other.collider.GetComponent<PlayerIdentities>();
+        if (player != null) {
+            LevelConnection.ActiveConnection = _connection;
+            SceneSwitch switcher = FindFirstObjectByType<SceneSwitch>();
+            if (switcher != null)
+            {
+                switcher.SetScene(_targetSceneName);
+                switcher.SwitchScene();
+                UnityEngine.Debug.Log("Switched to scene: " + _targetSceneName);
+            }
+            else
+            {
+                UnityEngine.Debug.Log("ERROR manual override of sceneswitcher in levelchanger.cs");
+                SceneManager.LoadScene(_targetSceneName);
+            }
+        }
+    }
 }
+
+//Luke Bonniwell Code
