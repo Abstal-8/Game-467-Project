@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f8685e97a2b27f4f9864de8b8ca5908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelChanger
-  _connection: {fileID: 11400000, guid: 70cc585fe4aa9d34d94ba120a04d424a, type: 2}
-  _targetSceneName: NurseHallway
+  _connection: {fileID: 0}
+  _targetSceneName: 
   _spawnPoint: {fileID: 2439175649743689734}
+  player: {fileID: 0}
 --- !u!61 &8571504449775187886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -107,7 +108,7 @@ GameObject:
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
