@@ -18,7 +18,7 @@ public class LevelChanger : MonoBehaviour {
 
 
 //will start the plyaer on spawn point always. Please note findobjectoftype isn't the most
-    //efficient way, but it is the simplest for what we are trying to do.
+//efficient way, but it is the simplest for what we are trying to do.
     private void Start()
     {
         if (_connection == LevelConnection.ActiveConnection)
