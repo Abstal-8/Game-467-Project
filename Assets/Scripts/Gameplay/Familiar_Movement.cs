@@ -7,7 +7,7 @@ public class Familiar_Movement : MonoBehaviour
     // SerializedField just lets us edit the feilds in inspector
     [SerializeField] Transform target; //target -> object going to follow the player
     [SerializeField] Vector2 offset = new Vector2(-1f, 0f); // direction it follows
-    [SerializeField] float smoothTime = 0.12f;  // How quickly the familiar reacts, lower = snappier, higher = floatier
+    [SerializeField] float smoothTime = 0.12f;  // How quickly the familiar reacts
     [SerializeField] float maxSpeed = 12f;
     [SerializeField] bool freed = false;
 
