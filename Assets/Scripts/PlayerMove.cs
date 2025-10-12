@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+
     [SerializeField] float moveSpeed;
     private Rigidbody2D rb;
     private Animator animator;
@@ -35,8 +35,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("prevInputX", input.x);
             animator.SetFloat("prevInputY", input.y);
         }
-        
-        
+
+
     }
 
     void FixedUpdate()
