@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class LevelConnection : ScriptableObject
 {
-    
+    public static LevelConnection ActiveConnection { get; set; }
 }
+
+//Luke Bonniwell Code
