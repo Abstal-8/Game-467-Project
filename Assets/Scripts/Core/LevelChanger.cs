@@ -31,11 +31,11 @@ public class LevelChanger : MonoBehaviour {
         var player = other.collider.GetComponent<PlayerIdentities>();
         if (player != null) {
             LevelConnection.ActiveConnection = _connection;
-            SceneSwitch switcher = FindFirstObjectByType<SceneSwitch>();
-            if (switcher != null)
+            // SceneSwitch switcher = FindFirstObjectByType<SceneSwitch>(); if "sceneswitch.instance" doesn't work replace all with "switcher" and uncomment this code
+            if (SwitchScene.instance != null)
             {
-                switcher.SetScene(_targetSceneName);
-                switcher.SwitchScene();
+                SwitchScene.instance.SetScene(_targetSceneName);
+                SwitchScene.instance.SwitchScene();
                 UnityEngine.Debug.Log("Switched to scene: " + _targetSceneName);
             }
             else
