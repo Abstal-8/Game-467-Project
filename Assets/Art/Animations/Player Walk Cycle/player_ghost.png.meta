@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: a5113708d1eda5c4c8c3ee62b9fe2b8c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1878829162656583296
+    second: player_ghost_0
+  - first:
+      213: -5490326465973093692
+    second: player_ghost_1
+  - first:
+      213: 1669803409962049188
+    second: player_ghost_2
+  - first:
+      213: 538494311180732876
+    second: player_ghost_3
+  - first:
+      213: -8854880478836983050
+    second: player_ghost_4
+  - first:
+      213: 5704739283458444706
+    second: player_ghost_5
+  - first:
+      213: 7784833166368419912
+    second: player_ghost_6
+  - first:
+      213: 6601551912563357409
+    second: player_ghost_7
+  - first:
+      213: -5639348163783212733
+    second: player_ghost_8
+  - first:
+      213: 6248393842545753935
+    second: player_ghost_9
+  - first:
+      213: -1328131850186334008
+    second: player_ghost_10
+  - first:
+      213: 6528827213380797135
+    second: player_ghost_11
+  - first:
+      213: -1476371023995550710
+    second: player_ghost_12
+  - first:
+      213: 9209853401595218966
+    second: player_ghost_13
+  - first:
+      213: -6574056803215487022
+    second: player_ghost_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: player_ghost_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081b53eb4de0de5e0800000000000000
+      internalID: -1878829162656583296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 3
+        width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca7fbe0b217ec3b0800000000000000
+      internalID: -5490326465973093692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 3
+        width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ae1687ba555c2710800000000000000
+      internalID: 1669803409962049188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 3
+        width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc90f7319bd197700800000000000000
+      internalID: 538494311180732876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_4
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 3
+        width: 20
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fa7162ae152d1580800000000000000
+      internalID: -8854880478836983050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_5
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 3
+        width: 20
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adc1ce372e4b2f40800000000000000
+      internalID: 5704739283458444706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_6
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 3
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 840b11dd488490c60800000000000000
+      internalID: 7784833166368419912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 3
+        width: 19
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6b3aaec7c6d9b50800000000000000
+      internalID: 6601551912563357409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_8
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 3
+        width: 22
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34143fc39b20db1b0800000000000000
+      internalID: -5639348163783212733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_9
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 3
+        width: 22
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f7da92811c6b650800000000000000
+      internalID: 6248393842545753935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_10
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 3
+        width: 19
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0e2c67e17819de0800000000000000
+      internalID: -1328131850186334008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_11
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 3
+        width: 23
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2477562cd0b9a50800000000000000
+      internalID: 6528827213380797135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_12
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 3
+        width: 22
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a04c0163060e28be0800000000000000
+      internalID: -1476371023995550710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_13
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 3
+        width: 20
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61c81837fd8ffcf70800000000000000
+      internalID: 9209853401595218966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_ghost_14
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 3
+        width: 20
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dfc9171b2244c4a0800000000000000
+      internalID: -6574056803215487022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      player_ghost_0: -1878829162656583296
+      player_ghost_1: -5490326465973093692
+      player_ghost_10: -1328131850186334008
+      player_ghost_11: 6528827213380797135
+      player_ghost_12: -1476371023995550710
+      player_ghost_13: 9209853401595218966
+      player_ghost_14: -6574056803215487022
+      player_ghost_2: 1669803409962049188
+      player_ghost_3: 538494311180732876
+      player_ghost_4: -8854880478836983050
+      player_ghost_5: 5704739283458444706
+      player_ghost_6: 7784833166368419912
+      player_ghost_7: 6601551912563357409
+      player_ghost_8: -5639348163783212733
+      player_ghost_9: 6248393842545753935
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
