@@ -21,10 +21,10 @@ public class LevelChanger : MonoBehaviour {
 //efficient way, but it is the simplest for what we are trying to do.
     private void Start()
     {
-        Debug.Log($"_connection:  {_connection}");
-        Debug.Log($"ActiveConnection:  {_connection}");
-        Debug.Log($"player:  {_connection}");
-        Debug.Log($"_spawnPoint:  {_connection}");
+        // Debug.Log($"_connection:  {_connection}");
+        // Debug.Log($"ActiveConnection:  {_connection}");
+        // Debug.Log($"player:  {_connection}");
+        // Debug.Log($"_spawnPoint:  {_connection}");
 
         if (_connection == LevelConnection.ActiveConnection)
         {
