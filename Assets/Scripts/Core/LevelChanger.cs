@@ -35,7 +35,7 @@ public class LevelChanger : MonoBehaviour {
             if (SwitchScene.instance != null)
             {
                 SwitchScene.instance.SetScene(_targetSceneName);
-                SwitchScene.instance.SwitchScene();
+                //SwitchScene.instance.SwitchScene();
                 UnityEngine.Debug.Log("Switched to scene: " + _targetSceneName);
             }
             else
@@ -45,6 +45,6 @@ public class LevelChanger : MonoBehaviour {
             }
         }
     }
-}
+} 
 
 //Luke Bonniwell Code
