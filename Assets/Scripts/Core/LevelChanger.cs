@@ -50,6 +50,6 @@ public class LevelChanger : MonoBehaviour {
             }
         }
     }
-}
+} 
 
 //Luke Bonniwell Code
