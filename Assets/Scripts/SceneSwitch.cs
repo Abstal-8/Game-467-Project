@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    private static SceneSwitch instance;
+    public static SceneSwitch instance;
     [SerializeField] string sceneName;
     //for whatever object this is attached to, it will persist between scenes. 
     //in particular this will allow the object to continue, but if there are duplicated there won't be any errors. 

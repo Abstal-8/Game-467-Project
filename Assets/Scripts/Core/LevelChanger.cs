@@ -1,4 +1,4 @@
-using System.Diagnostics;
+// using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +21,11 @@ public class LevelChanger : MonoBehaviour {
 //efficient way, but it is the simplest for what we are trying to do.
     private void Start()
     {
+        Debug.Log($"_connection:  {_connection}");
+        Debug.Log($"ActiveConnection:  {_connection}");
+        Debug.Log($"player:  {_connection}");
+        Debug.Log($"_spawnPoint:  {_connection}");
+
         if (_connection == LevelConnection.ActiveConnection)
         {
             player.transform.position = _spawnPoint.position;
@@ -32,10 +37,10 @@ public class LevelChanger : MonoBehaviour {
         if (player != null) {
             LevelConnection.ActiveConnection = _connection;
             // SceneSwitch switcher = FindFirstObjectByType<SceneSwitch>(); if "sceneswitch.instance" doesn't work replace all with "switcher" and uncomment this code
-            if (SwitchScene.instance != null)
+            if (SceneSwitch.instance != null)
             {
-                SwitchScene.instance.SetScene(_targetSceneName);
-                //SwitchScene.instance.SwitchScene();
+                SceneSwitch.instance.SetScene(_targetSceneName);
+                SceneSwitch.instance.SwitchScene();
                 UnityEngine.Debug.Log("Switched to scene: " + _targetSceneName);
             }
             else
