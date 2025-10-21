@@ -58,6 +58,7 @@ public class BattleStateManager : MonoBehaviour
 
     public void ChangeState(BattleState state)
     {
+        currentState?.ExitState(this);
         currentState = state;
         state.EnterState(this);
     }
