@@ -1,0 +1,1313 @@
+fileFormatVersion: 2
+guid: b3a4922bb7cf60449b40f5d4e358f73e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5776189199128528573
+    second: OpAssets_0
+  - first:
+      213: 7625915241121370303
+    second: OpAssets_1
+  - first:
+      213: -7793981800481262485
+    second: OpAssets_2
+  - first:
+      213: 8459993266350370065
+    second: OpAssets_3
+  - first:
+      213: -6621823091552255669
+    second: OpAssets_4
+  - first:
+      213: -3882219389867634653
+    second: OpAssets_5
+  - first:
+      213: 4336582484401590714
+    second: OpAssets_6
+  - first:
+      213: 5112160881561444520
+    second: OpAssets_7
+  - first:
+      213: -2235662817590049804
+    second: OpAssets_8
+  - first:
+      213: -8126382687927544364
+    second: OpAssets_9
+  - first:
+      213: -8713677132557235858
+    second: OpAssets_10
+  - first:
+      213: 2425095547565122021
+    second: OpAssets_11
+  - first:
+      213: -9029318253972391070
+    second: OpAssets_12
+  - first:
+      213: -7886106025455967128
+    second: OpAssets_13
+  - first:
+      213: -2960159394722132757
+    second: OpAssets_14
+  - first:
+      213: 8973209117051596544
+    second: OpAssets_15
+  - first:
+      213: 3605516626399963070
+    second: OpAssets_16
+  - first:
+      213: -3759994510262619067
+    second: OpAssets_17
+  - first:
+      213: -1888380693633736928
+    second: OpAssets_18
+  - first:
+      213: 5362608678509773515
+    second: OpAssets_19
+  - first:
+      213: -5444075651409489386
+    second: OpAssets_20
+  - first:
+      213: 1009058099742069236
+    second: OpAssets_21
+  - first:
+      213: -268836684911279796
+    second: OpAssets_22
+  - first:
+      213: -6106708266294297886
+    second: OpAssets_23
+  - first:
+      213: 5468041722459756658
+    second: OpAssets_24
+  - first:
+      213: -8423399186702326912
+    second: OpAssets_25
+  - first:
+      213: -7544972529518975138
+    second: OpAssets_26
+  - first:
+      213: -71224403822129685
+    second: OpAssets_27
+  - first:
+      213: -6612968980898984855
+    second: OpAssets_28
+  - first:
+      213: 1516874068450142772
+    second: OpAssets_29
+  - first:
+      213: -8011902548493475184
+    second: OpAssets_30
+  - first:
+      213: 4969614600655576113
+    second: OpAssets_31
+  - first:
+      213: -8052841656484907483
+    second: OpAssets_32
+  - first:
+      213: -1500564651542487772
+    second: OpAssets_33
+  - first:
+      213: 6394026523703030283
+    second: OpAssets_34
+  - first:
+      213: 6388967432792673810
+    second: OpAssets_35
+  - first:
+      213: -2700542461508262658
+    second: OpAssets_36
+  - first:
+      213: -1461125635040608159
+    second: OpAssets_37
+  - first:
+      213: 668302723347014574
+    second: OpAssets_38
+  - first:
+      213: -1142574553447208427
+    second: OpAssets_39
+  - first:
+      213: 7186512730303663458
+    second: OpAssets_40
+  - first:
+      213: 7294334199674029605
+    second: OpAssets_41
+  - first:
+      213: 8102298906081136258
+    second: OpAssets_42
+  - first:
+      213: 4572705246502515508
+    second: OpAssets_43
+  - first:
+      213: 1437544112484607448
+    second: OpAssets_44
+  - first:
+      213: -7309371948329050641
+    second: OpAssets_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OpAssets_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 403
+        width: 68
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db601891975292050800000000000000
+      internalID: 5776189199128528573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 403
+        width: 26
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0d64a0281b4d960800000000000000
+      internalID: 7625915241121370303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 404
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b647474c8d636d390800000000000000
+      internalID: -7793981800481262485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_3
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 403
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11da2038d0fe76570800000000000000
+      internalID: 8459993266350370065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_4
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 451
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b418c8e6bfe8a14a0800000000000000
+      internalID: -6621823091552255669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 403
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3205ec6a8069f1ac0800000000000000
+      internalID: -3882219389867634653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_6
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 419
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab110f91bc2ae2c30800000000000000
+      internalID: 4336582484401590714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_7
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 403
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a02e148c3b02f640800000000000000
+      internalID: 5112160881561444520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_8
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 375
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f30fff238459f0e0800000000000000
+      internalID: -2235662817590049804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_9
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 384
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5d131300a493f80800000000000000
+      internalID: -8126382687927544364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 355
+        width: 59
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e694b72a0dcc21780800000000000000
+      internalID: -8713677132557235858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 355
+        width: 62
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e120034d8ba7a120800000000000000
+      internalID: 2425095547565122021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_12
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 355
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b760c23ea61b280800000000000000
+      internalID: -9029318253972391070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_13
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 354
+        width: 54
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86421ab2a5cee8290800000000000000
+      internalID: -7886106025455967128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 323
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec4d0fc6b66be6d0800000000000000
+      internalID: -2960159394722132757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_15
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 323
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f282d562e378c70800000000000000
+      internalID: 8973209117051596544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_16
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 323
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7a554d44e590230800000000000000
+      internalID: 3605516626399963070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_17
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 307
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544b06a0ae0d1dbc0800000000000000
+      internalID: -3759994510262619067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_18
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 305
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f5143a3cf1bc5e0800000000000000
+      internalID: -1888380693633736928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_19
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 307
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc280084e20db6a40800000000000000
+      internalID: 5362608678509773515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_20
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 311
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 612526bf902c274b0800000000000000
+      internalID: -5444075651409489386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_21
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 259
+        width: 25
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f15bd8def4e00e00800000000000000
+      internalID: 1009058099742069236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_22
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 307
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41054d9576e44cf0800000000000000
+      internalID: -268836684911279796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_23
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 270
+        width: 35
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea3690cf2d904ba0800000000000000
+      internalID: -6106708266294297886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 274
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2789a34c9f262eb40800000000000000
+      internalID: 5468041722459756658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_25
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 280
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0832b4b91131a1b80800000000000000
+      internalID: -8423399186702326912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_26
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 243
+        width: 82
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57e0f9957fda4790800000000000000
+      internalID: -7544972529518975138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_27
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 275
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bedc7d638c5f20ff0800000000000000
+      internalID: -71224403822129685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_28
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 275
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96cc6d6bfb30a34a0800000000000000
+      internalID: -6612968980898984855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_29
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 260
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ae8f2bde40d0510800000000000000
+      internalID: 1516874068450142772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_30
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 259
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092effdb41100d090800000000000000
+      internalID: -8011902548493475184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 211
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c9bae262e97f440800000000000000
+      internalID: 4969614600655576113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_32
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 211
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526bfb0ed2f8e3090800000000000000
+      internalID: -8052841656484907483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_33
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 231
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d5d46566cec2be0800000000000000
+      internalID: -1500564651542487772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_34
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 211
+        width: 20
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b02bebd0f352cb850800000000000000
+      internalID: 6394026523703030283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_35
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 206
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e8529a70c2aa850800000000000000
+      internalID: 6388967432792673810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_36
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 194
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4e0f870feb58ad0800000000000000
+      internalID: -2700542461508262658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_37
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 150
+        width: 56
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 160003fe9f909bbe0800000000000000
+      internalID: -1461125635040608159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_38
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 115
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea3668b39c9464900800000000000000
+      internalID: 668302723347014574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_39
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 115
+        width: 26
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ae06c4f72c420f0800000000000000
+      internalID: -1142574553447208427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_40
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 115
+        width: 23
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d829f904f9bb360800000000000000
+      internalID: 7186512730303663458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_41
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 147
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526cd8cbe4eaa3560800000000000000
+      internalID: 7294334199674029605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_42
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 147
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e80016de5217070800000000000000
+      internalID: 8102298906081136258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_43
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 147
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 433f858c133857f30800000000000000
+      internalID: 4572705246502515508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_44
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 114
+        width: 82
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d5699df0ce23f310800000000000000
+      internalID: 1437544112484607448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OpAssets_45
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 115
+        width: 44
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed54a090f4ef8a90800000000000000
+      internalID: -7309371948329050641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      OpAssets_0: 5776189199128528573
+      OpAssets_1: 7625915241121370303
+      OpAssets_10: -8713677132557235858
+      OpAssets_11: 2425095547565122021
+      OpAssets_12: -9029318253972391070
+      OpAssets_13: -7886106025455967128
+      OpAssets_14: -2960159394722132757
+      OpAssets_15: 8973209117051596544
+      OpAssets_16: 3605516626399963070
+      OpAssets_17: -3759994510262619067
+      OpAssets_18: -1888380693633736928
+      OpAssets_19: 5362608678509773515
+      OpAssets_2: -7793981800481262485
+      OpAssets_20: -5444075651409489386
+      OpAssets_21: 1009058099742069236
+      OpAssets_22: -268836684911279796
+      OpAssets_23: -6106708266294297886
+      OpAssets_24: 5468041722459756658
+      OpAssets_25: -8423399186702326912
+      OpAssets_26: -7544972529518975138
+      OpAssets_27: -71224403822129685
+      OpAssets_28: -6612968980898984855
+      OpAssets_29: 1516874068450142772
+      OpAssets_3: 8459993266350370065
+      OpAssets_30: -8011902548493475184
+      OpAssets_31: 4969614600655576113
+      OpAssets_32: -8052841656484907483
+      OpAssets_33: -1500564651542487772
+      OpAssets_34: 6394026523703030283
+      OpAssets_35: 6388967432792673810
+      OpAssets_36: -2700542461508262658
+      OpAssets_37: -1461125635040608159
+      OpAssets_38: 668302723347014574
+      OpAssets_39: -1142574553447208427
+      OpAssets_4: -6621823091552255669
+      OpAssets_40: 7186512730303663458
+      OpAssets_41: 7294334199674029605
+      OpAssets_42: 8102298906081136258
+      OpAssets_43: 4572705246502515508
+      OpAssets_44: 1437544112484607448
+      OpAssets_45: -7309371948329050641
+      OpAssets_5: -3882219389867634653
+      OpAssets_6: 4336582484401590714
+      OpAssets_7: 5112160881561444520
+      OpAssets_8: -2235662817590049804
+      OpAssets_9: -8126382687927544364
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

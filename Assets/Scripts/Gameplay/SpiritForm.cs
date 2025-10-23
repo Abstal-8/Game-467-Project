@@ -7,15 +7,18 @@ public class SpiritForm : MonoBehaviour
     public Color bodyColorInSpirit = Color.blue;
 
     [Header("Optional")]
-    public MonoBehaviour playerMovementScript; // Drag your PlayerMovement script here
+    public MonoBehaviour playerMovementScript; // Drag your PlayerMovement script here (also works to drop in player gameobject)
+    public MonoBehaviour cameraFollowScript; //Drag cam follow script here
 
     private SpriteRenderer bodySR;
+    private PolygonCollider2D polyCollider; //in order to collect the edges of the sprite not just the center for making edges smoother
     private bool inSpiritForm = false;
     private GameObject spiritInstance;
 
     void Awake()
     {
         bodySR = GetComponent<SpriteRenderer>();
+        polyCollider = GetComponent<PolygonCollider2D>(); //in order to collect the edges of the sprite not just the center for making edges smoother 
     }
 
     void Update()
@@ -39,7 +42,7 @@ public class SpiritForm : MonoBehaviour
         bodySR.color = bodyColorInSpirit;
 
         // Spawn spirit slightly offset
-        Vector3 spawnPos = transform.position + new Vector3(0.4f, 0f, 0f);
+        Vector3 spawnPos = polyCollider.bounds.center + new Vector3(0.4f, 0f, 0f);
         spiritInstance = Instantiate(spiritPrefab, spawnPos, Quaternion.identity);
 
         inSpiritForm = true;
