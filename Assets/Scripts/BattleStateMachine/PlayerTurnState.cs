@@ -12,4 +12,9 @@ public class PlayerTurnState : BattleState
         Debug.Log("Player turn end!");
         // Switch to enemy turn if enemy and/or player not dead
     }
+
+    public override void UpdateState(BattleStateManager battleState)
+    {
+        throw new System.NotImplementedException();
+    }
 }

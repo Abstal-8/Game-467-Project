@@ -11,4 +11,9 @@ public class LoseBattle : BattleState
     {
         Debug.Log("LoseBattle state exit");
     }
+
+    public override void UpdateState(BattleStateManager battleState)
+    {
+        throw new System.NotImplementedException();
+    }
 }

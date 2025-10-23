@@ -11,4 +11,9 @@ public class WinBattle : BattleState
     {
         Debug.Log("WinBattle state exit");
     }
+
+    public override void UpdateState(BattleStateManager battleState)
+    {
+        throw new System.NotImplementedException();
+    }
 }

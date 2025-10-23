@@ -9,12 +9,10 @@ public class BattleStateManager : MonoBehaviour
     public GameObject enemy;
     public string sceneToBattle;
     public string battleToScene;
-    Collider2D playerCollider;
-    Collider2D enemyCollider;
 
     // ---------------------------------------------
 
-    BattleState currentState;
+    protected BattleState currentState;
 
     public PlayerTurnState playerTurn = new PlayerTurnState();
     public EnemyTurnState enemyTurn = new EnemyTurnState();
@@ -26,16 +24,7 @@ public class BattleStateManager : MonoBehaviour
 
     void Start()
     {
-        playerCollider = player.GetComponent<Collider2D>();
-        enemyCollider = enemy.GetComponent<Collider2D>();
-
-        // currentState = playerTurn;
-        // currentState.EnterState(this); // calling current state (Player turn) EnterState method
-        // currentState.ExitState(this);
-
-        // currentState = enemyTurn;
-        // currentState.EnterState(this); // calling current state (Enemy turn) EnterState method
-        // currentState.ExitState(this);
+        currentState = null;
     }
 
     void Update()

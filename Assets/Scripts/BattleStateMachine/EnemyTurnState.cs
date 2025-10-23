@@ -11,4 +11,9 @@ public class EnemyTurnState : BattleState
     {
         Debug.Log("Enemy turn end!");
     }
+
+    public override void UpdateState(BattleStateManager battleState)
+    {
+        throw new System.NotImplementedException();
+    }
 }

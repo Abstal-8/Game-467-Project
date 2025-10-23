@@ -6,11 +6,8 @@ public abstract class BattleState
     bool _hasBattleEnded;
 
     // Test Variables
-
-    int playerHealth;
-    int playerMana;
-    
-    int enemyHealth;
+    public PlayerManager playerManager;
+    public Enemy enemyReference;
 
 
 
@@ -22,6 +19,7 @@ public abstract class BattleState
 
 
     public abstract void EnterState(BattleStateManager battleState);
+    public abstract void UpdateState(BattleStateManager battleState);
     public abstract void ExitState(BattleStateManager battleState);
 
 }

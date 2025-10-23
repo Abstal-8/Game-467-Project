@@ -30,4 +30,9 @@ public class EndBattle : BattleState
 
         */
     }
+
+    public override void UpdateState(BattleStateManager battleState)
+    {
+        throw new System.NotImplementedException();
+    }
 }
