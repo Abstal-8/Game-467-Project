@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class WinBattle : BattleState
 {
+    public WinBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
+    {
+    }
+
     public override void EnterState(BattleStateManager battleState)
     {
         Debug.Log("You have won, congratulations!");

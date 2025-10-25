@@ -5,7 +5,7 @@ public class PlayerManager : MonoBehaviour, IDamagable
     public int maxHealth { get; private set; }
     public int currentHealth { get; private set; }
 
-    public Enemy enemyEncounter { get; private set; }
+    public Enemy Enemyencounter { get; private set; }
 
 
     void Start()
@@ -26,12 +26,12 @@ public class PlayerManager : MonoBehaviour, IDamagable
 
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        var enemy = collision.gameObject.GetComponent<Enemy>();
-        if (enemy != null)
+        if (other.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            enemyEncounter = enemy;
+            Enemyencounter = enemy;
         }
+
     }
 }

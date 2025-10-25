@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class EndBattle : BattleState
 {
+    public EndBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
+    {
+    }
+
     public override void EnterState(BattleStateManager battleState)
     {
         Debug.Log("You have exited battle.");
