@@ -10,8 +10,13 @@ public class StartBattle : BattleState
     Scene prevScene;
     Vector3 prevPlayerPos;
 
+    public static Action startStateEndEvent;
 
-    public StartBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy) { }
+
+    public StartBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
+    {
+        
+    }
 
     public override void EnterState(BattleStateManager battleState)
     {
@@ -23,11 +28,8 @@ public class StartBattle : BattleState
         // Get enemy Reference
         enemyReference = playerManager.Enemyencounter;
         // Load battle scene
-        SceneManager.LoadScene(battleState.sceneToBattle);
-        Debug.Log("Prev Pos: " + prevPlayerPos);
-        Debug.Log("Prev scene: " + prevScene.name);
-        Debug.Log(enemyReference + " " + enemyReference.name);
-
+        SceneSwitch.instance.LoadLevel(battleState.sceneToBattle);
+        uIManager.InitializeBattleScreen();
     }
 
     public override void UpdateState(BattleStateManager battleState)
@@ -39,11 +41,8 @@ public class StartBattle : BattleState
     {
         Debug.Log("StartBattle state exited.");
 
-        battleStartEvent?.Invoke();
-
         // Check for turn advantage
         // Change to state based on turn advantage
-
         battleState.ChangeState(battleState.playerTurn);
     }
 

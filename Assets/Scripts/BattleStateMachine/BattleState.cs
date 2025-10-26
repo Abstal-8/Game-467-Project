@@ -4,8 +4,8 @@ using UnityEngine;
 public abstract class BattleState
 {
     // Variables needed: player reference, enemy reference, booleans: (_isFighting, _hasEnded),
-    public static bool _hasBattleStarted;
-    public static bool _hasBattleEnded;
+    public static bool _hasBattleStarted = false;
+    public static bool _hasBattleEnded = false;
 
     public static Action battleStartEvent;
     //public static Action battleEnd;

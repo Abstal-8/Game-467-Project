@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
@@ -36,4 +37,12 @@ public class SceneSwitch : MonoBehaviour
             Debug.LogWarning("SceneSwitch: No scene name set!");
         }
     }
+
+    public async void LoadLevel(string name)
+    {
+        await Awaitable.FromAsyncOperation(SceneManager.LoadSceneAsync(name, LoadSceneMode.Single));
+        BattleState._hasBattleStarted = true;
+    }
+    
+    
 }

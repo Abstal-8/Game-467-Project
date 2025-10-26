@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] PlayerManager playerManager;
     [SerializeField] Enemy enemy;
-    int playerCurrentHealth;
+    int playerHealth;
     int playerMaxHealth;
     int enemyHealth;
     int enemyMaxHealth;
@@ -19,57 +19,48 @@ public class UIManager : MonoBehaviour
     // Battle Screen
     [SerializeField] GameObject playerPanel;
     [SerializeField] GameObject enemyPanel;
-    TextMeshProUGUI playerHealthText;
-    TextMeshProUGUI enemyHealthText;
-    Image enemyHealthBar;
-    Image playerHealthBar;
+    [SerializeField] TextMeshProUGUI playerHealthText;
+    [SerializeField] TextMeshProUGUI enemyHealthText;
+    [SerializeField] Image enemyHealthBar;
+    [SerializeField] Image playerHealthBar;
 
     // -----------------------------------
 
     void Start()
     {
-        playerHealthText = playerPanel.GetComponent<TextMeshProUGUI>();
-        enemyHealthText = enemyPanel.GetComponent<TextMeshProUGUI>();
-        playerHealthBar = playerPanel.GetComponent<Image>();
-        enemyHealthBar = enemyPanel.GetComponent<Image>();
-
-        playerCurrentHealth = playerManager.currentHealth;
+        playerHealth = playerManager.currentHealth;
         playerMaxHealth = playerManager.maxHealth;
-        playerCurrentHealth = playerMaxHealth;
 
         enemyHealth = enemy.currentHealth;
         enemyMaxHealth = enemy.maxHealth;
 
     }
 
-    void OnEnable()
-    {
-        BattleState.battleStartEvent += InitializeBattleScreen;
-    }
-
-    void OnDisable()
-    {
-        BattleState.battleStartEvent -= InitializeBattleScreen;
-    }
+    // void Update()
+    // {
+    //     // playerHealth = playerManager.currentHealth;
+    //     // playerMaxHealth = playerManager.maxHealth;
+    //     // enemyHealth = enemy.currentHealth;
+    // }
 
 
     void UpdateHealth(int amount)
     {
-        playerCurrentHealth += amount;
-        playerCurrentHealth = Mathf.Clamp(playerCurrentHealth, 0, playerMaxHealth);
-        playerHealthText.text = playerCurrentHealth + "/" + playerMaxHealth;
+        playerHealth -= amount;
+        playerHealth = Mathf.Clamp(playerHealth, 0, playerMaxHealth);
+        playerHealthText.text = playerHealth + "/" + playerMaxHealth;
         UpdateHealthBar();
     }
 
     void UpdateHealthBar()
     {
-        float targetfillamount = playerCurrentHealth / playerMaxHealth;
+        float targetfillamount = playerHealth / playerMaxHealth;
         playerHealthBar.fillAmount = targetfillamount; // make smooth looking fill later
     }
 
     public void InitializeBattleScreen()
     {
-        playerHealthText.text = playerCurrentHealth + "/" + playerMaxHealth;
+        playerHealthText.text = playerManager.currentHealth + "/" + playerManager.maxHealth;
         enemyHealthText.text = enemyHealth + "/" + enemyMaxHealth;
 
         playerHealthBar.fillAmount = playerMaxHealth;

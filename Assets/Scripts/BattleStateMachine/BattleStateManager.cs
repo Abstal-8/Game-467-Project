@@ -40,27 +40,29 @@ public class BattleStateManager : MonoBehaviour
 
     }
 
+    void OnEnable()
+    {
+        BattleState.battleStartEvent += BattleIntialize;
+    }
+
+    void OnDisable()
+    {
+        BattleState.battleStartEvent -= BattleIntialize;
+    }
+
     void Update()
     {
-        if (playerManager.Enemyencounter)
-        {
-            currentState = startBattle;
-            currentState.EnterState(this);
-        }
+    }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            currentState.ExitState(this);
-        }
-        
-
-        
+    void BattleIntialize()
+    {
+        currentState = startBattle;
+        currentState.EnterState(this);
     }
 
 
     public void ChangeState(BattleState state)
     {
-        currentState?.ExitState(this);
         currentState = state;
         state.EnterState(this);
     }

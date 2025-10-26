@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour, IDamagable
 
     void Start()
     {
+        maxHealth = 100;
         currentHealth = maxHealth;
     }
 
@@ -31,6 +32,7 @@ public class PlayerManager : MonoBehaviour, IDamagable
         if (other.TryGetComponent<Enemy>(out Enemy enemy))
         {
             Enemyencounter = enemy;
+            BattleState.battleStartEvent?.Invoke();
         }
 
     }
