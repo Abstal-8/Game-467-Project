@@ -26,11 +26,12 @@ public class BattleStateManager : MonoBehaviour
     public EndBattle endBattle;
     public WinBattle winBattle;
     public LoseBattle loseBattle;
+    public DefaultBattle defaultBattle;
 
 
     void Start()
     {
-        currentState = null;
+        defaultBattle = new(playerManager, uIManager, enemyReference);
         startBattle = new(playerManager, uIManager, enemyReference);
         endBattle = new(playerManager, uIManager, enemyReference);
         winBattle = new(playerManager, uIManager, enemyReference);
@@ -38,6 +39,7 @@ public class BattleStateManager : MonoBehaviour
         playerTurn = new(playerManager, uIManager, enemyReference);
         enemyTurn = new(playerManager, uIManager, enemyReference);
 
+        currentState = defaultBattle;
     }
 
     void OnEnable()
@@ -52,6 +54,7 @@ public class BattleStateManager : MonoBehaviour
 
     void Update()
     {
+        currentState.UpdateState(this);
     }
 
     void BattleIntialize()

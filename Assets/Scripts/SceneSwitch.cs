@@ -41,7 +41,6 @@ public class SceneSwitch : MonoBehaviour
     public async void LoadLevel(string name)
     {
         await Awaitable.FromAsyncOperation(SceneManager.LoadSceneAsync(name, LoadSceneMode.Single));
-        BattleState._hasBattleStarted = true;
     }
     
     

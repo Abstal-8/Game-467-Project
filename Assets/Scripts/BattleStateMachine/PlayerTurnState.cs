@@ -1,7 +1,10 @@
+using System;
 using UnityEngine;
 
 public class PlayerTurnState : BattleState
 {
+
+    public static Action<BattleStateManager> playerTurnEndEvent;
     public PlayerTurnState(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
     {
     }
@@ -15,10 +18,15 @@ public class PlayerTurnState : BattleState
     {
         Debug.Log("Player turn end!");
         // Switch to enemy turn if enemy and/or player not dead
+
+        battleState.ChangeState(battleState.endBattle);
     }
 
     public override void UpdateState(BattleStateManager battleState)
     {
-        throw new System.NotImplementedException();
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            ExitState(battleState);
+        }
     }
 }

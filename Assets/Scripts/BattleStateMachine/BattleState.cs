@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public abstract class BattleState
 {
@@ -8,10 +9,12 @@ public abstract class BattleState
     public static bool _hasBattleEnded = false;
 
     public static Action battleStartEvent;
-    //public static Action battleEnd;
+    public static Action battleEnd;
     // need player turn and enemy turn (maybe utilize funcs)
 
     // Test Variables
+    protected Scene prevScene;
+    protected Vector3 prevPlayerPos;
     
     protected PlayerManager playerManager;
     protected UIManager uIManager;

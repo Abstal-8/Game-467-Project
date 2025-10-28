@@ -7,14 +7,14 @@ using UnityEngine.SceneManagement;
 public class StartBattle : BattleState
 {
 
-    Scene prevScene;
-    Vector3 prevPlayerPos;
 
-    public static Action startStateEndEvent;
+
+    public static Action<BattleStateManager> startStateEndEvent;
 
 
     public StartBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
     {
+
         
     }
 
@@ -27,9 +27,13 @@ public class StartBattle : BattleState
         prevPlayerPos = battleState.player.transform.position;
         // Get enemy Reference
         enemyReference = playerManager.Enemyencounter;
+        battleState.battleToScene = prevScene.name;
         // Load battle scene
         SceneSwitch.instance.LoadLevel(battleState.sceneToBattle);
         uIManager.InitializeBattleScreen();
+
+        startStateEndEvent += ExitState;
+        startStateEndEvent(battleState);
     }
 
     public override void UpdateState(BattleStateManager battleState)
@@ -40,9 +44,11 @@ public class StartBattle : BattleState
     public override void ExitState(BattleStateManager battleState)
     {
         Debug.Log("StartBattle state exited.");
+        Debug.Log("Prev player pos: " + prevPlayerPos);
 
         // Check for turn advantage
         // Change to state based on turn advantage
+        startStateEndEvent -= ExitState;
         battleState.ChangeState(battleState.playerTurn);
     }
 
