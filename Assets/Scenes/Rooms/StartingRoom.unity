@@ -1124,10 +1124,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CellUnlock
   inventory: {fileID: 11400000, guid: 2fa289ee9e3a050458bd2505d0af2f6e, type: 2}
-  requiredKey: {fileID: 11400000, guid: 8ea916aca2c3546428d858162194c004, type: 2}
-  prox: {fileID: 0}
-  promptLabel: {fileID: 0}
+  keyItem: {fileID: 11400000, guid: 8ea916aca2c3546428d858162194c004, type: 2}
   familiar: {fileID: 230684213}
+  cageColliderToDisable: {fileID: 0}
+  prompt: {fileID: 0}
+  interactKey: E
+  tagThatCanUnlock: Player
 --- !u!114 &191454092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12568,6 +12570,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4342370050748814584, guid: 550fd67a98acf0b4099ddbaba8e9ee95, type: 3}
+      propertyPath: _isInteracable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4871636798807188098, guid: 550fd67a98acf0b4099ddbaba8e9ee95, type: 3}
       propertyPath: m_Name
       value: Key
@@ -16364,5 +16370,5 @@ SceneRoots:
   - {fileID: 1234869058}
   - {fileID: 191454095}
   - {fileID: 230684216}
-  - {fileID: 410244213}
   - {fileID: 1018189554}
+  - {fileID: 410244213}
