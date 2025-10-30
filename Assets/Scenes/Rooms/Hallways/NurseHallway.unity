@@ -20975,6 +20975,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelChanger (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2280261909203287377, guid: b514b68897ec42e4db8fe106fd2be026, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2390481625306317790, guid: b514b68897ec42e4db8fe106fd2be026, type: 3}
       propertyPath: player
       value: 
