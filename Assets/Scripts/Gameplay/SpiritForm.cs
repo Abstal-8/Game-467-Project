@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SpiritForm : MonoBehaviour
@@ -5,6 +6,8 @@ public class SpiritForm : MonoBehaviour
     [Header("Prefabs & Visuals")]
     public GameObject spiritPrefab;                 // ghost prefab with tag "Spirit"
     public Color bodyColorInSpirit = Color.blue;
+    public event Action<bool> OnSpiritStateChanged;   // true = entered, false = exited
+    public bool IsInSpirit => inSpiritForm;
 
     [Header("References")]
     public MonoBehaviour playerMovementScript;      // your PlayerMovement script
@@ -13,7 +16,6 @@ public class SpiritForm : MonoBehaviour
 
     [Header("Flow")]
     public bool lockAtStart = true;                 // start immobilized on table
-    public bool completeUnlock = false;             // free movement for testing
 
     private SpriteRenderer bodySR;
     private PolygonCollider2D poly;
@@ -35,7 +37,6 @@ public class SpiritForm : MonoBehaviour
         if (startPointOnTable) transform.position = startPointOnTable.position;
 
         if (lockAtStart) LockBody();
-        if (completeUnlock) UnlockBody();
     }
 
     void Update()
@@ -80,6 +81,8 @@ public class SpiritForm : MonoBehaviour
         Vector3 spawnPos = (poly ? poly.bounds.center : transform.position) + new Vector3(0.6f, 0f, 0f);
         spiritInstance = Instantiate(spiritPrefab, spawnPos, Quaternion.identity);
         inSpiritForm = true;
+        inSpiritForm = true;
+        OnSpiritStateChanged?.Invoke(true);
     }
 
     void ExitSpiritForm()
@@ -90,6 +93,8 @@ public class SpiritForm : MonoBehaviour
 
         if (spiritInstance) Destroy(spiritInstance);
         inSpiritForm = false;
+        inSpiritForm = false;
+        OnSpiritStateChanged?.Invoke(false);
     }
 
     // Called by the unlock zone when the Spirit presses E in the trigger
