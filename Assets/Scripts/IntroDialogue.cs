@@ -15,10 +15,9 @@ public class IntroDialogue : MonoBehaviour
     public string[] lines = {
         "Player : Urg my head",
         "??? : Hey, you're finally awake.",
-        "Player : Where am I?",
         "??? : You've been out for hours... didn't think would make it, what a shame.",
         "Player: Huh?, What Happened?, Where am I?, Who are you??",
-        "??? : You don't remember what happend?",
+        "??? : You don't remember what happened?",
         "Player : Why can't I move, Why can't I see!?",
         "??? : Calm down were just spirit shackled, not even by a strong one",
         "Player : What the hell are you talking about?",
@@ -27,11 +26,11 @@ public class IntroDialogue : MonoBehaviour
         "??? : Now <i>that</i> is intriguing",
         "??? : I suppose I can help, for a price",
         "Player : What do you want?",
-        "??? : We'll discuss that once you're free, feel the area around you with your mind, feel for a tug",
+        "??? : We'll discuss that once you're free, feel the area around you with your mind, you should feel a tug",
         "Player : ...What?",
         "??? : Just do it",
-        "Player : I feel something",
-        "??? : Good pull on it",
+        "Player : Huh, werid I do feel something",
+        "??? : Good focus on that and pull",
         ""
     };
 
