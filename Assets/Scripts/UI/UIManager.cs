@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using NUnit.Framework;
 
 
 public class UIManager : MonoBehaviour
@@ -24,6 +25,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image enemyHealthBar;
     [SerializeField] Image playerHealthBar;
 
+    public Button attackButton;
+    public Button spiritButton;
+
     // -----------------------------------
 
     void Start()
@@ -33,29 +37,45 @@ public class UIManager : MonoBehaviour
 
         enemyHealth = enemy.currentHealth;
         enemyMaxHealth = enemy.maxHealth;
-
     }
 
-    // void Update()
-    // {
-    //     // playerHealth = playerManager.currentHealth;
-    //     // playerMaxHealth = playerManager.maxHealth;
-    //     // enemyHealth = enemy.currentHealth;
-    // }
 
-
-    void UpdateHealth(int amount)
+    public void UpdateHealth(int amount, Object obj)
     {
-        playerHealth -= amount;
-        playerHealth = Mathf.Clamp(playerHealth, 0, playerMaxHealth);
-        playerHealthText.text = playerHealth + "/" + playerMaxHealth;
-        UpdateHealthBar();
+        if (obj.GetComponent<PlayerManager>())
+        {
+            playerHealth -= amount;
+            playerHealth = Mathf.Clamp(playerHealth, 0, playerMaxHealth);
+            playerHealthText.text = playerHealth + "/" + playerMaxHealth;
+            UpdateHealthBar(obj);
+        }
+        else if (obj.GetComponent<Enemy>())
+        {
+            enemyHealth -= amount;
+            enemyHealth = Mathf.Clamp(enemyHealth, 0, enemyMaxHealth);
+            enemyHealthText.text = enemyHealth + "/" + enemyMaxHealth;
+            UpdateHealthBar(obj);
+        }
+        
     }
 
-    void UpdateHealthBar()
+    void UpdateHealthBar(Object obj)
     {
-        float targetfillamount = playerHealth / playerMaxHealth;
-        playerHealthBar.fillAmount = targetfillamount; // make smooth looking fill later
+        if (obj.GetComponent<PlayerManager>())
+        {
+            float targetfillamount = (float)playerHealth / (float)playerMaxHealth;
+            playerHealthBar.fillAmount = targetfillamount; // make smooth looking fill later
+        }
+        else if (obj.GetComponent<Enemy>())
+        {
+            float targetfillamount = (float)enemyHealth / (float)enemyMaxHealth;
+            enemyHealthBar.fillAmount = targetfillamount; // make smooth looking fill later
+        }
+        else
+        {
+            Debug.Log("Invalid Object Reference!");
+        }
+        
     }
 
     public void InitializeBattleScreen()
@@ -68,6 +88,16 @@ public class UIManager : MonoBehaviour
 
         playerPanel.SetActive(true);
         enemyPanel.SetActive(true);
+
+        // attackButton.gameObject.SetActive(false);
+        // spiritButton.gameObject.SetActive(false);
+    }
+
+    public void DeacivateBattleScreen()
+    {
+        playerPanel.SetActive(false);
+        enemyPanel.SetActive(false);
+
         
     }
 

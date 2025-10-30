@@ -14,7 +14,7 @@ public abstract class BattleState
 
     // Test Variables
     protected Scene prevScene;
-    protected Vector3 prevPlayerPos;
+    // protected Vector3 prevPlayerPos; for some reason the player keeps og position without this var ???
     
     protected PlayerManager playerManager;
     protected UIManager uIManager;

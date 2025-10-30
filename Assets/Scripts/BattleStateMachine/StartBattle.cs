@@ -14,8 +14,6 @@ public class StartBattle : BattleState
 
     public StartBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
     {
-
-        
     }
 
     public override void EnterState(BattleStateManager battleState)
@@ -24,9 +22,11 @@ public class StartBattle : BattleState
         // Saves previous scene to go back to after battle
         prevScene = SceneManager.GetActiveScene();
         // Saves player position in previous scene
-        prevPlayerPos = battleState.player.transform.position;
+        //prevPlayerPos = battleState.player.transform.position;
         // Get enemy Reference
         enemyReference = playerManager.Enemyencounter;
+        enemyReference.gameObject.SetActive(false);
+        playerManager.gameObject.SetActive(false);
         battleState.battleToScene = prevScene.name;
         // Load battle scene
         SceneSwitch.instance.LoadLevel(battleState.sceneToBattle);
@@ -44,7 +44,7 @@ public class StartBattle : BattleState
     public override void ExitState(BattleStateManager battleState)
     {
         Debug.Log("StartBattle state exited.");
-        Debug.Log("Prev player pos: " + prevPlayerPos);
+        //Debug.Log("Prev player pos: " + prevPlayerPos);
 
         // Check for turn advantage
         // Change to state based on turn advantage

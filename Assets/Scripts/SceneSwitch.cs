@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using System;
 
 public class SceneSwitch : MonoBehaviour
 {
     public static SceneSwitch instance;
+    public static Action OnBattleScene;
+    public static Action OnPrevScene;
     [SerializeField] string sceneName;
     //for whatever object this is attached to, it will persist between scenes. 
     //in particular this will allow the object to continue, but if there are duplicated there won't be any errors. 

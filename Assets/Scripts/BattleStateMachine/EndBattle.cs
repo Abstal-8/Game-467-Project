@@ -10,6 +10,7 @@ public class EndBattle : BattleState
     public override void EnterState(BattleStateManager battleState)
     {
         Debug.Log("You have exited battle.");
+        ExitState(battleState);
         
         // Check if player won or lost
         // If won, switch to win state, give player rewards earned from battle and display win screen
@@ -21,8 +22,9 @@ public class EndBattle : BattleState
     {
         Debug.Log("EndBattle state exit");
         SceneSwitch.instance.LoadLevel(battleState.battleToScene);
+        uIManager.DeacivateBattleScreen();
+        playerManager.gameObject.SetActive(true);
         // (Testing only)
-        playerManager.gameObject.transform.position = new(prevPlayerPos.x - 5f, prevPlayerPos.y, prevPlayerPos.z);
         /*
             Depends on option.
             Win - after recieving rewards through menu/dialouge boxes (and/or win screen)
@@ -40,9 +42,6 @@ public class EndBattle : BattleState
 
     public override void UpdateState(BattleStateManager battleState)
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ExitState(battleState);
-        }
+
     }
 }
