@@ -13,6 +13,7 @@ public class SpiritForm : MonoBehaviour
 
     [Header("Flow")]
     public bool lockAtStart = true;                 // start immobilized on table
+    public bool completeUnlock = false;             // free movement for testing
 
     private SpriteRenderer bodySR;
     private PolygonCollider2D poly;
@@ -34,6 +35,7 @@ public class SpiritForm : MonoBehaviour
         if (startPointOnTable) transform.position = startPointOnTable.position;
 
         if (lockAtStart) LockBody();
+        if (completeUnlock) UnlockBody();
     }
 
     void Update()

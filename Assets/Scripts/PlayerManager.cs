@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour, IDamagable
 {
-    public int maxHealth { get; private set; }
-    public int currentHealth { get; private set; }
+    public int maxHealth;
+    public int currentHealth;
 
     public Enemy Enemyencounter { get; private set; }
 
 
     void Start()
     {
-        maxHealth = 100;
         currentHealth = maxHealth;
     }
 

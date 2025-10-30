@@ -12,15 +12,6 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //temp* overrides "rigidbody2d" inspector settings for player or wherever this script is placed
-        animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-        rb.simulated = true;
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.gravityScale = 0;
-        Debug.Log("RB setup: " + rb.bodyType + ", simulated=" + rb.simulated);
-        //temp*
-
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }

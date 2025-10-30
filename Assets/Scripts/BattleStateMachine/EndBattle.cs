@@ -24,6 +24,8 @@ public class EndBattle : BattleState
         SceneSwitch.instance.LoadLevel(battleState.battleToScene);
         uIManager.DeacivateBattleScreen();
         playerManager.gameObject.SetActive(true);
+        enemyReference.gameObject.SetActive(false);
+        enemyReference.currentHealth = enemyReference.maxHealth;
         // (Testing only)
         /*
             Depends on option.

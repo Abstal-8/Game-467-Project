@@ -123,6 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d088eb2569b7e7e46a2512903333e2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
+  maxHealth: 100
+  currentHealth: 0
 --- !u!114 &6806241099652699443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +141,9 @@ MonoBehaviour:
   bodyColorInSpirit: {r: 0, g: 0, b: 1, a: 1}
   playerMovementScript: {fileID: 0}
   cameraFollowScript: {fileID: 0}
+  startPointOnTable: {fileID: 0}
+  lockAtStart: 1
+  completeUnlock: 0
 --- !u!114 &5628234329865949303
 MonoBehaviour:
   m_ObjectHideFlags: 0
