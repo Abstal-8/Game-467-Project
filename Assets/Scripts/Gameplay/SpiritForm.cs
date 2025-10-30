@@ -44,9 +44,12 @@ public class SpiritForm : MonoBehaviour
         // Only allow toggling spirit when locked or when already in spirit form
         if (Input.GetKeyDown(KeyCode.T))
         {
-            if (!inSpiritForm && movementLocked) EnterSpiritForm();
-            else if (inSpiritForm) ExitSpiritForm(); // optional: allow return any time
+            if (!inSpiritForm)
+                EnterSpiritForm();
+            else
+                ExitSpiritForm();
         }
+
     }
 
     void LockBody()
@@ -75,24 +78,28 @@ public class SpiritForm : MonoBehaviour
     {
         if (inSpiritForm) return;
 
-        // Body stays frozen in place
+        // freeze player body in place
+        LockBody();
         bodySR.color = bodyColorInSpirit;
 
-        Vector3 spawnPos = (poly ? poly.bounds.center : transform.position) + new Vector3(0.6f, 0f, 0f);
+        // spawn spirit slightly offset
+        Vector3 spawnPos = transform.position + new Vector3(0.6f, 0f, 0f);
         spiritInstance = Instantiate(spiritPrefab, spawnPos, Quaternion.identity);
-        inSpiritForm = true;
+
         inSpiritForm = true;
         OnSpiritStateChanged?.Invoke(true);
     }
+
 
     void ExitSpiritForm()
     {
         if (!inSpiritForm) return;
 
+        // remove spirit, restore player control
+        if (spiritInstance) Destroy(spiritInstance);
         bodySR.color = Color.white;
 
-        if (spiritInstance) Destroy(spiritInstance);
-        inSpiritForm = false;
+        UnlockBody();
         inSpiritForm = false;
         OnSpiritStateChanged?.Invoke(false);
     }

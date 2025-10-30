@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
+
     [SerializeField] float moveSpeed;
     private Rigidbody2D rb;
     private Animator animator;
@@ -23,8 +23,6 @@ public class PlayerMovement : MonoBehaviour
         input.y = Input.GetAxis("Vertical");
         input.Normalize();
 
-        rb.linearVelocity = input * moveSpeed;
-
         if (input.y > 0 || input.y < 0 || input.x > 0 || input.x < 0) // RIGHT NOW WE ONLY HAVE UP AND DOWN ANIMATIONS
         {
             animator.SetBool("isWalking", true);
@@ -37,8 +35,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("prevInputX", input.x);
             animator.SetFloat("prevInputY", input.y);
         }
-        
-        
+
+
     }
 
     void FixedUpdate()
