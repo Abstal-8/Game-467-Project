@@ -241,15 +241,26 @@ MonoBehaviour:
   fadePanel: {fileID: 234380347}
   dialogueText: {fileID: 904123415}
   lines:
+  - 'Player : Urg my head'
   - '??? : Hey, you''re finally awake.'
   - 'Player : Where am I?'
-  - '??? : You''ve been out for hours... didn''t think would make it, welcome back.'
-  - 'Player: What Happened?, Where am I?'
-  - '??? : I would be more worried about what you are, and why they want you'
-  - 'Player : I can''t move'
-  - '??? : Dang they must''ve banged you up good, you are shackled, I could help
-    you get out... for a small favor'
-  - 'Player : ... Alright'
+  - '??? : You''ve been out for hours... didn''t think would make it, what a shame.'
+  - 'Player: Huh?, What Happened?, Where am I?, Who are you??'
+  - '??? : You don''t remember what happend?'
+  - 'Player : Why can''t I move, Why can''t I see!?'
+  - '??? : Calm down were just spirit shackled, not even by a strong one'
+  - 'Player : What the hell are you talking about?'
+  - '??? : You really don''t remember?'
+  - 'Player : ...No'
+  - '??? : Now <i>that</i> is intriguing'
+  - '??? : I suppose I can help, for a price'
+  - 'Player : What do you want?'
+  - '??? : We''ll discuss that once you''re free, feel the area around you with your
+    mind, feel for a tug'
+  - 'Player : ...What?'
+  - '??? : Just do it'
+  - 'Player : I feel something'
+  - '??? : Good pull on it'
   - 
   typingSpeed: 0.03
   fadeDuration: 1

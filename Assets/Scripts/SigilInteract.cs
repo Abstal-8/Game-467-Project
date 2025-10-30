@@ -40,6 +40,7 @@ public class SigilInteractUI : MonoBehaviour
         {
             Debug.Log("[Sigil] E pressed in range → UnlockMovement()");
             if (player) player.UnlockMovement();
+            GetComponent<DialogueTrigger>()?.TriggerDialogue();
             if (promptUI) promptUI.SetActive(false);
             // Optional: Destroy(gameObject);
         }

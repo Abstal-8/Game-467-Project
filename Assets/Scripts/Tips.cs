@@ -40,7 +40,7 @@ public class TipOnWake : MonoBehaviour
     IEnumerator ShowTipAfterDelay()
     {
         yield return new WaitForSeconds(delayBeforeShow);
-        if (tipText) tipText.text = "Press T to enter spirit form";
+        if (tipText) tipText.text = "Press T to enter spirit Mode";
         yield return StartCoroutine(FadeTo(1f, fadeIn));
         shown = true;
     }
