@@ -15,12 +15,12 @@ public class IntroDialogue : MonoBehaviour
     public string[] lines = {
         "??? : Hey, you're finally awake.",
         "Player : Where am I?",
-        "??? : You've been out for hours... didn't think would make it, welcome back.",
+        "??? : You've been out for hours... didn't think you would make it, welcome back.",
         "Player: What Happened?, Where am I?",
-        "??? : I would be more worried about what you are, and why they want you",
-        "Player : I can't move",
-        "??? : Dang they must've banged you up good, you are shackled, I could help you get out... for a small favor",
-        "Player : ... Alright",
+        "??? : I would be more worried about what you are, and why they want you.",
+        "Player : I can't move!",
+        "??? : Dang, they must've banged you up good, you are shackled, I could help you get out... for a small favor.",
+        "Player : ... Alright.",
         ""
     };
 

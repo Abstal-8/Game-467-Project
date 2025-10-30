@@ -42,11 +42,11 @@ public class EnemyTurnState : BattleState
 
     void EnemyAttack()
     {
-        float dmg = Random.Range(1, 10);
-
-        playerManager.TakeDamage((int)dmg);
-        uIManager.UpdateHealth((int)dmg, playerManager);
-        Debug.Log("Enemy did: " + dmg + " damage!");
+        int dmg = Random.Range(1, 10);
+        
+        playerManager.TakeDamage(dmg);
+        uIManager.UpdateHealth(dmg, playerManager);
+        uIManager.damageText.text = "You Took:\n" + dmg + "\nDMG";
         _isEnemyTurnOver = true;
     }
 }

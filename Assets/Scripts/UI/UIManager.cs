@@ -22,8 +22,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject enemyPanel;
     [SerializeField] TextMeshProUGUI playerHealthText;
     [SerializeField] TextMeshProUGUI enemyHealthText;
+    [SerializeField] public TextMeshProUGUI damageText;
     [SerializeField] Image enemyHealthBar;
     [SerializeField] Image playerHealthBar;
+    [SerializeField] GameObject playerBattleSprite;
+    [SerializeField] GameObject enemyBattleSprite;
 
     public Button attackButton;
     public Button spiritButton;
@@ -89,6 +92,9 @@ public class UIManager : MonoBehaviour
         playerPanel.SetActive(true);
         enemyPanel.SetActive(true);
 
+        playerBattleSprite.SetActive(true);
+        enemyBattleSprite.SetActive(true);
+
         // attackButton.gameObject.SetActive(false);
         // spiritButton.gameObject.SetActive(false);
     }
@@ -98,7 +104,8 @@ public class UIManager : MonoBehaviour
         playerPanel.SetActive(false);
         enemyPanel.SetActive(false);
 
-        
+        playerBattleSprite.SetActive(false);
+        enemyBattleSprite.SetActive(false);
     }
 
 
