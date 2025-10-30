@@ -19,6 +19,7 @@ public class StartBattle : BattleState
     public override void EnterState(BattleStateManager battleState)
     {
         Debug.Log("You have started a battle.");
+        MusicManager.OnBattleMusic?.Invoke();
         // Saves previous scene to go back to after battle
         prevScene = SceneManager.GetActiveScene();
         // Saves player position in previous scene

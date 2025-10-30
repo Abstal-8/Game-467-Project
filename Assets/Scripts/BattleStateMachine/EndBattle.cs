@@ -10,6 +10,7 @@ public class EndBattle : BattleState
     public override void EnterState(BattleStateManager battleState)
     {
         Debug.Log("You have exited battle.");
+        battleEnd?.Invoke();
         ExitState(battleState);
         
         // Check if player won or lost
