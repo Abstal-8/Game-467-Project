@@ -9,10 +9,20 @@ public class CamFollow : MonoBehaviour
     Vector2 camFollow;
     Vector2 playerTarget;
 
+    private static CamFollow instance;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        // Make sure only one camera persists
+        if (instance != null && instance != this) {
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+        DontDestroyOnLoad(gameObject);
+
         _cam = GetComponent<Camera>();
     }
 

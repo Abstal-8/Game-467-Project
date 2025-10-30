@@ -12,6 +12,15 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //temp* overrides "rigidbody2d" inspector settings for player or wherever this script is placed
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        rb.simulated = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.gravityScale = 0;
+        Debug.Log("RB setup: " + rb.bodyType + ", simulated=" + rb.simulated);
+        //temp*
+
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -22,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
         input.Normalize();
+
+        rb.linearVelocity = input * moveSpeed;
 
         if (input.y > 0 || input.y < 0 || input.x > 0 || input.x < 0) // RIGHT NOW WE ONLY HAVE UP AND DOWN ANIMATIONS
         {

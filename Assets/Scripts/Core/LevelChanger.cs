@@ -1,4 +1,5 @@
 // using System.Diagnostics;
+// using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,22 +14,50 @@ public class LevelChanger : MonoBehaviour {
     [SerializeField]
     private Transform _spawnPoint;
 
-    [SerializeField]
+    // [SerializeField]
     private PlayerIdentities player;
 
 
-//will start the plyaer on spawn point always. Please note findobjectoftype isn't the most
-//efficient way, but it is the simplest for what we are trying to do.
     private void Start()
     {
-        // Debug.Log($"_connection:  {_connection}");
-        // Debug.Log($"ActiveConnection:  {_connection}");
-        // Debug.Log($"player:  {_connection}");
-        // Debug.Log($"_spawnPoint:  {_connection}");
 
         if (_connection == LevelConnection.ActiveConnection)
         {
             player.transform.position = _spawnPoint.position;
+        }
+    }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Find the persistent player
+        if (player == null)
+            player = PlayerIdentities.Instance;
+
+        if (player == null)
+        {
+            Debug.LogError("Persistent player not found!");
+            return;
+        }
+
+        // Find the LevelChanger that matches the ActiveConnection
+        LevelChanger[] allChangers = FindObjectsOfType<LevelChanger>();
+        foreach (var changer in allChangers)
+        {
+            if (changer._connection == LevelConnection.ActiveConnection && changer._spawnPoint != null)
+            {
+                player.transform.position = changer._spawnPoint.position;
+                Debug.Log($"Player moved to spawn point: {changer._spawnPoint.position} in scene {scene.name}");
+                break; // Only move to the correct LevelChanger's spawn
+            }
         }
     }
 
