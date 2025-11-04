@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: a47f5f279ef876a419148ae8f358385e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9144980828951114868
+    second: RecAssets1_0
+  - first:
+      213: 4454687676775822037
+    second: RecAssets1_1
+  - first:
+      213: 8577523945523529578
+    second: RecAssets1_2
+  - first:
+      213: 8507435489414279086
+    second: RecAssets1_3
+  - first:
+      213: -3324367371580195799
+    second: RecAssets1_4
+  - first:
+      213: 960870878373359381
+    second: RecAssets1_5
+  - first:
+      213: 9065929577690368242
+    second: RecAssets1_6
+  - first:
+      213: 9062061443054922180
+    second: RecAssets1_7
+  - first:
+      213: 39955582400284677
+    second: RecAssets1_8
+  - first:
+      213: 8909339249607320723
+    second: RecAssets1_9
+  - first:
+      213: -7003219638370351293
+    second: RecAssets1_10
+  - first:
+      213: -4005304995540771975
+    second: RecAssets1_11
+  - first:
+      213: 5726721256869623037
+    second: RecAssets1_12
+  - first:
+      213: 608311449536680662
+    second: RecAssets1_13
+  - first:
+      213: 3773106973873592722
+    second: RecAssets1_14
+  - first:
+      213: 1953638649841258056
+    second: RecAssets1_15
+  - first:
+      213: -3060462512251676976
+    second: RecAssets1_16
+  - first:
+      213: -3589023643882224753
+    second: RecAssets1_17
+  - first:
+      213: 3601340985202627467
+    second: RecAssets1_18
+  - first:
+      213: 3685949962385673423
+    second: RecAssets1_19
+  - first:
+      213: -8383574332195671590
+    second: RecAssets1_20
+  - first:
+      213: 5070244512949322507
+    second: RecAssets1_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RecAssets1_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 240
+        width: 93
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b8c946360861180800000000000000
+      internalID: -9144980828951114868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 203
+        width: 114
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2788f07da32dd30800000000000000
+      internalID: 4454687676775822037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_2
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 161
+        width: 66
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a674651359c790770800000000000000
+      internalID: 8577523945523529578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 253
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eafe618d08b701670800000000000000
+      internalID: 8507435489414279086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_4
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 239
+        width: 66
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c30122d797dd1d0800000000000000
+      internalID: -3324367371580195799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_5
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 219
+        width: 34
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f267419f2b55d00800000000000000
+      internalID: 960870878373359381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_6
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 217
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f801f4eae6a0dd70800000000000000
+      internalID: 9065929577690368242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_7
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 217
+        width: 54
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c96d0e9ed8e2cd70800000000000000
+      internalID: 9062061443054922180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 222
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50843c7f363fd8000800000000000000
+      internalID: 39955582400284677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_9
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 222
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3942a4408d454ab70800000000000000
+      internalID: 8909339249607320723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_10
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 231
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34745e2f7d09fce90800000000000000
+      internalID: -7003219638370351293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_11
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 231
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97bd1bbd35c4a68c0800000000000000
+      internalID: -4005304995540771975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 179
+        width: 93
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4746344a6697f40800000000000000
+      internalID: 5726721256869623037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_13
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 108
+        width: 114
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2df665a08217800800000000000000
+      internalID: 608311449536680662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_14
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 88
+        width: 28
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 299d84d4dc4cc5430800000000000000
+      internalID: 3773106973873592722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_15
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 114
+        width: 28
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e034f4008bc1b10800000000000000
+      internalID: 1953638649841258056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 80
+        width: 83
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6d6d46f8d0785d0800000000000000
+      internalID: -3060462512251676976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_17
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 84
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f830ce7e20a313ec0800000000000000
+      internalID: -3589023643882224753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_18
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 84
+        width: 22
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b83de0a9b888af130800000000000000
+      internalID: 3601340985202627467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_19
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 88
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fccccd736ff172330800000000000000
+      internalID: 3685949962385673423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_20
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 88
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1f46d109f87ab80800000000000000
+      internalID: -8383574332195671590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecAssets1_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 16
+        width: 76
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03c7be65802d5640800000000000000
+      internalID: 5070244512949322507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RecAssets1_0: -9144980828951114868
+      RecAssets1_1: 4454687676775822037
+      RecAssets1_10: -7003219638370351293
+      RecAssets1_11: -4005304995540771975
+      RecAssets1_12: 5726721256869623037
+      RecAssets1_13: 608311449536680662
+      RecAssets1_14: 3773106973873592722
+      RecAssets1_15: 1953638649841258056
+      RecAssets1_16: -3060462512251676976
+      RecAssets1_17: -3589023643882224753
+      RecAssets1_18: 3601340985202627467
+      RecAssets1_19: 3685949962385673423
+      RecAssets1_2: 8577523945523529578
+      RecAssets1_20: -8383574332195671590
+      RecAssets1_21: 5070244512949322507
+      RecAssets1_3: 8507435489414279086
+      RecAssets1_4: -3324367371580195799
+      RecAssets1_5: 960870878373359381
+      RecAssets1_6: 9065929577690368242
+      RecAssets1_7: 9062061443054922180
+      RecAssets1_8: 39955582400284677
+      RecAssets1_9: 8909339249607320723
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

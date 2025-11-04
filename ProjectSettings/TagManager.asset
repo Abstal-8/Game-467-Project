@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Enemy
+  - Spirit
   layers:
   - Default
   - TransparentFX
@@ -39,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: NotVisible
+    uniqueID: 1175903353
+    locked: 0
   - name: Background1
     uniqueID: 2424472617
     locked: 0
