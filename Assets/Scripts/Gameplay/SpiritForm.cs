@@ -17,18 +17,25 @@ public class SpiritForm : MonoBehaviour
     [Header("Flow")]
     public bool lockAtStart = true;                 // start immobilized on table
 
+    [Header("Animation")]
+    public Animator animator;
+
     private SpriteRenderer bodySR;
     private PolygonCollider2D poly;
     private Rigidbody2D rb;
     private bool inSpiritForm = false;
     private bool movementLocked = false;
     private GameObject spiritInstance;
+    private bool animatorWasEnabled = true;
 
     void Awake()
     {
         bodySR = GetComponent<SpriteRenderer>();
         poly = GetComponent<PolygonCollider2D>();
         rb = GetComponent<Rigidbody2D>();
+        if (animator)
+            animatorWasEnabled = animator.enabled;
+
     }
 
     void Start()
@@ -88,6 +95,11 @@ public class SpiritForm : MonoBehaviour
 
         inSpiritForm = true;
         OnSpiritStateChanged?.Invoke(true);
+        if (animator)
+        {
+            animatorWasEnabled = animator.enabled;
+            animator.enabled = false;
+        }
     }
 
 
@@ -98,8 +110,8 @@ public class SpiritForm : MonoBehaviour
         // remove spirit, restore player control
         if (spiritInstance) Destroy(spiritInstance);
         bodySR.color = Color.white;
-
-        UnlockBody();
+        if (animator)
+            animator.enabled = animatorWasEnabled;
         inSpiritForm = false;
         OnSpiritStateChanged?.Invoke(false);
     }
