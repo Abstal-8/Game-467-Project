@@ -2,41 +2,57 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     [SerializeField] float moveSpeed;
+    [SerializeField] Transform startPoint;
+
     private Rigidbody2D rb;
     private Animator animator;
     Vector2 input;
+    Vector2 lastDir = new Vector2(0, -1);  // default: facing down
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (startPoint != null)
+        {
+            transform.position = startPoint.position;
+        }
+
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+
+        // Initialize facing direction in animator
+        animator.SetFloat("prevInputX", lastDir.x);
+        animator.SetFloat("prevInputY", lastDir.y);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        input.x = Input.GetAxis("Horizontal");
-        input.y = Input.GetAxis("Vertical");
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
         input.Normalize();
 
-        if (input.y > 0 || input.y < 0 || input.x > 0 || input.x < 0) // RIGHT NOW WE ONLY HAVE UP AND DOWN ANIMATIONS
+        if (input != Vector2.zero)
         {
+            // walking
             animator.SetBool("isWalking", true);
+
             animator.SetFloat("InputX", input.x);
             animator.SetFloat("InputY", input.y);
+
+            // update last direction ONLY when moving
+            lastDir = input;
+            animator.SetFloat("prevInputX", lastDir.x);
+            animator.SetFloat("prevInputY", lastDir.y);
         }
         else
         {
+            // idle
             animator.SetBool("isWalking", false);
-            animator.SetFloat("prevInputX", input.x);
-            animator.SetFloat("prevInputY", input.y);
+
+            // don't touch lastDir here – that’s the whole point
+            animator.SetFloat("prevInputX", lastDir.x);
+            animator.SetFloat("prevInputY", lastDir.y);
         }
-
-
     }
 
     void FixedUpdate()
