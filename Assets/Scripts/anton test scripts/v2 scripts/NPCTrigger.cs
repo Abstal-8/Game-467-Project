@@ -1,26 +1,25 @@
 using UnityEngine;
 
-public class DialogueTrigger_V2 : MonoBehaviour
+public class NPCTrigger : MonoBehaviour
 {
     [Tooltip("The tag of the object that should start the dialogue (e.g., 'Player').")]
     public string playerTag = "Player";
     
-    // This correctly links to the logic script you are using (DialogueManager_V2)
-    private DialogueManager_V2 manager; 
+    // Automatically references the new manager script
+    private PopupManager manager; 
 
     void Start()
     {
-        // This searches the scene for the correct class instance
-        manager = FindObjectOfType<DialogueManager_V2>();
+        // Finds the manager automatically in the scene
+        manager = FindObjectOfType<PopupManager>();
 
         if (manager == null)
         {
-            // This error tells us if the link is broken
-            Debug.LogError("FATAL ERROR: Could not find DialogueManager_V2 script in the scene! Ensure it is attached to an active GameObject.");
+            Debug.LogError("FATAL ERROR: Could not find PopupManager script in the scene! Ensure it is attached to an active GameObject.");
         }
     }
 
-    // This uses 2D physics interaction
+    // Uses 2D physics interaction (required for your 2D project)
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Debug confirms the trigger fired
@@ -34,7 +33,7 @@ public class DialogueTrigger_V2 : MonoBehaviour
                 // 2. Start the dialogue sequence!
                 manager.StartDialogue();
                 
-                // 3. Deactivate the trigger so it only runs once
+                // 3. Deactivate the trigger so it only runs once (optional)
                 gameObject.SetActive(false); 
             }
         }
