@@ -5,6 +5,8 @@ public class PlayerManager : MonoBehaviour, IDamagable
     public int maxHealth;
     public int currentHealth;
 
+    public TextAsset inkJSON; // TESTING PURPOSES ONLY
+
     public Enemy Enemyencounter { get; private set; }
 
 
@@ -31,7 +33,8 @@ public class PlayerManager : MonoBehaviour, IDamagable
         if (other.TryGetComponent<Enemy>(out Enemy enemy))
         {
             Enemyencounter = enemy;
-            BattleState.battleStartEvent?.Invoke();
+            //BattleState.battleStartEvent?.Invoke();
+            DialogueScript.DialougeInstance.InitializeStory(inkJSON);
         }
 
     }

@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialoguePanel;      // Drag your DialogueBox Image object here!
     public AudioSource audioSource;       // Drag an AudioSource component here!
 
+
     [Header("Dialogue Settings")]
     [Tooltip("The time delay (in seconds) between each character appearing.")]
     public float typingSpeed = 0.05f; 
@@ -22,8 +23,12 @@ public class DialogueManager : MonoBehaviour
     private string[] dialogueLines; // Array to hold all the lines of dialogue
     private int currentLineIndex = 0;
 
+   
+
     void Start()
     {
+       
+
         // 1. Set up the dialogue lines for the start of the game
         dialogueLines = new string[]
         {
