@@ -962,7 +962,6 @@ GameObject:
   - component: {fileID: 579666481}
   - component: {fileID: 579666480}
   - component: {fileID: 579666479}
-  - component: {fileID: 579666478}
   m_Layer: 5
   m_Name: DialougeCanvas
   m_TagString: Untagged
@@ -970,20 +969,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &579666478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579666477}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14d330beeb5cb1642852f611330adbf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueScript
-  tutorJSON: {fileID: 4900000, guid: 00d5881832773d54185fab137c454c3c, type: 3}
-  dialogueText: {fileID: 1394230751}
 --- !u!114 &579666479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3432,6 +3417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6892147745904961905, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 00d5881832773d54185fab137c454c3c, type: 3}
     - target: {fileID: 7455949850054396571, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.97164905
@@ -3475,7 +3464,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 2002291340}
   m_SourcePrefab: {fileID: 100100000, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
 --- !u!4 &2002291330 stripped
 Transform:
@@ -3493,6 +3485,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d088eb2569b7e7e46a2512903333e2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
+--- !u!114 &2002291340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930865111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02b9e2f6e817b7439e1625144c26bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 5
+  startPoint: {fileID: 0}
 --- !u!1 &2008733796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,6 +3635,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008733796}
   m_CullTransparentMesh: 1
+--- !u!1 &2031512586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2031512588}
+  - component: {fileID: 2031512587}
+  m_Layer: 0
+  m_Name: Dialouge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2031512587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031512586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d330beeb5cb1642852f611330adbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueScript
+  dialogueText: {fileID: 1394230751}
+  dialougePanel: {fileID: 240226202}
+--- !u!4 &2031512588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031512586}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2076460217
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,3 +4391,4 @@ SceneRoots:
   - {fileID: 1986162162}
   - {fileID: 8818358066865554842}
   - {fileID: 579666482}
+  - {fileID: 2031512588}
