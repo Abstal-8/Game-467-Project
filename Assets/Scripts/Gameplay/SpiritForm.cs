@@ -11,8 +11,11 @@ public class SpiritForm : MonoBehaviour
 
     [Header("References")]
     public MonoBehaviour playerMovementScript;      // your PlayerMovement script
+
     [Header("Flow")]
     public bool lockAtStart = true;                 // start immobilized on table
+    public KeyCode spiritToggleKey = KeyCode.T;     // toggle spirit form
+    public KeyCode swapKey = KeyCode.F;             // swap body <-> spirit while in spirit form
 
     [Header("Animation")]
     public Animator animator;
@@ -51,14 +54,23 @@ public class SpiritForm : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        // Toggle spirit form (T)
+        if (Input.GetKeyDown(spiritToggleKey))
         {
             if (!inSpiritForm)
                 EnterSpiritForm();
             else
                 ExitSpiritForm();
         }
+
+        // Swap places (F) - only if in spirit form AND after the first puzzle
+        if (inSpiritForm && hasUnlockedOnce && Input.GetKeyDown(swapKey))
+        {
+            SwapBodyAndSpirit();
+        }
     }
+
+    // --- Core helpers ---
 
     void LockBody()
     {
@@ -91,13 +103,13 @@ public class SpiritForm : MonoBehaviour
         if (inSpiritForm) return;
         if (!spiritPrefab) return;
 
-        // Whenever we leave our body, we freeze it in place
+        // Freeze body in place
         LockBody();
 
         if (bodySR)
             bodySR.color = bodyColorInSpirit;
 
-        // spawn spirit slightly offset from body
+        // Spawn spirit slightly offset from body
         Vector3 spawnPos = transform.position + new Vector3(0.6f, 0f, 0f);
         spiritInstance = Instantiate(spiritPrefab, spawnPos, Quaternion.identity);
 
@@ -106,7 +118,7 @@ public class SpiritForm : MonoBehaviour
         if (animator)
         {
             animatorWasEnabled = animator.enabled;
-            animator.enabled = false;
+            animator.enabled = false; // pause body animator
         }
 
         OnSpiritStateChanged?.Invoke(true);
@@ -116,7 +128,7 @@ public class SpiritForm : MonoBehaviour
     {
         if (!inSpiritForm) return;
 
-        // remove spirit visual
+        // Remove spirit visual
         if (spiritInstance)
             Destroy(spiritInstance);
 
@@ -128,9 +140,8 @@ public class SpiritForm : MonoBehaviour
 
         inSpiritForm = false;
 
-        // IMPORTANT:
-        //  - Before the first unlock: body stays locked on table (hasUnlockedOnce == false)
-        //  - After unlock: exiting spirit returns full control to body
+        // Before first unlock: body stays chained
+        // After unlock: exiting spirit returns full control to body
         if (hasUnlockedOnce)
         {
             UnlockBody();
@@ -139,22 +150,45 @@ public class SpiritForm : MonoBehaviour
         OnSpiritStateChanged?.Invoke(false);
     }
 
-    
+    /// <summary>
+    /// Swap the positions of the body and the spirit.
+    /// Only makes sense while in spirit form.
+    /// </summary>
+    void SwapBodyAndSpirit()
+    {
+        if (!inSpiritForm) return;
+        if (!spiritInstance) return;
+
+        // Save current positions
+        Vector3 bodyPos = transform.position;
+        Vector3 spiritPos = spiritInstance.transform.position;
+
+        // Swap them
+        transform.position = spiritPos;
+        spiritInstance.transform.position = bodyPos;
+
+        // Note: rb.simulated is false while in spirit form, but you can
+        // still teleport the body by setting transform.position.
+        // When you later ExitSpiritForm and unlock, the body will be
+        // controllable at the new spot.
+    }
+
+    // --- Called by puzzle / cutscene to free the body for the first time ---
+
     public void UnlockMovement()
     {
-        
         hasUnlockedOnce = true;
         lockAtStart = false;
 
-        
         if (inSpiritForm)
         {
-            
+            // If you are currently out of your body when it's "freed",
+            // exiting spirit form will now give you full control.
             ExitSpiritForm();
         }
         else
         {
-          
+            // If you're currently in your body, just unlock it now.
             UnlockBody();
         }
     }

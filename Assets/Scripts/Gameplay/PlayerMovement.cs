@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             // idle
             animator.SetBool("isWalking", false);
 
-            // don't touch lastDir here – that’s the whole point
+            // don't touch lastDir here ï¿½ thatï¿½s the whole point
             animator.SetFloat("prevInputX", lastDir.x);
             animator.SetFloat("prevInputY", lastDir.y);
         }
@@ -58,5 +58,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = input * moveSpeed;
+        
     }
 }

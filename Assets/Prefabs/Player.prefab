@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7455949850054396571}
   - component: {fileID: 5143649936219118015}
-  - component: {fileID: 4630668805761069183}
   - component: {fileID: 6892147745904961905}
-  - component: {fileID: 6806241099652699443}
   - component: {fileID: 5628234329865949303}
   - component: {fileID: 950810971235721563}
   - component: {fileID: 3246519391873113772}
@@ -97,19 +95,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4630668805761069183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5324873077698660863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02b9e2f6e817b7439e1625144c26bf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8
 --- !u!114 &6892147745904961905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,24 +109,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
   maxHealth: 100
   currentHealth: 100
---- !u!114 &6806241099652699443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5324873077698660863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8fc922f571f45e4e9f39db468788249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpiritForm
-  spiritPrefab: {fileID: 9149319249045855954, guid: c76089e8549351f4590ddffb9ed1b74d, type: 3}
-  bodyColorInSpirit: {r: 0, g: 0, b: 1, a: 1}
-  playerMovementScript: {fileID: 0}
-  cameraFollowScript: {fileID: 0}
-  startPointOnTable: {fileID: 0}
-  lockAtStart: 1
 --- !u!114 &5628234329865949303
 MonoBehaviour:
   m_ObjectHideFlags: 0

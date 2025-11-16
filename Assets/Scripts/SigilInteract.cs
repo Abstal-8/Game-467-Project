@@ -3,15 +3,25 @@
 public class SigilInteractUI : MonoBehaviour
 {
     [Header("Assign in Inspector")]
-    public GameObject promptUI;          // the TMP text GameObject (World-space or Screen-space)
-    public SpiritForm player;            // Player object that has SpiritForm
-    public string spiritTag = "Spirit";  // tag on your spirit prefab
+    public GameObject promptUI;               // the TMP text GameObject (World-space or Screen-space)
+    public SpiritFormController controller;   // <-- talk to the new controller
+    public string spiritTag = "Spirit";       // tag on your spirit prefab
 
     bool inRange;
 
     void Start()
     {
         if (promptUI) promptUI.SetActive(false);
+
+        // Safety: auto-find controller if not set in Inspector
+        if (controller == null)
+        {
+            controller = FindObjectOfType<SpiritFormController>();
+            if (controller == null)
+            {
+                Debug.LogError("[Sigil] No SpiritFormController found in scene!");
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -39,7 +49,13 @@ public class SigilInteractUI : MonoBehaviour
         if (inRange && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("[Sigil] E pressed in range → UnlockMovement()");
-            if (player) player.UnlockMovement();
+
+            if (controller != null)
+            {
+                controller.UnlockMovement();   // ✅ call the new controller
+                controller.UnlockSwap();       // optional: unlock swap at same time
+            }
+
             if (promptUI) promptUI.SetActive(false);
             // Optional: Destroy(gameObject);
         }
