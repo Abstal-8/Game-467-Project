@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: 7fad52d81ab006e4d8793ede0dbf97e4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2511441986539599911
+    second: RecEnvironment_0
+  - first:
+      213: -3540937115889717918
+    second: RecEnvironment_1
+  - first:
+      213: 6214426442432753696
+    second: RecEnvironment_2
+  - first:
+      213: -6475162917495441842
+    second: RecEnvironment_3
+  - first:
+      213: 1755047959426206647
+    second: RecEnvironment_4
+  - first:
+      213: 4853035091530602889
+    second: RecEnvironment_5
+  - first:
+      213: -8910746525527228178
+    second: RecEnvironment_6
+  - first:
+      213: 1903775134915524336
+    second: RecEnvironment_7
+  - first:
+      213: -4392873553765221982
+    second: RecEnvironment_8
+  - first:
+      213: -1675420073545130666
+    second: RecEnvironment_9
+  - first:
+      213: 7359294686413175921
+    second: RecEnvironment_10
+  - first:
+      213: -7041726852793311283
+    second: RecEnvironment_11
+  - first:
+      213: -392498355179857435
+    second: RecEnvironment_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RecEnvironment_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728b1b93e2f6ad220800000000000000
+      internalID: 2511441986539599911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 319
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26da56b24701cdec0800000000000000
+      internalID: -3540937115889717918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_2
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 319
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 020bff78ce31e3650800000000000000
+      internalID: 6214426442432753696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_3
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 319
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46f6e722a99326a0800000000000000
+      internalID: -6475162917495441842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_4
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 191
+        width: 97
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb8f5902de2b5810800000000000000
+      internalID: 1755047959426206647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 129
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989df2904b1795340800000000000000
+      internalID: 4853035091530602889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_6
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 157
+        width: 34
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee047660f3ba65480800000000000000
+      internalID: -8910746525527228178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_7
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 157
+        width: 66
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f67cd806619b6a10800000000000000
+      internalID: 1903775134915524336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_8
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 223
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a9bd9cf6c06903c0800000000000000
+      internalID: -4392873553765221982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 97
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d98c2e156bfb8e0800000000000000
+      internalID: -1675420073545130666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_10
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17cb31da687712660800000000000000
+      internalID: 7359294686413175921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_11
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfdced6cb2c64e90800000000000000
+      internalID: -7041726852793311283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecEnvironment_12
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 31
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e9549453d09d8af0800000000000000
+      internalID: -392498355179857435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RecEnvironment_0: 2511441986539599911
+      RecEnvironment_1: -3540937115889717918
+      RecEnvironment_10: 7359294686413175921
+      RecEnvironment_11: -7041726852793311283
+      RecEnvironment_12: -392498355179857435
+      RecEnvironment_2: 6214426442432753696
+      RecEnvironment_3: -6475162917495441842
+      RecEnvironment_4: 1755047959426206647
+      RecEnvironment_5: 4853035091530602889
+      RecEnvironment_6: -8910746525527228178
+      RecEnvironment_7: 1903775134915524336
+      RecEnvironment_8: -4392873553765221982
+      RecEnvironment_9: -1675420073545130666
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

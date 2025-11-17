@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 462006efbd19f85408f398c333db3e56
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8146670635238209051
+    second: GameRoom_0
+  - first:
+      213: -8630464555526894247
+    second: GameRoom_1
+  - first:
+      213: -3160318222111314778
+    second: GameRoom_2
+  - first:
+      213: 6832243929420177744
+    second: GameRoom_3
+  - first:
+      213: -9102149970223189222
+    second: GameRoom_4
+  - first:
+      213: 1332665688864621185
+    second: GameRoom_5
+  - first:
+      213: -6654769715681529445
+    second: GameRoom_6
+  - first:
+      213: -1809093834370476362
+    second: GameRoom_7
+  - first:
+      213: 960978006431335831
+    second: GameRoom_8
+  - first:
+      213: -1103890830107013472
+    second: GameRoom_9
+  - first:
+      213: 2881993740599294613
+    second: GameRoom_10
+  - first:
+      213: -1696660804643988823
+    second: GameRoom_11
+  - first:
+      213: -2789943607516543256
+    second: GameRoom_12
+  - first:
+      213: 5803088457231864213
+    second: GameRoom_13
+  - first:
+      213: 8331222832371499854
+    second: GameRoom_14
+  - first:
+      213: 6740804424550791015
+    second: GameRoom_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GameRoom_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 87
+        width: 162
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16ba73a7c9ce0170800000000000000
+      internalID: 8146670635238209051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_1
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 80
+        width: 54
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d4831863e6a3880800000000000000
+      internalID: -8630464555526894247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_2
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 80
+        width: 52
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ac6cd1325b4424d0800000000000000
+      internalID: -3160318222111314778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_3
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 80
+        width: 114
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051a8efa7a101de50800000000000000
+      internalID: 6832243929420177744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_4
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 141
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a13b38cc3daaea180800000000000000
+      internalID: -9102149970223189222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_5
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 104
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182802d12649e7210800000000000000
+      internalID: 1332665688864621185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_6
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 66
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9176cab33285a3a0800000000000000
+      internalID: -6654769715681529445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_7
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 6
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b69ffc1ebec4e6e0800000000000000
+      internalID: -1809093834370476362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_8
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 28
+        width: 66
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7958d46c764165d00800000000000000
+      internalID: 960978006431335831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_9
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 44
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae09a083213ea0f0800000000000000
+      internalID: -1103890830107013472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_10
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 23
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59af151a906eef720800000000000000
+      internalID: 2881993740599294613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_11
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aadddaccff3478e0800000000000000
+      internalID: -1696660804643988823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_12
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 33
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6ca9a12112849d0800000000000000
+      internalID: -2789943607516543256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_13
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 29
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591997da436b88050800000000000000
+      internalID: 5803088457231864213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_14
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 30
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43802c76037e9370800000000000000
+      internalID: 8331222832371499854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameRoom_15
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 31
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7673bb9e8e52c8d50800000000000000
+      internalID: 6740804424550791015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GameRoom_0: 8146670635238209051
+      GameRoom_1: -8630464555526894247
+      GameRoom_10: 2881993740599294613
+      GameRoom_11: -1696660804643988823
+      GameRoom_12: -2789943607516543256
+      GameRoom_13: 5803088457231864213
+      GameRoom_14: 8331222832371499854
+      GameRoom_15: 6740804424550791015
+      GameRoom_2: -3160318222111314778
+      GameRoom_3: 6832243929420177744
+      GameRoom_4: -9102149970223189222
+      GameRoom_5: 1332665688864621185
+      GameRoom_6: -6654769715681529445
+      GameRoom_7: -1809093834370476362
+      GameRoom_8: 960978006431335831
+      GameRoom_9: -1103890830107013472
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

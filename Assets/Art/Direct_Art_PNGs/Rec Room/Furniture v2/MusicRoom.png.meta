@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 99a6c58843c8de74aaa801d9ebdca88a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3393297703320380375
+    second: MusicRoom_0
+  - first:
+      213: -5437461802667093670
+    second: MusicRoom_1
+  - first:
+      213: -548129900467322660
+    second: MusicRoom_2
+  - first:
+      213: -1627009744542877790
+    second: MusicRoom_3
+  - first:
+      213: -5780422866596443954
+    second: MusicRoom_4
+  - first:
+      213: -4058600825019576078
+    second: MusicRoom_5
+  - first:
+      213: 7956664702846393977
+    second: MusicRoom_6
+  - first:
+      213: -6450511152138612945
+    second: MusicRoom_7
+  - first:
+      213: -4204713723594317440
+    second: MusicRoom_8
+  - first:
+      213: -2898598827250466613
+    second: MusicRoom_9
+  - first:
+      213: -918000637680446430
+    second: MusicRoom_10
+  - first:
+      213: -8788349811324726603
+    second: MusicRoom_11
+  - first:
+      213: -6922151279026229869
+    second: MusicRoom_12
+  - first:
+      213: -2962756051522053800
+    second: MusicRoom_13
+  - first:
+      213: 5420084218665325936
+    second: MusicRoom_14
+  - first:
+      213: 4950871875300930975
+    second: MusicRoom_15
+  - first:
+      213: 6823206780637376391
+    second: MusicRoom_16
+  - first:
+      213: -8373829923591733427
+    second: MusicRoom_17
+  - first:
+      213: 4498503317833862846
+    second: MusicRoom_18
+  - first:
+      213: -1518190004184326365
+    second: MusicRoom_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MusicRoom_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 159
+        width: 85
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c9070a7b598e0d0800000000000000
+      internalID: -3393297703320380375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_1
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 191
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51d544ac414a84b0800000000000000
+      internalID: -5437461802667093670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 191
+        width: 64
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd000e772c6a468f0800000000000000
+      internalID: -548129900467322660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_3
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 223
+        width: 56
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a73c62f143bb69e0800000000000000
+      internalID: -1627009744542877790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 127
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec849f06700d7cfa0800000000000000
+      internalID: -5780422866596443954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_5
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 127
+        width: 19
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0d9939d04fca7c0800000000000000
+      internalID: -4058600825019576078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_6
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 159
+        width: 64
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e5c0a1460cb6e60800000000000000
+      internalID: 7956664702846393977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 127
+        width: 34
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f051d884e2b76a0800000000000000
+      internalID: -6450511152138612945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_8
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 127
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08163fa552bd5a5c0800000000000000
+      internalID: -4204713723594317440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_9
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 32
+        width: 57
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc04f5b59bb16c7d0800000000000000
+      internalID: -2898598827250466613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2249977a84b9243f0800000000000000
+      internalID: -918000637680446430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_11
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 63
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b25e16c862890680800000000000000
+      internalID: -8788349811324726603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_12
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 63
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d202c36149fef90800000000000000
+      internalID: -6922151279026229869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_13
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 63
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85993e8811d22e6d0800000000000000
+      internalID: -2962756051522053800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_14
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 63
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0755f3a41e1083b40800000000000000
+      internalID: 5420084218665325936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 19
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f95b8cf5db705b440800000000000000
+      internalID: 4950871875300930975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_16
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f6de48a66e0be50800000000000000
+      internalID: 6823206780637376391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_17
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f37ca0d0e2acb80800000000000000
+      internalID: -8373829923591733427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_18
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 0
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe4768fee4ed6e30800000000000000
+      internalID: 4498503317833862846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MusicRoom_19
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 3
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f5b032c3e4eeae0800000000000000
+      internalID: -1518190004184326365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MusicRoom_0: -3393297703320380375
+      MusicRoom_1: -5437461802667093670
+      MusicRoom_10: -918000637680446430
+      MusicRoom_11: -8788349811324726603
+      MusicRoom_12: -6922151279026229869
+      MusicRoom_13: -2962756051522053800
+      MusicRoom_14: 5420084218665325936
+      MusicRoom_15: 4950871875300930975
+      MusicRoom_16: 6823206780637376391
+      MusicRoom_17: -8373829923591733427
+      MusicRoom_18: 4498503317833862846
+      MusicRoom_19: -1518190004184326365
+      MusicRoom_2: -548129900467322660
+      MusicRoom_3: -1627009744542877790
+      MusicRoom_4: -5780422866596443954
+      MusicRoom_5: -4058600825019576078
+      MusicRoom_6: 7956664702846393977
+      MusicRoom_7: -6450511152138612945
+      MusicRoom_8: -4204713723594317440
+      MusicRoom_9: -2898598827250466613
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
