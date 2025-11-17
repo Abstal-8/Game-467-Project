@@ -2,13 +2,19 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Ink.Runtime;
+using Unity.VisualScripting;
+using System.Collections.Generic;
 
 public class PopupManager : MonoBehaviour
 {
     // --- UI REFERENCES (DRAG AND DROP IN INSPECTOR) ---
     [Header("UI References")]
     [Tooltip("The root GameObject that holds the Canvas/DialogueBox (This object itself).")]
-    public GameObject dialogueRoot; 
+    public GameObject dialogueRoot;
+    public GameObject choicePanel;
+    public GameObject dialoguePanel; 
+    public List<Button> buttonChoices;
     public TextMeshProUGUI dialogueText; 
     public AudioSource audioSource;
     public Image portraitImage;
@@ -25,6 +31,7 @@ public class PopupManager : MonoBehaviour
     // --- Private State ---
     private bool isTyping = false;
     private int currentLineIndex = 0;
+    private Story currentStory;
 
     void Start()
     {
@@ -33,6 +40,8 @@ public class PopupManager : MonoBehaviour
         {
             dialogueRoot.SetActive(false); 
         }
+
+        choicePanel.SetActive(false);
     }
 
     void Update()
@@ -43,7 +52,8 @@ public class PopupManager : MonoBehaviour
             if (isTyping)
             {
                 StopAllCoroutines(); 
-                dialogueText.text = dialogueLines[currentLineIndex].line;
+                // dialogueText.text = dialogueLines[currentLineIndex].line;
+                dialogueText.text = currentStory.currentText;
                 isTyping = false;
             }
             else
@@ -53,36 +63,91 @@ public class PopupManager : MonoBehaviour
         }
     }
 
+    public void InitializeDialogue(TextAsset JSON)
+    {
+        currentStory = new Story(JSON.text);
+        dialogueText.text = "";
+    }
+
     // Public method called by the Trigger script
     public void StartDialogue()
     {
-        // Exit if there's no content
-        if (dialogueLines.Length == 0) return;
+        if (currentStory == null)
+        {
+            Debug.Log("Story Object has not been Initialized. " + currentStory);
+        }
+        else if (currentStory.currentChoices.Count > 0)
+        {
+            SetupChoice();
+        }
+
+        dialogueRoot.SetActive(true);
+
+        AdvanceDialogue();
+
+        // // Exit if there's no content
+        // if (dialogueLines.Length == 0) return;
         
-        // Show the entire UI root
-        if (dialogueRoot != null) dialogueRoot.SetActive(true);
-        currentLineIndex = 0;
+        // // Show the entire UI root
+        // if (dialogueRoot != null) dialogueRoot.SetActive(true);
+        // currentLineIndex = 0;
         
-        UpdatePortrait(dialogueLines[currentLineIndex].speakerIndex);
-        StartCoroutine(TypeLine(dialogueLines[currentLineIndex].line));
+        // UpdatePortrait(dialogueLines[currentLineIndex].speakerIndex);
+        // StartCoroutine(TypeLine(dialogueLines[currentLineIndex].line));
     }
 
     private void AdvanceDialogue()
     {
-        currentLineIndex++;
-
-        if (currentLineIndex < dialogueLines.Length)
+        if (currentStory.canContinue)
         {
-            UpdatePortrait(dialogueLines[currentLineIndex].speakerIndex);
-            StartCoroutine(TypeLine(dialogueLines[currentLineIndex].line));
+            StartCoroutine(TypeLine(currentStory.Continue()));
+        }
+        else if (currentStory.currentChoices.Count > 0)
+        {
+            SetupChoice();
         }
         else
         {
-            // End Conversation: Closes the box without loading a new scene.
-            if (dialogueRoot != null)
+            dialogueRoot.SetActive(false);
+        }
+
+        // currentLineIndex++;
+
+        // if (currentLineIndex < dialogueLines.Length)
+        // {
+        //     UpdatePortrait(dialogueLines[currentLineIndex].speakerIndex);
+        //     StartCoroutine(TypeLine(dialogueLines[currentLineIndex].line));
+        // }
+        // else
+        // {
+        //     // End Conversation: Closes the box without loading a new scene.
+        //     if (dialogueRoot != null)
+        //     {
+        //         dialogueRoot.SetActive(false);
+        //     }
+        // }
+    }
+
+    private void SetupChoice()
+    {
+        dialoguePanel.transform.localPosition = new Vector3(
+        dialoguePanel.transform.localPosition.x - 400,
+        dialoguePanel.transform.localPosition.y,
+        dialoguePanel.transform.localPosition.z);
+        choicePanel.SetActive(true);
+
+        // Pre-increment because it's choice 1, 2, 3
+        for (int i = 0; i < currentStory.currentChoices.Count; i++)
+        {
+            Choice choice = currentStory.currentChoices[i];
+            
+            for (int j = 0; j < buttonChoices.Count; j++)
             {
-                dialogueRoot.SetActive(false);
+                buttonChoices[j].gameObject.SetActive(true);
+                TextMeshProUGUI buttontext = choicePanel.GetComponentInChildren<TextMeshProUGUI>();
+                buttontext.text = choice.text;
             }
+            
         }
     }
 

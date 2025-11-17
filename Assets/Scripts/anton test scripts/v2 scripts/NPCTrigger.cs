@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class NPCTrigger : MonoBehaviour
 {
@@ -6,12 +7,14 @@ public class NPCTrigger : MonoBehaviour
     public string playerTag = "Player";
     
     // Automatically references the new manager script
-    private PopupManager manager; 
+    private PopupManager manager;
+    public GameObject managerObj; 
+    public TextAsset inkJSON;
 
     void Start()
     {
-        // Finds the manager automatically in the scene
-        manager = FindObjectOfType<PopupManager>();
+        // Finds the manager by accessing the script on the Manager object
+        manager = managerObj.GetComponent<PopupManager>();
 
         if (manager == null)
         {
@@ -30,6 +33,9 @@ public class NPCTrigger : MonoBehaviour
         {
             if (manager != null)
             {
+                //Initializing Dialogue with relevant file
+                manager.InitializeDialogue(inkJSON);
+
                 // 2. Start the dialogue sequence!
                 manager.StartDialogue();
                 
