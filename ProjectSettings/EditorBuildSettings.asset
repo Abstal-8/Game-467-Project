@@ -48,7 +48,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/IntroScene.unity
     guid: 05016467f35f4b84eb93fef435765027
   - enabled: 1
-    path: Assets/Scenes/Rooms/antontestinto.unity
+    path: Assets/Scenes/TestScenes/antontestinto.unity
     guid: fb239191e2103214abb32acb9865f683
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
