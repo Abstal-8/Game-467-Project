@@ -52,12 +52,13 @@ public class SigilInteractUI : MonoBehaviour
 
             if (controller != null)
             {
-                controller.UnlockMovement();   // ✅ call the new controller
-                controller.UnlockSwap();       // optional: unlock swap at same time
+                controller.UnlockMovement();   
+                controller.UnlockSwap();      
+               
             }
 
             if (promptUI) promptUI.SetActive(false);
-            // Optional: Destroy(gameObject);
+            
         }
     }
 }
