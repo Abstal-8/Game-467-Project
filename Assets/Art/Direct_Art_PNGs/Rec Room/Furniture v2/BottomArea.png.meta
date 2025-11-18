@@ -472,10 +472,10 @@ TextureImporter:
       name: BottomArea_12
       rect:
         serializedVersion: 2
-        x: 337
-        y: 628
-        width: 37
-        height: 86
+        x: 347
+        y: 629
+        width: 8
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1012,6 +1012,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: BottomArea_36
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 687
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7855d8cdec1df4043a3068accb0bc74a
+      internalID: 1282547126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1056,6 +1078,7 @@ TextureImporter:
       BottomArea_33: -4559609783060052575
       BottomArea_34: 981069979271490804
       BottomArea_35: -5751586686171913543
+      BottomArea_36: 1282547126
       BottomArea_4: -9161716396195388630
       BottomArea_5: -2895619265399451649
       BottomArea_6: -4712222430446560826
