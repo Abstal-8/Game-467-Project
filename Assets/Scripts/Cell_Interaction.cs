@@ -3,109 +3,65 @@ using TMPro;
 
 public class CellUnlock : MonoBehaviour
 {
-    [Header("Requirements")]
-    public Inventory inventory;
-    public Item keyItem;
-
     [Header("Who gets freed")]
-    public Familiar_Movement familiar;      // <-- drag your Cat here in Inspector
-    public Collider2D cageColliderToDisable; // optional: blocker you want to disable
+    public FamiliarController familiarController;     // drag the cat here
+    public Collider2D cageColliderToDisable;          // drag the wall collider here
 
-    [Header("UI (optional)")]
-    public TextMeshProUGUI prompt;
+    [Header("UI")]
+    public TextMeshProUGUI prompt;                    // "Press E to free the cat"
 
     [Header("Settings")]
-    public string interactKey = "E";
-    public string tagThatCanUnlock = "Spirit";
+    public KeyCode interactKey = KeyCode.E;
+    public string playerTag = "Player";
 
-    bool inRange;
+    private bool inRange = false;
 
-    void Awake()
+    private void Start()
     {
-        if (!inventory) inventory = FindObjectOfType<Inventory>();
-        if (!familiar) familiar = FindObjectOfType<Familiar_Movement>();
         if (prompt) prompt.gameObject.SetActive(false);
     }
 
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!inRange) return;
+        if (!other.CompareTag(playerTag)) return;
 
-        bool hasKey =
-            inventory ? inventory.HasItem(keyItem)
-                      : (keyItem && keyItem.inInventory);
-
-        if (hasKey && Input.GetKeyDown(KeyCode.E))
-        {
-            UnlockCell();
-        }
-    }
-
-    public void TryOpen()   // for ProximityInteraction event
-    {
-        bool hasKey =
-            inventory ? inventory.HasItem(keyItem)
-                      : (keyItem && keyItem.inInventory);
-
-        if (hasKey) UnlockCell();
-        else ShowNeedKey();
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (!other.CompareTag(tagThatCanUnlock)) return;
         inRange = true;
-        UpdatePrompt();
+        if (prompt) prompt.gameObject.SetActive(true);
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (!other.CompareTag(tagThatCanUnlock)) return;
+        if (!other.CompareTag(playerTag)) return;
+
         inRange = false;
         if (prompt) prompt.gameObject.SetActive(false);
     }
 
-    void UpdatePrompt()
+    private void Update()
     {
-        if (!prompt) return;
+        if (!inRange) return;
 
-        bool hasKey =
-            inventory ? inventory.HasItem(keyItem)
-                      : (keyItem && keyItem.inInventory);
-
-        prompt.text = hasKey ? "Press E to free the cat"
-                             : "Locked. You need a key.";
-        prompt.gameObject.SetActive(true);
+        if (Input.GetKeyDown(interactKey))
+            UnlockCell();
     }
 
-    void ShowNeedKey()
+    private void UnlockCell()
     {
-        if (!prompt) return;
-        prompt.text = "Locked. You need a key.";
-        prompt.gameObject.SetActive(true);
-    }
+        Debug.Log("[CellUnlock] Cat freed!");
 
-    void UnlockCell()
-    {
-        Debug.Log("[CellUnlock] Cell opened.");
+        // Free the cat
+        if (familiarController)
+            familiarController.FreeFamiliar();
 
-        // 1) Free the cat
-        if (familiar)
-        {
-            familiar.FreeFamiliar();
-        }
-        else
-        {
-            Debug.LogWarning("[CellUnlock] No Familiar_Movement reference set.");
-        }
+        // Disable the cage wall collider
+        if (cageColliderToDisable)
+            cageColliderToDisable.enabled = false;
 
-        // 2) Open the “cell” (optional)
-        if (cageColliderToDisable) cageColliderToDisable.enabled = false;
+        // Hide prompt
+        if (prompt)
+            prompt.gameObject.SetActive(false);
 
-        // 3) Hide prompt
-        if (prompt) prompt.gameObject.SetActive(false);
-
-        // 4) If this is a one-shot trigger, you can disable or destroy this
-        // enabled = false; // or Destroy(this);
+        // Remove this script (one-time use)
+        enabled = false;
     }
 }

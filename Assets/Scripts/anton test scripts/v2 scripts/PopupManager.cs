@@ -30,6 +30,7 @@ public class PopupManager : MonoBehaviour
 
     // --- Private State ---
     private bool isTyping = false;
+    private bool isChoosing = false;
     private int currentLineIndex = 0;
     private Story currentStory;
 
@@ -56,7 +57,7 @@ public class PopupManager : MonoBehaviour
                 dialogueText.text = currentStory.currentText;
                 isTyping = false;
             }
-            else
+            else if (!isChoosing)
             {
                 AdvanceDialogue();
             }
@@ -130,24 +131,24 @@ public class PopupManager : MonoBehaviour
 
     private void SetupChoice()
     {
+        isChoosing = true;
+        
         dialoguePanel.transform.localPosition = new Vector3(
         dialoguePanel.transform.localPosition.x - 400,
         dialoguePanel.transform.localPosition.y,
         dialoguePanel.transform.localPosition.z);
         choicePanel.SetActive(true);
 
-        // Pre-increment because it's choice 1, 2, 3
-        for (int i = 0; i < currentStory.currentChoices.Count; i++)
+        int index = 0;
+        int i = 0;
+
+        foreach(Choice choice in currentStory.currentChoices)
         {
-            Choice choice = currentStory.currentChoices[i];
-            
-            for (int j = 0; j < buttonChoices.Count; j++)
-            {
-                buttonChoices[j].gameObject.SetActive(true);
-                TextMeshProUGUI buttontext = choicePanel.GetComponentInChildren<TextMeshProUGUI>();
-                buttontext.text = choice.text;
-            }
-            
+            buttonChoices[index].gameObject.SetActive(true);
+            TextMeshProUGUI buttontext = buttonChoices[index].gameObject.GetComponentInChildren<TextMeshProUGUI>();
+            buttontext.text = choice.text;
+            buttonChoices[index].onClick?.AddListener(() => {currentStory.ChooseChoiceIndex(i += 1); AdvanceDialogue();});
+            index++;
         }
     }
 
