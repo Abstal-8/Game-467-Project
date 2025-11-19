@@ -4,7 +4,7 @@ public class EnemyTurnState : BattleState
 {
 
     bool _isEnemyTurnOver;
-    public EnemyTurnState(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
+    public EnemyTurnState(PlayerManager player, UIManager UI, Enemy enemy, SpiritBattleHandler sbh) : base(player, UI, enemy, sbh)
     {
     }
 

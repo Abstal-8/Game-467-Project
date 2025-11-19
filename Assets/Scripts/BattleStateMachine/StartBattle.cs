@@ -12,7 +12,7 @@ public class StartBattle : BattleState
     public static Action<BattleStateManager> startStateEndEvent;
 
 
-    public StartBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
+    public StartBattle(PlayerManager player, UIManager UI, Enemy enemy, SpiritBattleHandler sbh) : base(player, UI, enemy, sbh)
     {
     }
 

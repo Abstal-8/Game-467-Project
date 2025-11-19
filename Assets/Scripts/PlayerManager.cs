@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour, IDamagable
         if (other.TryGetComponent<Enemy>(out Enemy enemy))
         {
             Enemyencounter = enemy;
-            //BattleState.battleStartEvent?.Invoke();
+            BattleState.battleStartEvent?.Invoke();
         }
 
     }

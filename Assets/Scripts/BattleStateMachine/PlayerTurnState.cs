@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class PlayerTurnState : BattleState
 {
-
     public static Action<BattleStateManager> playerTurnEndEvent;
     bool _isPlayerTurnOver;
-    public PlayerTurnState(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
+    public PlayerTurnState(PlayerManager player, UIManager UI, Enemy enemy, SpiritBattleHandler sbh) : base(player, UI, enemy, sbh)
     {
         uIManager.attackButton.onClick?.AddListener(Attack);
+        
     }
 
     public override void EnterState(BattleStateManager battleState)
@@ -47,6 +47,7 @@ public class PlayerTurnState : BattleState
     void Attack()
     {
         enemyReference.TakeDamage(10); // arbitrary number
+        spiritBattleHandler.ChargeToken(10);
         uIManager.UpdateHealth(10, enemyReference);
         _isPlayerTurnOver = true;
     }

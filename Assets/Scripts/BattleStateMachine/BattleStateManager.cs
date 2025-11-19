@@ -17,6 +17,7 @@ public class BattleStateManager : MonoBehaviour
     [SerializeField] PlayerManager playerManager;
     [SerializeField] UIManager uIManager;
     [SerializeField] Enemy enemyReference;
+    [SerializeField] SpiritBattleHandler sbh;
 
     protected BattleState currentState;
 
@@ -31,13 +32,13 @@ public class BattleStateManager : MonoBehaviour
 
     void Start()
     {
-        defaultBattle = new(playerManager, uIManager, enemyReference);
-        startBattle = new(playerManager, uIManager, enemyReference);
-        endBattle = new(playerManager, uIManager, enemyReference);
-        winBattle = new(playerManager, uIManager, enemyReference);
-        loseBattle = new(playerManager, uIManager, enemyReference);
-        playerTurn = new(playerManager, uIManager, enemyReference);
-        enemyTurn = new(playerManager, uIManager, enemyReference);
+        defaultBattle = new(playerManager, uIManager, enemyReference, sbh);
+        startBattle = new(playerManager, uIManager, enemyReference, sbh);
+        endBattle = new(playerManager, uIManager, enemyReference, sbh);
+        winBattle = new(playerManager, uIManager, enemyReference, sbh);
+        loseBattle = new(playerManager, uIManager, enemyReference, sbh);
+        playerTurn = new(playerManager, uIManager, enemyReference, sbh);
+        enemyTurn = new(playerManager, uIManager, enemyReference, sbh);
 
         currentState = defaultBattle;
     }

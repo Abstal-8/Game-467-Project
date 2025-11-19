@@ -106,6 +106,13 @@ public class UIManager : MonoBehaviour
 
         playerBattleSprite.SetActive(false);
         enemyBattleSprite.SetActive(false);
+
+        // Reset UI elements for next encounter/testing
+        playerHealth = playerManager.maxHealth;
+        enemyHealth = enemy.maxHealth;
+        
+        playerHealthBar.fillAmount = playerMaxHealth;
+        enemyHealthBar.fillAmount = enemyMaxHealth;
     }
 
 

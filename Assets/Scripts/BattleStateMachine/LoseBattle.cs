@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LoseBattle : BattleState
 {
-    public LoseBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
+    public LoseBattle(PlayerManager player, UIManager UI, Enemy enemy, SpiritBattleHandler sbh) : base(player, UI, enemy, sbh)
     {
     }
 

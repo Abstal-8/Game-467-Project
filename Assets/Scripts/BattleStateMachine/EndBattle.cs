@@ -3,14 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class EndBattle : BattleState
 {
-    public EndBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
+    public EndBattle(PlayerManager player, UIManager UI, Enemy enemy, SpiritBattleHandler sbh) : base(player, UI, enemy, sbh)
     {
     }
 
     public override void EnterState(BattleStateManager battleState)
     {
         Debug.Log("You have exited battle.");
-        battleEnd?.Invoke();
+        battleEnd?.Invoke(); // Starts playing music
         ExitState(battleState);
         
         // Check if player won or lost
@@ -27,6 +27,7 @@ public class EndBattle : BattleState
         playerManager.gameObject.SetActive(true);
         enemyReference.gameObject.SetActive(false);
         enemyReference.currentHealth = enemyReference.maxHealth;
+        playerManager.currentHealth = playerManager.maxHealth;
         // (Testing only)
         /*
             Depends on option.

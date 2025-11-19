@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DefaultBattle : BattleState
 {
-    public DefaultBattle(PlayerManager player, UIManager UI, Enemy enemy) : base(player, UI, enemy)
+    public DefaultBattle(PlayerManager player, UIManager UI, Enemy enemy, SpiritBattleHandler sbh) : base(player, UI, enemy, sbh)
     {
     }
 

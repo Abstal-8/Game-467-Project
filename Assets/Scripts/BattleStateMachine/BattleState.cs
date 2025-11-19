@@ -19,12 +19,14 @@ public abstract class BattleState
     protected PlayerManager playerManager;
     protected UIManager uIManager;
     protected Enemy enemyReference;
+    protected SpiritBattleHandler spiritBattleHandler;
 
-    public BattleState(PlayerManager player, UIManager UI, Enemy enemy)
+    public BattleState(PlayerManager player, UIManager UI, Enemy enemy, SpiritBattleHandler sbh)
     {
         playerManager = player;
         uIManager = UI;
         enemyReference = enemy;
+        spiritBattleHandler = sbh;
     }
 
 
