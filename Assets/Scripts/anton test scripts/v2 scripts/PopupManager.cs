@@ -132,25 +132,54 @@ public class PopupManager : MonoBehaviour
     private void SetupChoice()
     {
         isChoosing = true;
-        
+
+        // Move the dialogue panel left to make room (optional)
         dialoguePanel.transform.localPosition = new Vector3(
-        dialoguePanel.transform.localPosition.x - 400,
-        dialoguePanel.transform.localPosition.y,
-        dialoguePanel.transform.localPosition.z);
+            dialoguePanel.transform.localPosition.x - 400,
+            dialoguePanel.transform.localPosition.y,
+            dialoguePanel.transform.localPosition.z
+        );
+
         choicePanel.SetActive(true);
 
-        int index = 0;
-        int i = 0;
-
-        foreach(Choice choice in currentStory.currentChoices)
+        // First, hide all buttons and clear old listeners
+        for (int b = 0; b < buttonChoices.Count; b++)
         {
-            buttonChoices[index].gameObject.SetActive(true);
-            TextMeshProUGUI buttontext = buttonChoices[index].gameObject.GetComponentInChildren<TextMeshProUGUI>();
-            buttontext.text = choice.text;
-            buttonChoices[index].onClick?.AddListener(() => {currentStory.ChooseChoiceIndex(i += 1); AdvanceDialogue();});
-            index++;
+            buttonChoices[b].gameObject.SetActive(false);
+            buttonChoices[b].onClick.RemoveAllListeners();
+        }
+
+        // Now set up buttons for each current Ink choice
+        for (int i = 0; i < currentStory.currentChoices.Count; i++)
+        {
+            Choice choice = currentStory.currentChoices[i];
+
+            Button btn = buttonChoices[i];
+            btn.gameObject.SetActive(true);
+
+            TextMeshProUGUI buttonText = btn.GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = choice.text;
+
+            int choiceIndex = i; // capture i for this specific button
+
+            btn.onClick.AddListener(() =>
+            {
+                isChoosing = false;
+                choicePanel.SetActive(false);
+
+                // (optional) move dialogue panel back:
+                dialoguePanel.transform.localPosition = new Vector3(
+                    dialoguePanel.transform.localPosition.x + 400,
+                    dialoguePanel.transform.localPosition.y,
+                    dialoguePanel.transform.localPosition.z
+                );
+
+                currentStory.ChooseChoiceIndex(choiceIndex);
+                AdvanceDialogue();
+            });
         }
     }
+
 
     IEnumerator TypeLine(string line)
     {
