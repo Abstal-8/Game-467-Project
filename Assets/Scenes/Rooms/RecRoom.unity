@@ -2355,7 +2355,7 @@ MonoBehaviour:
   puzzleManager: {fileID: 1794384085}
   padId: 3
   audioSource: {fileID: 317250045}
-  noteClip: {fileID: 8300000, guid: d98e604fb92dcb8408c4057b1f6d2b30, type: 3}
+  noteClip: {fileID: 8300000, guid: 68db0663321d1eb4ba86136a314f5a0c, type: 3}
   playerTag: Player
   interactKey: 101
   promptText: {fileID: 0}
@@ -17000,7 +17000,7 @@ MonoBehaviour:
   puzzleManager: {fileID: 1794384085}
   padId: 1
   audioSource: {fileID: 1062251718}
-  noteClip: {fileID: 8300000, guid: d98e604fb92dcb8408c4057b1f6d2b30, type: 3}
+  noteClip: {fileID: 8300000, guid: d18d2a1e6e683564c9388295f7bfd70c, type: 3}
   playerTag: Player
   interactKey: 101
   promptText: {fileID: 0}
@@ -32082,7 +32082,7 @@ MonoBehaviour:
   puzzleManager: {fileID: 1794384085}
   padId: 0
   audioSource: {fileID: 1794384083}
-  noteClip: {fileID: 8300000, guid: d98e604fb92dcb8408c4057b1f6d2b30, type: 3}
+  noteClip: {fileID: 8300000, guid: d842fd202dd532541845c6e197d52d85, type: 3}
   playerTag: Player
   interactKey: 101
   promptText: {fileID: 0}
@@ -47771,9 +47771,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1292161915}
-  - {fileID: 86412674}
   - {fileID: 109408001}
+  - {fileID: 86412674}
+  - {fileID: 1292161915}
   - {fileID: 159870502}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47792,10 +47792,10 @@ MonoBehaviour:
   sources:
   - {fileID: 109408000}
   - {fileID: 86412673}
-  - {fileID: 1794384083}
+  - {fileID: 770203530}
   - {fileID: 159870501}
-  pauseBetweenNotes: 1
-  pauseBetweenLoops: 1
+  pauseBetweenNotes: 0.5
+  pauseBetweenLoops: 2
   playOnStart: 1
 --- !u!1 &1975513985
 GameObject:
