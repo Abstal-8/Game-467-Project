@@ -12,6 +12,8 @@ public class DoorPortal : MonoBehaviour
     [Header("Keyboard Input")]
     [SerializeField] private KeyCode yesKey = KeyCode.E;
     [SerializeField] private KeyCode noKey = KeyCode.Escape;
+    [Header("Spawn")]
+    [SerializeField] private string spawnPointName;
 
     private bool playerInRange = false;
     private bool confirmOpen = false;
@@ -77,8 +79,14 @@ public class DoorPortal : MonoBehaviour
     public void OnConfirmYes()
     {
         Debug.Log("[DoorPortal] Confirm YES");
+
+        // Tell the next scene which spawn to use
+        SceneSpawnManager.nextSpawnPointName = spawnPointName;
+        Debug.Log("[DoorPortal] Setting next spawn to: " + spawnPointName);
+
         LoadTargetScene();
     }
+
 
     // Called by NO button
     public void OnConfirmNo()
