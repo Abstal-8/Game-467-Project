@@ -110,6 +110,7 @@ public class PopupManager : MonoBehaviour
         else
         {
             dialogueRoot.SetActive(false);
+           
         }
 
         // currentLineIndex++;
