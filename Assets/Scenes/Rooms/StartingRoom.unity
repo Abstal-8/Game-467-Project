@@ -1381,7 +1381,7 @@ Transform:
   m_GameObject: {fileID: 191454090}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.73, y: -15.98, z: 0}
+  m_LocalPosition: {x: -8.19, y: -9.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6178,11 +6178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2439175649743689734, guid: b514b68897ec42e4db8fe106fd2be026, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.56
+      value: -15.07
       objectReference: {fileID: 0}
     - target: {fileID: 2439175649743689734, guid: b514b68897ec42e4db8fe106fd2be026, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.03
+      value: 1.47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6617,7 +6617,7 @@ MonoBehaviour:
   spiritTutorialPanel: {fileID: 0}
   typingSound: {fileID: 8300000, guid: a2b2e7ffee0787046866dcd235c3bc82, type: 3}
   characterPortraits: []
-  typingSpeed: 0.05
+  typingSpeed: 0.1
   dialogueLines:
   - line: plz
     speakerIndex: 0
@@ -10411,6 +10411,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 801659662}
+    - targetCorrespondingSourceObject: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 801659664}
   m_SourcePrefab: {fileID: 100100000, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
 --- !u!1 &801659629 stripped
 GameObject:
@@ -10456,6 +10459,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7455949850054396571, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
   m_PrefabInstance: {fileID: 801659628}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &801659664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801659629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de4c3a9c1fdd9bd4886b7a970c6711cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnHandler
 --- !u!1 &825597539
 GameObject:
   m_ObjectHideFlags: 0
@@ -15841,10 +15856,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d5a12ab7cbaeb42a93114d56318d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorPortal
-  targetSceneName: SceneTest1
+  targetSceneName: NurseHallway
   confirmPanel: {fileID: 1491048886}
   yesKey: 101
   noKey: 27
+  spawnPointName: Spawn1
 --- !u!4 &1629157568
 Transform:
   m_ObjectHideFlags: 0
