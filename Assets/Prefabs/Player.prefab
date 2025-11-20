@@ -15,6 +15,11 @@ GameObject:
   - component: {fileID: 950810971235721563}
   - component: {fileID: 3246519391873113772}
   - component: {fileID: 1000048405274969780}
+  - component: {fileID: 2850247562058986173}
+  - component: {fileID: 5545558350863834179}
+  - component: {fileID: 1675795560340349025}
+  - component: {fileID: 1219335985485969220}
+  - component: {fileID: 5701181175380806648}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -83,7 +88,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 6785393795666294312, guid: e3c6595b116de494a9ccbfc62cbeb9ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -102,7 +107,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5324873077698660863}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d088eb2569b7e7e46a2512903333e2fb, type: 3}
   m_Name: 
@@ -216,10 +221,86 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.28125, y: 0.859375}
-      - {x: -0.34375, y: 0.765625}
+    - - {x: -0.28125, y: -0.140625}
+      - {x: -0.34375, y: -0.234375}
       - {x: -0.34375, y: -0.640625}
       - {x: -0.28125, y: -0.859375}
       - {x: 0.34375, y: -0.859375}
-      - {x: 0.34375, y: 0.859375}
+      - {x: 0.34375, y: -0.140625}
   m_UseDelaunayMesh: 0
+--- !u!114 &2850247562058986173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324873077698660863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa2e56aad35f5a4d85ec1e80cf5ea5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpiritFormController
+  lockBodyAtStart: 1
+  currentState: 0
+  toggleSpiritKey: 116
+--- !u!114 &5545558350863834179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324873077698660863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4aaf474dcc25242a002aa18fd0b815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpiritBodyController
+  controller: {fileID: 2850247562058986173}
+  playerMovementScript: {fileID: 0}
+  animator: {fileID: 3246519391873113772}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  spiritColor: {r: 0, g: 0, b: 1, a: 1}
+--- !u!114 &1675795560340349025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324873077698660863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f687756d75061b44c89f28014d9db012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpiritSpawner
+  controller: {fileID: 2850247562058986173}
+  spiritPrefab: {fileID: 9149319249045855954, guid: c76089e8549351f4590ddffb9ed1b74d, type: 3}
+  spawnOffset: {x: 0.6, y: 0, z: 0}
+--- !u!114 &1219335985485969220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324873077698660863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02b9e2f6e817b7439e1625144c26bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  moveSpeed: 8
+  startPoint: {fileID: 0}
+--- !u!114 &5701181175380806648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324873077698660863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b040e059b1e60fd4fb86875eaa73dde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SpiritSwapAbility
+  controller: {fileID: 2850247562058986173}
+  spawner: {fileID: 1675795560340349025}
+  swapKey: 102

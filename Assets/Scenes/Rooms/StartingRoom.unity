@@ -10433,26 +10433,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1000048405274969780, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000048405274969780, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      propertyPath: m_AutoTiling
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246519391873113772, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3246519391873113772, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: fa3647808caf1fc4d959e94024f84219, type: 2}
-    - target: {fileID: 4630668805761069183, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5143649936219118015, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_SortingOrder
       value: 5
@@ -10460,18 +10440,6 @@ PrefabInstance:
     - target: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5628234329865949303, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6806241099652699443, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 801659644}
-    - target: {fileID: 6806241099652699443, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6892147745904961905, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_Enabled
@@ -10520,22 +10488,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 801659651}
-    - targetCorrespondingSourceObject: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 801659650}
-    - targetCorrespondingSourceObject: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 801659652}
-    - targetCorrespondingSourceObject: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 801659653}
-    - targetCorrespondingSourceObject: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 801659658}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
 --- !u!1 &801659629 stripped
 GameObject:
@@ -10553,33 +10506,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d088eb2569b7e7e46a2512903333e2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
---- !u!95 &801659644 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 3246519391873113772, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
+--- !u!114 &801659651 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2850247562058986173, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
   m_PrefabInstance: {fileID: 801659628}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &801659650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801659629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff4aaf474dcc25242a002aa18fd0b815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpiritBodyController
-  controller: {fileID: 801659651}
-  playerMovementScript: {fileID: 0}
-  animator: {fileID: 801659644}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
-  spiritColor: {r: 0, g: 0, b: 1, a: 1}
---- !u!114 &801659651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801659629}
   m_Enabled: 1
@@ -10587,53 +10517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa2e56aad35f5a4d85ec1e80cf5ea5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpiritFormController
-  lockBodyAtStart: 1
-  currentState: 0
-  toggleSpiritKey: 116
---- !u!114 &801659652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801659629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f687756d75061b44c89f28014d9db012, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpiritSpawner
-  controller: {fileID: 801659651}
-  spiritPrefab: {fileID: 9149319249045855954, guid: c76089e8549351f4590ddffb9ed1b74d, type: 3}
-  spawnOffset: {x: 0.6, y: 0, z: 0}
---- !u!114 &801659653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801659629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02b9e2f6e817b7439e1625144c26bf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 8
-  startPoint: {fileID: 0}
---- !u!114 &801659658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801659629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b040e059b1e60fd4fb86875eaa73dde8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpiritSwapAbility
-  controller: {fileID: 801659651}
-  spawner: {fileID: 801659652}
-  swapKey: 102
 --- !u!1 &803788401
 GameObject:
   m_ObjectHideFlags: 0
