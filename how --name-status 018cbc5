@@ -1,0 +1,139 @@
+[33m018cbc5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32manother-merge-fix[m[33m)[m HEAD@{Thu Nov 20 05:26:15 2025}: checkout: moving from 018cbc5d5d49d1d1d669aa0e081a8214cbe5bcf6 to another-merge-fix
+[33m018cbc5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32manother-merge-fix[m[33m)[m HEAD@{Thu Nov 20 05:15:53 2025}: checkout: moving from main to 018cbc5d5d49d1d1d669aa0e081a8214cbe5bcf6
+[33mee88eae[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m HEAD@{Thu Nov 20 05:03:45 2025}: pull --tags origin main: Merge made by the 'ort' strategy.
+[33m6a56c3f[m HEAD@{Thu Nov 20 05:03:43 2025}: commit: updated lighting
+[33m018cbc5[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32manother-merge-fix[m[33m)[m HEAD@{Thu Nov 20 04:54:52 2025}: commit: added the intro diologue
+[33mbd7367c[m HEAD@{Thu Nov 20 01:56:29 2025}: commit: added secert_area
+[33m2ed489c[m HEAD@{Thu Nov 20 01:27:04 2025}: commit: added opening text
+[33m15d5808[m HEAD@{Thu Nov 20 01:08:39 2025}: commit: readded ink files
+[33m749dac3[m HEAD@{Thu Nov 20 00:56:01 2025}: checkout: moving from merge-fix to main
+[33mb33af16[m[33m ([m[1;31morigin/merge-fix[m[33m, [m[1;32mmerge-fix[m[33m)[m HEAD@{Thu Nov 20 00:54:13 2025}: checkout: moving from b33af16f2a306b435e0203509a93599397917834 to merge-fix
+[33mb33af16[m[33m ([m[1;31morigin/merge-fix[m[33m, [m[1;32mmerge-fix[m[33m)[m HEAD@{Thu Nov 20 00:47:29 2025}: checkout: moving from main to b33af16f2a306b435e0203509a93599397917834
+[33m749dac3[m HEAD@{Thu Nov 20 00:40:55 2025}: checkout: moving from 065160a9198cb87e94e47266e0a6c9bcb5f4ef4c to main
+[33m065160a[m HEAD@{Thu Nov 20 00:39:23 2025}: checkout: moving from 9533f5038de698df68ba178d9e23f4e9c34be557 to 065160a9198cb87e94e47266e0a6c9bcb5f4ef4c
+[33m9533f50[m HEAD@{Thu Nov 20 00:38:30 2025}: checkout: moving from b33af16f2a306b435e0203509a93599397917834 to 9533f5038de698df68ba178d9e23f4e9c34be557
+[33mb33af16[m[33m ([m[1;31morigin/merge-fix[m[33m, [m[1;32mmerge-fix[m[33m)[m HEAD@{Thu Nov 20 00:37:20 2025}: checkout: moving from main to b33af16f2a306b435e0203509a93599397917834
+[33m749dac3[m HEAD@{Thu Nov 20 00:24:00 2025}: commit: git commit -m "Restore RecRoom scene from last good version"
+[33m9acd98e[m HEAD@{Thu Nov 20 00:20:46 2025}: commit: Restore RecRoom scene from last good version
+[33m9f1a49c[m HEAD@{Thu Nov 20 00:02:54 2025}: pull --tags origin main: Fast-forward
+[33m9533f50[m HEAD@{Wed Nov 19 23:15:39 2025}: commit (merge): Merge branch 'main' of https://github.com/Abstal-8/Game-467-Project
+[33mf9e985a[m HEAD@{Wed Nov 19 23:14:28 2025}: commit: bunch of stuff
+[33mb33af16[m[33m ([m[1;31morigin/merge-fix[m[33m, [m[1;32mmerge-fix[m[33m)[m HEAD@{Wed Nov 19 23:04:15 2025}: commit: bunch of stuff
+[33m065160a[m HEAD@{Wed Nov 19 23:11:46 2025}: reset: moving to HEAD
+[33m065160a[m HEAD@{Wed Nov 19 23:10:32 2025}: pull: updating HEAD
+[33m065160a[m HEAD@{Wed Nov 19 23:07:57 2025}: pull: updating HEAD
+[33m065160a[m HEAD@{Wed Nov 19 23:06:44 2025}: pull: updating HEAD
+[33m065160a[m HEAD@{Wed Nov 19 23:05:25 2025}: pull: updating HEAD
+[33m065160a[m HEAD@{Wed Nov 19 23:04:59 2025}: pull: updating HEAD
+[33m065160a[m HEAD@{Wed Nov 19 23:04:11 2025}: commit: music puzzle, inked folders
+[33m250cdaa[m HEAD@{Wed Nov 19 11:27:37 2025}: pull: Fast-forward
+[33m9f1ec05[m HEAD@{Wed Nov 19 01:18:45 2025}: commit: started making game room with tile format
+[33m295e93e[m HEAD@{Tue Nov 18 13:53:12 2025}: commit (merge): Merge branch 'main' of https://github.com/Abstal-8/Game-467-Project
+[33mb7ba81a[m HEAD@{Tue Nov 18 13:51:33 2025}: commit: hopefully made it so the world lights stops falling off
+[33mc966fbd[m HEAD@{Tue Nov 18 08:54:28 2025}: pull: Fast-forward
+[33m17de509[m HEAD@{Mon Nov 17 22:21:33 2025}: commit: changed cat to be a mini state machine
+[33m1512623[m HEAD@{Mon Nov 17 21:37:59 2025}: pull --tags origin main: Fast-forward
+[33m33ab185[m HEAD@{Mon Nov 17 16:44:50 2025}: commit: deleted extra script
+[33m145fe87[m HEAD@{Mon Nov 17 16:25:02 2025}: pull: Fast-forward
+[33mf1dc773[m HEAD@{Mon Nov 17 12:15:10 2025}: commit: readded spirit world glow
+[33m5844c25[m HEAD@{Mon Nov 17 12:00:06 2025}: commit: Added door portal script to transport scene
+[33me5f6e8e[m HEAD@{Mon Nov 17 09:04:44 2025}: pull: Fast-forward
+[33m0ea5b46[m HEAD@{Sun Nov 16 01:31:01 2025}: pull: Fast-forward
+[33m375d1c9[m HEAD@{Sat Nov 15 23:42:21 2025}: commit: added spirit swapping ability
+[33m963b600[m HEAD@{Sat Nov 15 22:32:33 2025}: commit: added to build profile
+[33mb55d203[m HEAD@{Sat Nov 15 22:22:42 2025}: pull --tags origin main: Merge made by the 'ort' strategy.
+[33mc9b6c0d[m HEAD@{Sat Nov 15 22:22:39 2025}: commit: updated spirit form into state machine
+[33m22f23ae[m HEAD@{Sat Nov 15 18:38:11 2025}: commit: added base rec room
+[33m3325330[m HEAD@{Mon Nov 10 01:34:39 2025}: commit: changed spirit form to not lock movement after re entering once freed
+[33m2ecfce3[m HEAD@{Sun Nov 9 20:03:00 2025}: commit: finished operation room outline
+[33m01bedfd[m HEAD@{Sun Nov 9 11:28:23 2025}: commit: adjusteed starting area
+[33m6ba31b2[m HEAD@{Sun Nov 9 11:03:59 2025}: pull: Fast-forward
+[33m614e4ad[m HEAD@{Thu Nov 6 09:39:41 2025}: commit: moved light over, added tile collider
+[33m72e47c7[m HEAD@{Wed Nov 5 19:16:20 2025}: commit: locked player body animations when in spirit form
+[33m5c3f264[m HEAD@{Wed Nov 5 18:52:35 2025}: commit: added more tile assets
+[33m53fccb8[m HEAD@{Wed Nov 5 18:29:21 2025}: commit: added enviroment layers for tile maps
+[33m343dad9[m HEAD@{Wed Nov 5 11:52:06 2025}: pull: Fast-forward
+[33mba57393[m HEAD@{Wed Nov 5 11:25:09 2025}: commit: shifted borders
+[33mccce096[m HEAD@{Wed Nov 5 10:31:17 2025}: commit: adjust tile map offest to match unities, changed player start location
+[33m7feaaec[m HEAD@{Wed Nov 5 10:05:25 2025}: checkout: moving from main to main
+[33m7feaaec[m HEAD@{Wed Nov 5 09:59:45 2025}: pull: Fast-forward
+[33m1b017e6[m HEAD@{Tue Nov 4 17:59:22 2025}: pull: Fast-forward
+[33me19c81a[m HEAD@{Thu Oct 30 13:16:55 2025}: commit: fixed opening wording
+[33m036275c[m HEAD@{Thu Oct 30 13:09:18 2025}: commit (merge): Merge branch 'main' of https://github.com/Abstal-8/Game-467-Project
+[33m262cfbe[m HEAD@{Thu Oct 30 13:08:57 2025}: commit: Added popup spirit mode turturial
+[33m26de158[m HEAD@{Thu Oct 30 11:08:13 2025}: commit: Changed starting Dialogue
+[33mfdf89ce[m HEAD@{Thu Oct 30 11:03:49 2025}: commit: Added Music Mananger and looping soundtrack
+[33m7c1e9c1[m HEAD@{Thu Oct 30 10:49:33 2025}: commit: added cat and cell
+[33medd2b11[m HEAD@{Thu Oct 30 10:34:31 2025}: commit: Added glow for spirit Form
+[33mc7c5b49[m HEAD@{Thu Oct 30 10:26:35 2025}: commit: Fix Spirit Form Puzzle
+[33m3f68ac1[m HEAD@{Thu Oct 30 10:07:28 2025}: commit: fixed player and spirit movement to work as intended
+[33md215c9b[m HEAD@{Thu Oct 30 09:57:38 2025}: commit: fix sprirt form
+[33m1044fcf[m HEAD@{Thu Oct 30 09:38:44 2025}: reset: moving to 1044fcf663bae20a8e00b53254a311940d21b027
+[33m46305d2[m HEAD@{Thu Oct 30 09:38:17 2025}: pull --tags origin main: Fast-forward
+[33m1044fcf[m HEAD@{Thu Oct 30 09:37:17 2025}: reset: moving to 1044fcf663bae20a8e00b53254a311940d21b027
+[33m46305d2[m HEAD@{Thu Oct 30 09:36:38 2025}: checkout: moving from main to main
+[33m46305d2[m HEAD@{Thu Oct 30 09:30:59 2025}: checkout: moving from main to main
+[33m46305d2[m HEAD@{Thu Oct 30 09:26:48 2025}: checkout: moving from test to main
+[33m5b409f2[m[33m ([m[1;31morigin/test[m[33m, [m[1;31morigin/revert-fix[m[33m, [m[1;32mtest[m[33m, [m[1;32mrevert-fix[m[33m)[m HEAD@{Thu Oct 30 09:26:10 2025}: checkout: moving from 5b409f20947a25565c3536c13ea29501e2577eca to test
+[33m5b409f2[m[33m ([m[1;31morigin/test[m[33m, [m[1;31morigin/revert-fix[m[33m, [m[1;32mtest[m[33m, [m[1;32mrevert-fix[m[33m)[m HEAD@{Thu Oct 30 09:26:01 2025}: checkout: moving from main to 5b409f20947a25565c3536c13ea29501e2577eca
+[33m46305d2[m HEAD@{Thu Oct 30 09:25:29 2025}: checkout: moving from 5b409f20947a25565c3536c13ea29501e2577eca to main
+[33m5b409f2[m[33m ([m[1;31morigin/test[m[33m, [m[1;31morigin/revert-fix[m[33m, [m[1;32mtest[m[33m, [m[1;32mrevert-fix[m[33m)[m HEAD@{Thu Oct 30 09:24:40 2025}: checkout: moving from 99f037bbb80d4614feedece2eaa8aba309402e4a to 5b409f20947a25565c3536c13ea29501e2577eca
+[33m99f037b[m HEAD@{Thu Oct 30 09:20:26 2025}: checkout: moving from main to 99f037bbb80d4614feedece2eaa8aba309402e4a
+[33m46305d2[m HEAD@{Thu Oct 30 09:06:11 2025}: commit (merge): Merge branch 'revert-fix'
+[33mc46727f[m HEAD@{Thu Oct 30 09:05:22 2025}: commit (merge): Merge branch 'main' of https://github.com/Abstal-8/Game-467-Project
+[33m31548d5[m HEAD@{Thu Oct 30 09:01:47 2025}: checkout: moving from 7afe3ac00be3108e8b80bc1b20ddcd2d278400de to main
+[33m7afe3ac[m HEAD@{Thu Oct 30 08:58:22 2025}: commit: saving for merge
+[33m5b409f2[m[33m ([m[1;31morigin/test[m[33m, [m[1;31morigin/revert-fix[m[33m, [m[1;32mtest[m[33m, [m[1;32mrevert-fix[m[33m)[m HEAD@{Thu Oct 30 08:46:50 2025}: checkout: moving from 99f037bbb80d4614feedece2eaa8aba309402e4a to 5b409f20947a25565c3536c13ea29501e2577eca
+[33m99f037b[m HEAD@{Thu Oct 30 07:31:40 2025}: checkout: moving from revert-fix to 99f037b
+[33m5b409f2[m[33m ([m[1;31morigin/test[m[33m, [m[1;31morigin/revert-fix[m[33m, [m[1;32mtest[m[33m, [m[1;32mrevert-fix[m[33m)[m HEAD@{Thu Oct 30 07:20:48 2025}: commit: added more diolouge
+[33maab55fe[m HEAD@{Thu Oct 30 05:56:57 2025}: commit: added candle glow for spirit form
+[33mebf2dc5[m HEAD@{Thu Oct 30 05:26:04 2025}: commit: added tip for spirit mode
+[33m8978cbe[m HEAD@{Thu Oct 30 04:56:06 2025}: commit: added cat
+[33me9e55f3[m HEAD@{Thu Oct 30 04:17:45 2025}: commit: re-added spirit from text popup
+[33m7094c4a[m HEAD@{Thu Oct 30 04:09:52 2025}: checkout: moving from main to revert-fix
+[33m31548d5[m HEAD@{Thu Oct 30 04:02:47 2025}: commit: Revert "polished and integrated battle system in necessary scenes"
+[33mef8eb2f[m HEAD@{Thu Oct 30 03:58:24 2025}: revert: Revert "Merge conflict error (i messed up)"
+[33me55175a[m HEAD@{Thu Oct 30 03:58:16 2025}: reset: moving to origin/main
+[33me55175a[m HEAD@{Thu Oct 30 03:58:05 2025}: checkout: moving from main to main
+[33me55175a[m HEAD@{Thu Oct 30 03:55:05 2025}: reset: moving to origin/main
+[33me55175a[m HEAD@{Thu Oct 30 03:54:43 2025}: checkout: moving from main to main
+[33me55175a[m HEAD@{Thu Oct 30 03:51:30 2025}: reset: moving to origin/main
+[33me55175a[m HEAD@{Thu Oct 30 03:51:10 2025}: checkout: moving from main to main
+[33me55175a[m HEAD@{Thu Oct 30 03:49:59 2025}: checkout: moving from 7094c4ae665fdf5dd34fbc3f6ccedb1432a66f54 to main
+[33m7094c4a[m HEAD@{Thu Oct 30 03:48:37 2025}: checkout: moving from main to 7094c4a
+[33me55175a[m HEAD@{Thu Oct 30 03:48:18 2025}: checkout: moving from main to main
+[33me55175a[m HEAD@{Thu Oct 30 03:45:22 2025}: checkout: moving from main to main
+[33me55175a[m HEAD@{Thu Oct 30 02:55:19 2025}: pull --tags origin main: Fast-forward
+[33m7094c4a[m HEAD@{Thu Oct 30 01:40:25 2025}: commit: added spirit tag to spirit prefab, added table/chain player in starting room
+[33mae723e9[m HEAD@{Wed Oct 29 23:59:44 2025}: commit: Added introscene and dialouge script
+[33m559b547[m HEAD@{Wed Oct 29 23:59:26 2025}: pull: Fast-forward
+[33me42605c[m HEAD@{Tue Oct 28 09:18:55 2025}: commit: adjust familiar movement script to follow player randomly instead of a fixed point
+[33m29e5446[m HEAD@{Tue Oct 28 08:42:54 2025}: pull: Fast-forward
+[33mf50ab97[m HEAD@{Sun Oct 26 20:57:16 2025}: pull: Fast-forward
+[33mf63a7d9[m HEAD@{Mon Oct 20 10:41:56 2025}: commit: Added spirit form script
+[33m69c35ee[m HEAD@{Mon Oct 20 10:15:32 2025}: pull: Fast-forward
+[33mce505fb[m HEAD@{Tue Oct 14 13:05:13 2025}: pull --tags origin main: Fast-forward
+[33m90c9165[m HEAD@{Tue Oct 14 09:26:00 2025}: commit: Added nurse spirit and collider
+[33mb075fa4[m HEAD@{Mon Oct 13 18:36:31 2025}: pull: Fast-forward
+[33m0208e39[m HEAD@{Sun Oct 12 18:02:45 2025}: pull: Fast-forward
+[33mbb2e21d[m HEAD@{Sun Oct 12 12:55:30 2025}: commit (merge): Merge branch 'main' of https://github.com/Abstal-8/Game-467-Project
+[33mf1a4cee[m HEAD@{Sun Oct 12 12:51:08 2025}: commit: added state machine system
+[33m996d5fd[m HEAD@{Sun Oct 12 12:47:37 2025}: commit: Added state machine skeleton and changed existing scripts to work with new state machine
+[33mb0b6499[m HEAD@{Mon Oct 6 20:24:50 2025}: pull: Fast-forward
+[33m3a5729c[m HEAD@{Sat Oct 4 18:26:24 2025}: pull: Fast-forward
+[33mf79f0ec[m HEAD@{Fri Oct 3 15:36:12 2025}: pull: Fast-forward
+[33m18bb8de[m HEAD@{Fri Oct 3 13:38:06 2025}: commit: fixed merge conflict
+[33m9ede385[m HEAD@{Fri Oct 3 13:36:41 2025}: commit: Added cell_key scriptiable object, added cell_script and added helper method to search players current inventory
+[33m5652011[m HEAD@{Fri Oct 3 12:07:16 2025}: commit: changed familiar to start in cage and only follow player when interacted with
+[33m680bf24[m HEAD@{Fri Oct 3 11:40:13 2025}: commit: added cell_proximety logic and UI prompting
+[33maeb8f01[m HEAD@{Fri Oct 3 11:27:09 2025}: commit: added cell for familiar
+[33m50bcc5b[m HEAD@{Fri Oct 3 11:11:25 2025}: commit: added art_assets
+[33m57714c6[m HEAD@{Thu Oct 2 23:54:41 2025}: commit: added a familiar_movement script
+[33m228c130[m HEAD@{Thu Oct 2 21:36:28 2025}: commit: added script to key to allow it to be picked up
+[33m54774c1[m HEAD@{Wed Oct 1 23:08:36 2025}: commit: Started Making Key item
+[33m4390621[m HEAD@{Wed Oct 1 22:56:17 2025}: commit: Added Scene Selection Script
+[33m3d39768[m HEAD@{Wed Oct 1 22:07:42 2025}: commit: added c# extension
+[33m13c91e0[m HEAD@{Wed Oct 1 19:43:37 2025}: commit (merge): Merge branch 'main' of https://github.com/Abstal-8/Game-467-Project
+[33meef5a51[m HEAD@{Wed Oct 1 19:41:00 2025}: commit (merge): adding scene interaction test
+[33m5bd4b36[m HEAD@{Thu Sep 25 04:36:34 2025}: commit: Added 3rd scene to test interaction program
+[33me9c7fc2[m HEAD@{Wed Sep 24 20:56:02 2025}: clone: from https://github.com/Abstal-8/Game-467-Project.git

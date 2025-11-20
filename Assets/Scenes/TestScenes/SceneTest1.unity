@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1514,7 +1514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1954,7 +1954,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 1, g: 0.14901961, b: 0, a: 1}
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.78431374}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2863,7 +2863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.509434, g: 0.509434, b: 0.509434, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3277,11 +3277,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 514e355e0c753444f8d0887844b7e001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpiritBattleHandler
+  pmOBJ: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
+  enemyOBJ: {fileID: 1837655811261180071, guid: ec93dac0de9eeef47947f4a26ecf77f5, type: 3}
+  uIOBJ: {fileID: 1509123591}
   spiritTokens:
-  - {fileID: 713926541}
-  - {fileID: 1615461541}
-  - {fileID: 274749469}
-  - {fileID: 1168429306}
+  - {fileID: 713926543}
+  - {fileID: 1615461543}
+  - {fileID: 274749471}
+  - {fileID: 1168429308}
+  currentForm: 0
+  tokensFilled: 0
+  inSpiritForm: 0
+  leaveFromSpirit: 0
 --- !u!1 &1925416623
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,14 +3561,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6729267415534694719}
     m_Modifications:
+    - target: {fileID: 5143649936219118015, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2840122191084777704, guid: e3c6595b116de494a9ccbfc62cbeb9ed, type: 3}
     - target: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 6892147745904961905, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      propertyPath: inkJSON
-      value: 
-      objectReference: {fileID: 4900000, guid: 00d5881832773d54185fab137c454c3c, type: 3}
     - target: {fileID: 7455949850054396571, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.97164905
@@ -3605,10 +3612,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5324873077698660863, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 2002291340}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
 --- !u!4 &2002291330 stripped
 Transform:
@@ -3626,20 +3630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d088eb2569b7e7e46a2512903333e2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
---- !u!114 &2002291340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 930865111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02b9e2f6e817b7439e1625144c26bf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 5
-  startPoint: {fileID: 0}
 --- !u!1 &2031512586
 GameObject:
   m_ObjectHideFlags: 0
@@ -3773,6 +3763,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6729267415534694719}
     m_Modifications:
+    - target: {fileID: 121139576648992030, guid: ec93dac0de9eeef47947f4a26ecf77f5, type: 3}
+      propertyPath: attackDMG
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1837655811261180071, guid: ec93dac0de9eeef47947f4a26ecf77f5, type: 3}
       propertyPath: m_Name
       value: Enemy

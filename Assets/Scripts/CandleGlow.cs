@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;  // Safe to include if URP is installed
 public class CandleGlow : MonoBehaviour
 {
     [Header("Links")]
-    public SpiritForm spirit;                 // Drag your Player's SpiritForm here
+    public SpiritFormController spiritController;    // Drag your Player's SpiritForm here
     public Behaviour lightComponent;          // Drag ONE of: Light2D (URP) OR Light (3D)
     public SpriteRenderer glowSprite;         // Optional: a soft round sprite child for fallback
 
@@ -41,27 +41,29 @@ public class CandleGlow : MonoBehaviour
 
     void OnEnable()
     {
-        if (spirit != null)
-            spirit.OnSpiritStateChanged += HandleSpiritChanged;
+        if (spiritController != null)
+            spiritController.OnStateChanged += HandleSpiritStateChanged;
     }
 
     void OnDisable()
     {
-        if (spirit != null)
-            spirit.OnSpiritStateChanged -= HandleSpiritChanged;
+        if (spiritController != null)
+            spiritController.OnStateChanged -= HandleSpiritStateChanged;
 
         if (_flickerCo != null)
             StopCoroutine(_flickerCo);
     }
 
+
     void Start()
     {
-        // Initialize to current state
-        ApplyState(spirit != null && spirit.IsInSpirit);
+        bool inSpirit = spiritController != null && spiritController.IsInSpirit;
+        ApplyState(inSpirit);
     }
 
-    private void HandleSpiritChanged(bool inSpirit)
+    private void HandleSpiritStateChanged(SpiritState newState)
     {
+        bool inSpirit = (newState == SpiritState.SpiritActive);
         ApplyState(inSpirit);
     }
 
