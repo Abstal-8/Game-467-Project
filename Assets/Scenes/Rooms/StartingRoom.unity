@@ -5966,11 +5966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2439175649743689734, guid: b514b68897ec42e4db8fe106fd2be026, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.07
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 2439175649743689734, guid: b514b68897ec42e4db8fe106fd2be026, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.47
+      value: -0.78
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15476,7 +15476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!58 &1629157566
 CircleCollider2D:
   m_ObjectHideFlags: 0
