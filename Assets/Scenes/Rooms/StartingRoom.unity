@@ -6654,7 +6654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f961cc9e7ca4648459659544328dca2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowTutorialAfterIntro
-  tutorialCanvas: {fileID: 1841385975}
+  tutorialCanvas: {fileID: 0}
   tutorialPanel: {fileID: 319570796}
   popup: {fileID: 494028996}
 --- !u!1 &515014093
