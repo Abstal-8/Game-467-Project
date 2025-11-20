@@ -109,7 +109,10 @@ public class PopupManager : MonoBehaviour
         if (currentStory.canContinue)
         {
             string line = currentStory.Continue();
-
+            if (currentStory.currentTags.Contains("UNLOCK_SECRET_AREA"))
+            {
+                FindAnyObjectByType<SecretAreaUnlocker>()?.UnlockSecretArea();
+            }
             // Check tags from this line
             if (currentStory.currentTags.Contains("SHOW_SPIRIT_TUTORIAL") && !hasShownSpiritTutorial)
             {
