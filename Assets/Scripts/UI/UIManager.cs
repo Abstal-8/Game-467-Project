@@ -95,7 +95,7 @@ public class UIManager : MonoBehaviour
         playerPanel.SetActive(true);
         enemyPanel.SetActive(true);
 
-        enemyBattleSprite.gameObject.GetComponent<Image>().sprite = enemy.sprite;
+       // enemyBattleSprite.gameObject.GetComponent<Image>().sprite = enemy.sprite;
         enemyNameText.text = enemyName;
         playerBattleSprite.SetActive(true);
         enemyBattleSprite.SetActive(true);
