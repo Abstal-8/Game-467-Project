@@ -89,7 +89,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 6785393795666294312, guid: e3c6595b116de494a9ccbfc62cbeb9ed, type: 3}
+  m_Sprite: {fileID: 4308641811109011813, guid: 4469171860cee9049861094bc43e0eb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -164,7 +164,7 @@ Animator:
   m_GameObject: {fileID: 5324873077698660863}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fa3647808caf1fc4d959e94024f84219, type: 2}
+  m_Controller: {fileID: 9100000, guid: 48ae89d65be9fa043ba510661515a2de, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa2e56aad35f5a4d85ec1e80cf5ea5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpiritFormController
+  spiritTutorialPanel: {fileID: 0}
   lockBodyAtStart: 0
   currentState: 1
   toggleSpiritKey: 116
