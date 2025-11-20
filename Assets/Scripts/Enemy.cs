@@ -6,10 +6,14 @@ public class Enemy : MonoBehaviour, IDamagable
     public int currentHealth;
     public int attackDMG;
 
+    public Sprite sprite;
+    public string enemyName;
+
 
     void Start()
     {
         currentHealth = maxHealth;
+        sprite = this.GetComponent<SpriteRenderer>().sprite;
     }
 
     public void TakeDamage(int damage)

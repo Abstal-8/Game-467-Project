@@ -69,6 +69,15 @@ public class PopupManager : MonoBehaviour
                 AdvanceDialogue();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && choicePanel.activeInHierarchy)
+        {
+            dialoguePanel.SetActive(false);
+            choicePanel.SetActive(false);
+            isTyping = false;
+            isChoosing = false;
+            dialogueText.text = "";
+        }
     }
 
     public void InitializeDialogue(TextAsset JSON)
@@ -121,6 +130,15 @@ public class PopupManager : MonoBehaviour
                 {
                     spiritTutorialPanel.SetActive(true);
                 }
+            }
+
+            if (currentStory.currentTags.Contains("player"))
+            {
+                UpdatePortrait(0);
+            }
+            else if (currentStory.currentTags.Contains("cat"))
+            {
+                UpdatePortrait(1);
             }
 
             StartCoroutine(TypeLine(line));

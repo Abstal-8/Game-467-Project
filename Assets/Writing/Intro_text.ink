@@ -1,11 +1,11 @@
-﻿VAR spiritTutorialSeen = false
+VAR spiritTutorialSeen = false
 
 -> intro_monologue
 
 === intro_monologue ===
-ahh… my head. What happened?
-Where am I?
-Hmmm... I can’t seem to move.
-I should try and see if I can enter my spirit form and look around. #SHOW_SPIRIT_TUTORIAL
+ahh… my head. What happened? #player
+Where am I? #player
+Hmmm... I can’t seem to move. #player
+I should try and see if I can enter my spirit form and look around. #player #SHOW_SPIRIT_TUTORIAL
 ~ spiritTutorialSeen = true
 -> DONE

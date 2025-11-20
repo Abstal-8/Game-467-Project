@@ -28,6 +28,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject playerBattleSprite;
     [SerializeField] GameObject enemyBattleSprite;
 
+    [SerializeField] string enemyName;
+    [SerializeField] TextMeshProUGUI enemyNameText;
+
     public Button attackButton;
     public Button spiritButton;
 
@@ -92,6 +95,8 @@ public class UIManager : MonoBehaviour
         playerPanel.SetActive(true);
         enemyPanel.SetActive(true);
 
+        enemyBattleSprite.gameObject.GetComponent<Image>().sprite = enemy.sprite;
+        enemyNameText.text = enemyName;
         playerBattleSprite.SetActive(true);
         enemyBattleSprite.SetActive(true);
 
