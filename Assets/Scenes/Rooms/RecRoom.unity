@@ -1688,14 +1688,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8358e5e7b8f17684bb4e37690540009d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicalPadInteract
-  puzzleManager: {fileID: 0}
-  padId: 1
-  audioSource: {fileID: 0}
-  noteClip: {fileID: 8300000, guid: 2fb65161cc978364d9d82662d2321f36, type: 3}
-  playerTag: Player
-  interactKey: 101
-  promptText: {fileID: 0}
-  glowObject: {fileID: 0}
 --- !u!212 &279004213
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2186,7 +2178,7 @@ Transform:
   m_GameObject: {fileID: 343698001}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.07, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9955,14 +9947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8358e5e7b8f17684bb4e37690540009d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicalPadInteract
-  puzzleManager: {fileID: 0}
-  padId: 3
-  audioSource: {fileID: 0}
-  noteClip: {fileID: 8300000, guid: 2fb65161cc978364d9d82662d2321f36, type: 3}
-  playerTag: Player
-  interactKey: 101
-  promptText: {fileID: 0}
-  glowObject: {fileID: 0}
 --- !u!212 &416709497
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17146,7 +17130,7 @@ Transform:
   m_GameObject: {fileID: 1169706407}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60, y: 0, z: 0}
+  m_LocalPosition: {x: 59.93, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31070,14 +31054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8358e5e7b8f17684bb4e37690540009d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicalPadInteract
-  puzzleManager: {fileID: 0}
-  padId: 2
-  audioSource: {fileID: 0}
-  noteClip: {fileID: 8300000, guid: 2fb65161cc978364d9d82662d2321f36, type: 3}
-  playerTag: Player
-  interactKey: 101
-  promptText: {fileID: 0}
-  glowObject: {fileID: 0}
 --- !u!212 &1741018217
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31443,7 +31419,7 @@ Transform:
   m_GameObject: {fileID: 1794384077}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 95.57, y: 9.61, z: 0}
+  m_LocalPosition: {x: 115.82, y: 2.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31566,13 +31542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58dcd2d8b90306443b7d12ba2bf58c5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicalPuzzleManager
-  correctSequence: 00000000010000000200000003000000
-  audioSource: {fileID: 0}
-  successClip: {fileID: 8300000, guid: f16857c17dbc6df4dac0e2bf29bc939a, type: 3}
-  failClip: {fileID: 0}
-  doorToUnlock: {fileID: 0}
-  colliderToDisable: {fileID: 0}
-  extraFX: {fileID: 0}
 --- !u!114 &1794384082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31585,14 +31554,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8358e5e7b8f17684bb4e37690540009d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicalPadInteract
-  puzzleManager: {fileID: 0}
-  padId: 0
-  audioSource: {fileID: 0}
-  noteClip: {fileID: 8300000, guid: 2fb65161cc978364d9d82662d2321f36, type: 3}
-  playerTag: Player
-  interactKey: 101
-  promptText: {fileID: 0}
-  glowObject: {fileID: 343698001}
 --- !u!82 &1794384083
 AudioSource:
   m_ObjectHideFlags: 0
