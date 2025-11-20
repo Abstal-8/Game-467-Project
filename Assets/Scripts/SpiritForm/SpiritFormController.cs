@@ -12,6 +12,8 @@ public class SpiritFormController : MonoBehaviour
 {
     //State Machine for spirit form
 
+    [Header("UI")]
+    public GameObject spiritTutorialPanel;
 
     [Header("Initial Setup")]
     [Tooltip("Should the body start chained/immobilized on the table?")]
@@ -74,14 +76,19 @@ public class SpiritFormController : MonoBehaviour
     //Public APIs 
     public void EnterSpirit()
     {
-        //Only lets you enter if your not spirit mode
+        //Only lets you enter if you're not already in spirit mode
         if (currentState == SpiritState.SpiritActive)
-        
             return;
+
         SetState(SpiritState.SpiritActive);
+
+        // HIDE TUTORIAL once we successfully enter spirit form
+        if (spiritTutorialPanel != null)
+            spiritTutorialPanel.SetActive(false);
     }
-           
-        
+
+
+
     public void ExitSpirit()
     {
         if (currentState != SpiritState.SpiritActive)

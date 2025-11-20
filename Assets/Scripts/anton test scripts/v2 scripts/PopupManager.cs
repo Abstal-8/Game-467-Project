@@ -8,6 +8,7 @@ using System.Collections.Generic;
 
 public class PopupManager : MonoBehaviour
 {
+    public event System.Action OnDialogueComplete;
     // --- UI REFERENCES (DRAG AND DROP IN INSPECTOR) ---
     [Header("UI References")]
     [Tooltip("The root GameObject that holds the Canvas/DialogueBox (This object itself).")]
@@ -18,6 +19,10 @@ public class PopupManager : MonoBehaviour
     public TextMeshProUGUI dialogueText; 
     public AudioSource audioSource;
     public Image portraitImage;
+    //for the Press T to enter spirit Form
+    [Header("Tutorial")]
+    public GameObject spiritTutorialPanel;
+    private bool hasShownSpiritTutorial = false;
 
     [Header("Assets & Configuration")]
     public AudioClip typingSound;
@@ -43,6 +48,8 @@ public class PopupManager : MonoBehaviour
         }
 
         choicePanel.SetActive(false);
+        if (spiritTutorialPanel != null)
+            spiritTutorialPanel.SetActive(false);
     }
 
     void Update()
@@ -103,11 +110,14 @@ public class PopupManager : MonoBehaviour
         {
             string line = currentStory.Continue();
 
-            if (currentStory.currentTags.Contains("UNLOCK_SECRET_AREA"))
+            // Check tags from this line
+            if (currentStory.currentTags.Contains("SHOW_SPIRIT_TUTORIAL") && !hasShownSpiritTutorial)
             {
-                Debug.Log("UNLOCK_SECRET_AREA tag detected from Ink");
-                var unlocker = FindFirstObjectByType<SecretAreaUnlocker>();
-                unlocker?.UnlockSecretArea();
+                hasShownSpiritTutorial = true;
+                if (spiritTutorialPanel != null)
+                {
+                    spiritTutorialPanel.SetActive(true);
+                }
             }
 
             StartCoroutine(TypeLine(line));
@@ -119,27 +129,28 @@ public class PopupManager : MonoBehaviour
         else
         {
             dialogueRoot.SetActive(false);
-           
+            OnDialogueComplete?.Invoke();
         }
+    
 
-        // currentLineIndex++;
+    // currentLineIndex++;
 
-        // if (currentLineIndex < dialogueLines.Length)
-        // {
-        //     UpdatePortrait(dialogueLines[currentLineIndex].speakerIndex);
-        //     StartCoroutine(TypeLine(dialogueLines[currentLineIndex].line));
-        // }
-        // else
-        // {
-        //     // End Conversation: Closes the box without loading a new scene.
-        //     if (dialogueRoot != null)
-        //     {
-        //         dialogueRoot.SetActive(false);
-        //     }
-        // }
-    }
+    // if (currentLineIndex < dialogueLines.Length)
+    // {
+    //     UpdatePortrait(dialogueLines[currentLineIndex].speakerIndex);
+    //     StartCoroutine(TypeLine(dialogueLines[currentLineIndex].line));
+    // }
+    // else
+    // {
+    //     // End Conversation: Closes the box without loading a new scene.
+    //     if (dialogueRoot != null)
+    //     {
+    //         dialogueRoot.SetActive(false);
+    //     }
+    // }
+}
 
-    private void SetupChoice()
+private void SetupChoice()
     {
         isChoosing = true;
 
