@@ -1,64 +1,82 @@
 ﻿using UnityEngine;
 
-public class SigilInteractUI : MonoBehaviour
+public class SigilInteract : MonoBehaviour
 {
-    [Header("Assign in Inspector")]
-    public GameObject promptUI;               // the TMP text GameObject (World-space or Screen-space)
-    public SpiritFormController controller;   // <-- talk to the new controller
-    public string spiritTag = "Spirit";       // tag on your spirit prefab
+    [Header("UI")]
+    public GameObject promptUI;           // existing "Press E" panel
+    public GameObject returnToBodyPanel;  // NEW: "Press T to return to your body" panel
 
-    bool inRange;
+    [Header("Spirit")]
+    public SpiritFormController player;  // Player (SpiritFormController)
+    public string spiritTag = "Spirit";
 
-    void Start()
-    {
-        if (promptUI) promptUI.SetActive(false);
+    [Header("After Unlock Dialogue")]
+    public PopupManager popup;           // PopupSystemRoot (PopupManager)
+    public TextAsset afterUnlockInk;     // ReturnToBody.json
 
-        // Safety: auto-find controller if not set in Inspector
-        if (controller == null)
-        {
-            controller = FindObjectOfType<SpiritFormController>();
-            if (controller == null)
-            {
-                Debug.LogError("[Sigil] No SpiritFormController found in scene!");
-            }
-        }
-    }
+    private bool inRange = false;
+    private bool hasUnlocked = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"[Sigil] OnTriggerEnter2D with {other.name} (tag={other.tag})");
+        Debug.Log("[Sigil] OnTriggerEnter2D with " + other.name + " (tag=" + other.tag + ")");
+
+        if (hasUnlocked) return;
+
         if (other.CompareTag(spiritTag))
         {
             inRange = true;
-            if (promptUI) promptUI.SetActive(true);
+            if (promptUI != null)
+                promptUI.SetActive(true);
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log($"[Sigil] OnTriggerExit2D with {other.name} (tag={other.tag})");
+        Debug.Log("[Sigil] OnTriggerExit2D with " + other.name + " (tag=" + other.tag + ")");
+
         if (other.CompareTag(spiritTag))
         {
             inRange = false;
-            if (promptUI) promptUI.SetActive(false);
+            if (promptUI != null)
+                promptUI.SetActive(false);
         }
     }
 
     void Update()
     {
-        if (inRange && Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("[Sigil] E pressed in range → UnlockMovement()");
+        if (hasUnlocked || !inRange) return;
 
-            if (controller != null)
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("[Sigil] E pressed in range => UnlockMovement()");
+
+            hasUnlocked = true;
+
+            // 1. Unlock movement
+            if (player != null)
+                player.UnlockMovement();
+
+            // 2. Hide original "Press E" prompt
+            if (promptUI != null)
+                promptUI.SetActive(false);
+
+            // 3. Show "Press T to return to your body"
+            if (returnToBodyPanel != null)
+                returnToBodyPanel.SetActive(true);
+
+            // 4. Play the extra Ink line
+            if (popup != null && afterUnlockInk != null)
             {
-                controller.UnlockMovement();   
-                controller.UnlockSwap();      
-               
+                Debug.Log("[Sigil] Playing after-unlock Ink: " + afterUnlockInk.name);
+                popup.InitializeDialogue(afterUnlockInk);
+                popup.StartDialogue();
             }
 
-            if (promptUI) promptUI.SetActive(false);
-            
+            // 5. Disable collider so this zone can't be used again
+            var col = GetComponent<Collider2D>();
+            if (col != null) col.enabled = false;
         }
+
     }
 }

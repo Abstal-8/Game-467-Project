@@ -33,7 +33,7 @@ public class SpiritFormController : MonoBehaviour
     public bool HasMovementUnlocked { get; private set; } = false; 
 
     //checks if you can swap places yet, currently unlocked right after you free yourself may change later
-    public bool HasSwapUnlocked { get; private set; } = false;
+    public bool HasSwapUnlocked { get; private set; } = true;
     //Lets other scripts subscribe to spiritstate youtube channel so they can know when currentstate changes
     public event Action<SpiritState> OnStateChanged;
     //Just used for error handling
@@ -78,6 +78,7 @@ public class SpiritFormController : MonoBehaviour
     {
         //Only lets you enter if you're not already in spirit mode
         if (currentState == SpiritState.SpiritActive)
+
             return;
 
         SetState(SpiritState.SpiritActive);
@@ -118,15 +119,14 @@ public class SpiritFormController : MonoBehaviour
     //actually changes the state, all state changes need to call this method
     private void SetState(SpiritState newState)
     {
-        if (newState == currentState)
-            return;
+        if (newState == currentState) return;
 
         currentState = newState;
 
-        // Debug - check console see transitions in the Console
-        Debug.Log($"[SpiritFormController] State changed to: {currentState}");
+        if (newState == SpiritState.SpiritActive)
+            if (spiritTutorialPanel != null)
+                spiritTutorialPanel.SetActive(false);
 
-        // Tell everyone who cares that the state changed
         OnStateChanged?.Invoke(currentState);
     }
 }
