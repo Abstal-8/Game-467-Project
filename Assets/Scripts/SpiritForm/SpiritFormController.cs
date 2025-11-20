@@ -33,7 +33,7 @@ public class SpiritFormController : MonoBehaviour
     public bool HasMovementUnlocked { get; private set; } = false; 
 
     //checks if you can swap places yet, currently unlocked right after you free yourself may change later
-    public bool HasSwapUnlocked { get; private set; } = false;
+    public bool HasSwapUnlocked { get; private set; } = true;
     //Lets other scripts subscribe to spiritstate youtube channel so they can know when currentstate changes
     public event Action<SpiritState> OnStateChanged;
     //Just used for error handling
