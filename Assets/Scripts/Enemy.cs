@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour, IDamagable
 {
     public int maxHealth;
     public int currentHealth;
+    public int attackDMG;
 
 
     void Start()
@@ -23,4 +24,5 @@ public class Enemy : MonoBehaviour, IDamagable
         }
         
     }
+
 }

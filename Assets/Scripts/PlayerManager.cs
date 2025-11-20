@@ -4,6 +4,7 @@ public class PlayerManager : MonoBehaviour, IDamagable
 {
     public int maxHealth;
     public int currentHealth;
+    public int attackDMG;
 
     public Enemy Enemyencounter { get; private set; }
 
@@ -33,6 +34,5 @@ public class PlayerManager : MonoBehaviour, IDamagable
             Enemyencounter = enemy;
             BattleState.battleStartEvent?.Invoke();
         }
-
     }
 }

@@ -107,13 +107,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5324873077698660863}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d088eb2569b7e7e46a2512903333e2fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
   maxHealth: 100
   currentHealth: 100
+  attackDMG: 10
 --- !u!114 &5628234329865949303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa2e56aad35f5a4d85ec1e80cf5ea5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpiritFormController
-  lockBodyAtStart: 1
-  currentState: 0
+  lockBodyAtStart: 0
+  currentState: 1
   toggleSpiritKey: 116
 --- !u!114 &5545558350863834179
 MonoBehaviour:
