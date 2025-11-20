@@ -3,7 +3,8 @@
 public class SigilInteract : MonoBehaviour
 {
     [Header("UI")]
-    public GameObject promptUI;          // the "Press E to enter spirit form" panel
+    public GameObject promptUI;           // existing "Press E" panel
+    public GameObject returnToBodyPanel;  // NEW: "Press T to return to your body" panel
 
     [Header("Spirit")]
     public SpiritFormController player;  // Player (SpiritFormController)
@@ -56,25 +57,26 @@ public class SigilInteract : MonoBehaviour
             if (player != null)
                 player.UnlockMovement();
 
-            // 2. Hide prompt
+            // 2. Hide original "Press E" prompt
             if (promptUI != null)
                 promptUI.SetActive(false);
 
-            // 3. Play the extra Ink line
+            // 3. Show "Press T to return to your body"
+            if (returnToBodyPanel != null)
+                returnToBodyPanel.SetActive(true);
+
+            // 4. Play the extra Ink line
             if (popup != null && afterUnlockInk != null)
             {
                 Debug.Log("[Sigil] Playing after-unlock Ink: " + afterUnlockInk.name);
                 popup.InitializeDialogue(afterUnlockInk);
                 popup.StartDialogue();
             }
-            else
-            {
-                Debug.LogWarning("[Sigil] Popup or Ink asset missing, cannot play dialogue.");
-            }
 
-            // 4. Disable collider so the zone never re-triggers
+            // 5. Disable collider so this zone can't be used again
             var col = GetComponent<Collider2D>();
             if (col != null) col.enabled = false;
         }
+
     }
 }
