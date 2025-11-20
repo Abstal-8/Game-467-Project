@@ -1,14 +1,14 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CatCageUnlock : MonoBehaviour
 {
     [Header("Interaction")]
     public string playerTag = "Player";
     public KeyCode interactKey = KeyCode.E;
-    public GameObject promptUI;         // "Press E to unlock cage"
+    public GameObject promptUI;
 
-    [Header("Cat")]
-    public MonoBehaviour catFollowScript;  // your Familiar_Movement / CatFollow script
+    [Header("Cat Controller")]
+    public FamiliarController familiar;   // ← drag your cat here
 
     private bool playerInRange = false;
     private PlayerKeyRing keyRing;
@@ -44,49 +44,47 @@ public class CatCageUnlock : MonoBehaviour
 
     private void Update()
     {
-        if (opened || !playerInRange || keyRing == null) return;
+        if (opened || !playerInRange || keyRing == null)
+            return;
 
         if (Input.GetKeyDown(interactKey))
         {
             if (!keyRing.HasCatKey)
             {
-                Debug.Log("[CatCage] Player has no key, cannot open cage.");
+                Debug.Log("[CatCage] Player has no key.");
                 return;
             }
 
-            // Use key
+            // Player uses the key
             keyRing.UseCatKey();
 
-            // Free the cat
-            OpenCageAndFreeCat();
+            // Open the cage
+            UnlockCage();
         }
     }
 
-    private void OpenCageAndFreeCat()
+    private void UnlockCage()
     {
         opened = true;
-        Debug.Log("[CatCage] Cage opened, freeing cat.");
 
-        // Call cat script
-        if (catFollowScript != null)
-        {
-            // Try to call a method named "FreeCat" on whatever script you drop here
-            var method = catFollowScript.GetType().GetMethod("FreeCat");
-            if (method != null)
-                method.Invoke(catFollowScript, null);
-            else
-                Debug.LogWarning("[CatCage] No FreeCat() method on " + catFollowScript.GetType().Name);
-        }
+        Debug.Log("[CatCage] Cage unlocked! Freeing familiar...");
 
         // Hide the prompt
         if (promptUI != null)
             promptUI.SetActive(false);
 
-        // Optionally, disable this collider & maybe the bars sprite so the cage looks open
+        // Disable the cage collider so it no longer blocks anything
         var col = GetComponent<Collider2D>();
-        if (col != null) col.enabled = false;
+        if (col != null)
+            col.enabled = false;
 
-        // If the cage is just a sprite object, you can also disable it or change sprite here
-        // gameObject.SetActive(false);  // if you want the whole cage to vanish
+        // Call the cat's controller to free it
+        if (familiar != null)
+            familiar.FreeFamiliar();
+        else
+            Debug.LogWarning("[CatCage] No FamiliarController assigned!");
+
+        // OPTIONAL: disable cage sprite or play animation
+        // gameObject.SetActive(false);
     }
 }
