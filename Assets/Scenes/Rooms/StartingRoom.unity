@@ -5972,6 +5972,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.78
       objectReference: {fileID: 0}
+    - target: {fileID: 8571504449775187886, guid: b514b68897ec42e4db8fe106fd2be026, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6404,7 +6408,9 @@ MonoBehaviour:
   portraitImage: {fileID: 1125542408}
   spiritTutorialPanel: {fileID: 0}
   typingSound: {fileID: 8300000, guid: a2b2e7ffee0787046866dcd235c3bc82, type: 3}
-  characterPortraits: []
+  characterPortraits:
+  - {fileID: 4308641811109011813, guid: 4469171860cee9049861094bc43e0eb5, type: 3}
+  - {fileID: 4131224390281329484, guid: 243ec5a2c48daa14cb80b43348a97c11, type: 3}
   typingSpeed: 0.1
   dialogueLines:
   - line: plz
@@ -10152,7 +10158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6892147745904961905, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7455949850054396571, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10216,7 +10222,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 801659628}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801659629}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d088eb2569b7e7e46a2512903333e2fb, type: 3}
   m_Name: 
