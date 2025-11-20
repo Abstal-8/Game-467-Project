@@ -1,23 +1,16 @@
-﻿VAR metBefore = false
+﻿
 
 -> cat_menu
 
 === cat_menu ===
-{ metBefore:
-    We meet again, human.
-- else:
-    Hello, traveler.
-    ~ metBefore = true
-}
-
-* "What are you?"
-    I am a cat. Obviously.
+* "Are you... a cat?"
+   I am a cat. Obviously
     -> cat_menu
-
-* "Are you a cat?"
-    Yes. You’re very observant.
-    -> cat_menu
-
 * "Why are you locked up?"
-    They say I cause trouble. I say I improve the place.
-    -> DONE
+    Because I know things, like how to get escape this place...
+    -> cat_menu
+* "How can I help you"
+    I saw one of them walk through the wall over there with a key, if you can free me I'll tell you what is going on. #UNLOCK_SECRET_AREA
+    ->DONE
+
+  

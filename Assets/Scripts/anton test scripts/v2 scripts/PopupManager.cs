@@ -101,7 +101,16 @@ public class PopupManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            StartCoroutine(TypeLine(currentStory.Continue()));
+            string line = currentStory.Continue();
+
+            if (currentStory.currentTags.Contains("UNLOCK_SECRET_AREA"))
+            {
+                Debug.Log("UNLOCK_SECRET_AREA tag detected from Ink");
+                var unlocker = FindFirstObjectByType<SecretAreaUnlocker>();
+                unlocker?.UnlockSecretArea();
+            }
+
+            StartCoroutine(TypeLine(line));
         }
         else if (currentStory.currentChoices.Count > 0)
         {
