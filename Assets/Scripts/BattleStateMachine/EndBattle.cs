@@ -28,6 +28,7 @@ public class EndBattle : BattleState
         enemyReference.gameObject.SetActive(false);
         enemyReference.currentHealth = enemyReference.maxHealth;
         playerManager.currentHealth = playerManager.maxHealth;
+        spiritBattleHandler.FlushTokens();
         // (Testing only)
         /*
             Depends on option.

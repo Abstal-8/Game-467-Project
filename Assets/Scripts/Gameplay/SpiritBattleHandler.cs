@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using Unity.Mathematics;
+using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime;
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,38 +37,145 @@ public class SpiritBattleHandler : MonoBehaviour
         
 
     */
+    public GameObject pmOBJ;
+    public GameObject enemyOBJ;
+    public GameObject uIOBJ;
+    PlayerManager playerManager;
+    Enemy enemy;
+    UIManager uIManager;
+    [SerializeField] List<Image> spiritTokens;
 
-    [SerializeField] List<GameObject> spiritTokens;
+    public CurrentForm currentForm;
     int tokenIndex = 0;
-    int tokensFilled = 0;
+    public int tokensFilled = 0;
+    public bool inSpiritForm;
+    public bool leaveFromSpirit;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
+    {
+        playerManager = pmOBJ.GetComponent<PlayerManager>();
+        enemy = enemyOBJ.GetComponent<Enemy>();
+        uIManager = uIOBJ.GetComponent<UIManager>();
+        
+    }
+
     void Start()
     {
-        foreach (GameObject token in spiritTokens)
+        FlushTokens();
+        currentForm = CurrentForm.HUMAN;
+    }
+
+
+    void Update()
+    {
+        switch(currentForm)
         {
-            token.gameObject.GetComponent<Image>().fillAmount = 0;
+            case CurrentForm.HUMAN:
+                HumanState();
+                break;
+            case CurrentForm.SPIRIT:
+                SpiritState();
+                break;
+        }
+        
+    }
+
+
+    void HumanState()
+    {
+        if (leaveFromSpirit)
+        {
+            // Check which spirit and apply stage of grief buff/debuff
+            // for now, hard-coded buff/debuff
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeForm()
     {
-        
+        if (currentForm == CurrentForm.HUMAN)
+        {
+            leaveFromSpirit = false;
+            currentForm = CurrentForm.SPIRIT;
+            inSpiritForm = true;
+        }
+        else
+        {
+            inSpiritForm = false;
+            currentForm = CurrentForm.HUMAN;
+            leaveFromSpirit = true;
+        }
+    }
+
+    void SpiritState()
+    {
+        if (inSpiritForm)
+        {
+
+        }
     }
 
     public void ChargeToken(int charge)
     {
         // For now flat charge rate for each token
     
-        spiritTokens[tokenIndex].gameObject.GetComponent<Image>().fillAmount += (float)(charge / 100f);
-
-        if (spiritTokens[tokenIndex].gameObject.GetComponent<Image>().fillAmount >= 1)
+        spiritTokens[tokenIndex].fillAmount += (float)(charge / 100f);
+        if (!inSpiritForm && spiritTokens[tokenIndex].fillAmount >= 1)
         {
-            tokenIndex++;
+            spiritTokens[tokenIndex].color = Color.cyan;
             tokensFilled++;
+            tokenIndex++;
         }
+
+        if (tokenIndex >= 3)
+        {
+            tokenIndex = 3;
+        }
+        
+    }
+
+    public void RemoveToken()
+    {
+        
+        if (spiritTokens[tokenIndex].fillAmount < 1 && tokenIndex > 0)
+        {
+            spiritTokens[tokenIndex].fillAmount = 0;
+            spiritTokens[tokenIndex - 1].fillAmount = 0;
+            tokenIndex--;
+        }
+        else
+        {
+            // Assuming at index = 0 and full token is realized
+            spiritTokens[tokenIndex].fillAmount = 0;
+        }
+        spiritTokens[tokenIndex].color = Color.gray;
+        tokensFilled--;
+
+        if (tokensFilled == 0)
+        {
+            ChangeForm();
+        }
+    }
+
+    public void FlushTokens()
+    {
+        foreach (Image token in spiritTokens)
+        {
+            token.fillAmount = 0;
+            token.color = Color.gray;
+        }
+
+        tokensFilled = 0;
+        tokenIndex = 0;
+        leaveFromSpirit = false;
+        inSpiritForm = false;
+        currentForm = CurrentForm.HUMAN;
+    }
+
+    public enum CurrentForm
+    {
+        HUMAN,
+        SPIRIT
     }
 
 }
