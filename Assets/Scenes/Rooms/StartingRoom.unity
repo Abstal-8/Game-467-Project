@@ -16870,8 +16870,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SigilInteractUI
   promptUI: {fileID: 1284704758}
-  controller: {fileID: 801659651}
+  player: {fileID: 801659651}
   spiritTag: Spirit
+  popup: {fileID: 494028996}
+  afterUnlockInk: {fileID: 4900000, guid: 2d752f1957dc9834f9f25221bfb6bc7f, type: 3}
 --- !u!114 &1981691867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16884,7 +16886,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c560e7c10c068834b8181953b20d5a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpiritUnlock
-  player: {fileID: 0}
+  player: {fileID: 801659651}
+  popup: {fileID: 494028996}
+  afterUnlockInk: {fileID: 4900000, guid: 2d752f1957dc9834f9f25221bfb6bc7f, type: 3}
   spiritTag: Spirit
 --- !u!212 &1981691868
 SpriteRenderer:
