@@ -9,6 +9,7 @@ public class SpiritSwapAbility : MonoBehaviour
     [Header("Input")]
     [Tooltip("Key used to swap the body with the spirit while in spirit form.")]
     public KeyCode swapKey = KeyCode.F;
+    public SpiritFormController spiritForm;
 
     private void Awake()
     {
@@ -56,6 +57,7 @@ public class SpiritSwapAbility : MonoBehaviour
 
         controller.transform.position = spiritPos;
         spirit.transform.position = bodyPos;
+        spiritForm.ExitSpirit();
 
         Debug.Log("[SpiritSwapAbility] Swapped body and spirit positions.");
     }
