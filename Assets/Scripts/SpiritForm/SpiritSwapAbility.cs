@@ -11,6 +11,11 @@ public class SpiritSwapAbility : MonoBehaviour
     public KeyCode swapKey = KeyCode.F;
     public SpiritFormController spiritForm;
 
+
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip swapSound;
+
     private void Awake()
     {
        
@@ -57,6 +62,13 @@ public class SpiritSwapAbility : MonoBehaviour
 
         controller.transform.position = spiritPos;
         spirit.transform.position = bodyPos;
+        if (audioSource && swapSound)
+        {
+            audioSource.pitch = 2.0f;
+            audioSource.PlayOneShot(swapSound, 2.0f);
+            audioSource.pitch = 1f;
+        }
+
         spiritForm.ExitSpirit();
 
         Debug.Log("[SpiritSwapAbility] Swapped body and spirit positions.");
