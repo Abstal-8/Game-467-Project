@@ -355,7 +355,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -680523687
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -859,7 +859,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -680523687
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1271,7 +1271,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -680523687
+  m_SortingLayerID: -1247392611
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 2659928716049758086, guid: 8694413ded2462c49b0a7eda8686ee08, type: 3}
@@ -1365,7 +1365,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -680523687
+  m_SortingLayerID: -1247392611
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -7925945275110868319, guid: 99c5b3cacf5955b428902a2b88539473, type: 3}
@@ -1897,7 +1897,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -680523687
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1990,7 +1990,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -680523687
+  m_SortingLayerID: -1247392611
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -173530099807541425, guid: 99c5b3cacf5955b428902a2b88539473, type: 3}
@@ -2088,8 +2088,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -680523687
-  m_SortingLayer: 6
+  m_SortingLayerID: 1715350499
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2154,6 +2154,7 @@ MonoBehaviour:
   page2Text: {fileID: 5633634287891034188}
   page3Text: {fileID: 5649821692932198166}
   page4Text: {fileID: 1052675760932637434}
+  maxCharacters: 333
 --- !u!114 &7693131087305590492
 MonoBehaviour:
   m_ObjectHideFlags: 0
