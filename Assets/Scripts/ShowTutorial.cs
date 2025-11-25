@@ -1,10 +1,11 @@
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class ShowTutorialAfterIntro : MonoBehaviour
 {
     [Header("UI")]
     public GameObject tutorialCanvas;   // your TutorialCanvas
-    public GameObject tutorialPanel;    // Tutorial_Panel
+    public GameObject Panel;    // Tutorial_Panel
 
     [Header("Dialogue")]
     public PopupManager popup;
@@ -14,10 +15,13 @@ public class ShowTutorialAfterIntro : MonoBehaviour
     void Start()
     {
         if (tutorialCanvas != null)
-            tutorialCanvas.SetActive(true);
+        {
+            Panel.SetActive(true); // <- actually show it
+         
+        }
 
-        if (tutorialPanel != null)
-            tutorialPanel.SetActive(false);
+        if (Panel != null)
+            Panel.SetActive(false);
 
         if (popup != null)
         {
@@ -44,10 +48,11 @@ public class ShowTutorialAfterIntro : MonoBehaviour
         Debug.Log("[ShowTutorialAfterIntro] Showing tutorial panel (first time only).");
 
         if (tutorialCanvas != null)
-            tutorialCanvas.SetActive(true);
+        Panel.GetComponent<SetText>().SetMessage("Tutorial: press T to enter Spirit Form");
+        tutorialCanvas.SetActive(true);
+        Panel.SetActive(true);
 
-        if (tutorialPanel != null)
-            tutorialPanel.SetActive(true);
+       
 
         // We don't care about later dialogues (like the cat), so unsubscribe
         if (popup != null)

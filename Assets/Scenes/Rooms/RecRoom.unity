@@ -473,7 +473,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d18d2a1e6e683564c9388295f7bfd70c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -692,7 +692,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d842fd202dd532541845c6e197d52d85, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1001,7 +1001,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 68db0663321d1eb4ba86136a314f5a0c, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13230,8 +13230,8 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1317787955
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.28125, y: 1.453125, z: 0}
@@ -14045,11 +14045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7455949850054396571, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 128.29
+      value: 125.92
       objectReference: {fileID: 0}
     - target: {fileID: 7455949850054396571, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.73
+      value: 7.2
       objectReference: {fileID: 0}
     - target: {fileID: 7455949850054396571, guid: 5929e52b3a3b1734fb7d13dbc482509b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14536,6 +14536,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1377126477564430529, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.65625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377126477564430529, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377126477564430529, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3053554773599210980, guid: 8ac434b9ec0c9cd41bfb989363fb1742, type: 3}
+    - target: {fileID: 1377126477564430529, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377126477564430529, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1247392611
+      objectReference: {fileID: 0}
+    - target: {fileID: 1377126477564430529, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6017789702137185304, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 128.45352
@@ -14576,14 +14600,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6469121256482430406, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6469121256482430406, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 2068671669
-      objectReference: {fileID: 0}
+    - target: {fileID: 7889951199424494276, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 873704221}
     - target: {fileID: 7915289040218828267, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_Name
       value: ObjectInformation
@@ -26344,7 +26364,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: d98e604fb92dcb8408c4057b1f6d2b30, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0

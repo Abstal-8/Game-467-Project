@@ -27,19 +27,45 @@ public class NoteInfoSwitcher : MonoBehaviour
         if (page1Text != null) page2Text.gameObject.SetActive(false);
         if (page1Text != null) page3Text.gameObject.SetActive(false);
         if (page1Text != null) page4Text.gameObject.SetActive(false);
+        showingPage1 = true;
+        showingPage2 = false;
+        showingPage3 = false;
+        showingPage4 = false;
     }
-    private void Update()
+    public void Show()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            NextPage();
-        }
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            PrevPage();
-        }
+        if (page1Text != null) page1Text.gameObject.SetActive(true);
+        if (page1Text != null) page2Text.gameObject.SetActive(false);
+        if (page1Text != null) page3Text.gameObject.SetActive(false);
+        if (page1Text != null) page4Text.gameObject.SetActive(false);
+        showingPage1 = true;
+        showingPage2 = false;
+        showingPage3 = false;
+        showingPage4 = false;
     }
-    private void NextPage()
+    public void Hide()
+    {
+        if (page1Text != null) page1Text.gameObject.SetActive(false);
+        if (page1Text != null) page2Text.gameObject.SetActive(false);
+        if (page1Text != null) page3Text.gameObject.SetActive(false);
+        if (page1Text != null) page4Text.gameObject.SetActive(false);
+        showingPage1 = false;
+        showingPage2 = false;
+        showingPage3 = false;
+        showingPage4 = false;
+    }
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.E))
+    //     {
+    //         NextPage();
+    //     }
+    //     else if (Input.GetKeyDown(KeyCode.Q))
+    //     {
+    //         PrevPage();
+    //     }
+    // }
+    public void NextPage()
     {
         if (showingPage4) return;
 
@@ -83,7 +109,7 @@ public class NoteInfoSwitcher : MonoBehaviour
             }
         }
     }
-    private void PrevPage()
+    public void PrevPage()
     {
         if (showingPage1) return;
 

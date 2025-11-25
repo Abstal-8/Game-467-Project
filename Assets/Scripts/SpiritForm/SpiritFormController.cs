@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 
 public enum SpiritState
@@ -13,7 +14,7 @@ public class SpiritFormController : MonoBehaviour
     //State Machine for spirit form
 
     [Header("UI")]
-    public GameObject spiritTutorialPanel;
+    public GameObject Panel;
 
     [Header("Initial Setup")]
     [Tooltip("Should the body start chained/immobilized on the table?")]
@@ -84,8 +85,8 @@ public class SpiritFormController : MonoBehaviour
         SetState(SpiritState.SpiritActive);
 
         // HIDE TUTORIAL once we successfully enter spirit form
-        if (spiritTutorialPanel != null)
-            spiritTutorialPanel.SetActive(false);
+        if (Panel != null)
+            Panel.SetActive(false);
     }
 
 
@@ -124,8 +125,9 @@ public class SpiritFormController : MonoBehaviour
         currentState = newState;
 
         if (newState == SpiritState.SpiritActive)
-            if (spiritTutorialPanel != null)
-                spiritTutorialPanel.SetActive(false);
+            if (Panel != null)
+                Panel.GetComponent<SetText>().SetMessage("whatever text you want");
+                Panel.SetActive(false);
 
         OnStateChanged?.Invoke(currentState);
     }
