@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IDamagable
@@ -6,14 +7,16 @@ public class Enemy : MonoBehaviour, IDamagable
     public int currentHealth;
     public int attackDMG;
 
-    //public Sprite sprite;
+    private SpriteRenderer spriteRenderer;
+    public Sprite enemySprite;
     public string enemyName;
 
 
     void Start()
     {
         currentHealth = maxHealth;
-       // sprite = this.GetComponent<SpriteRenderer>().sprite;
+        spriteRenderer = this.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = enemySprite;
     }
 
     public void TakeDamage(int damage)

@@ -16,7 +16,7 @@ public class BattleStateManager : MonoBehaviour
 
     [SerializeField] PlayerManager playerManager;
     [SerializeField] UIManager uIManager;
-    [SerializeField] Enemy enemyReference;
+    Enemy enemyReference;
     [SerializeField] SpiritBattleHandler sbh;
 
     protected BattleState currentState;

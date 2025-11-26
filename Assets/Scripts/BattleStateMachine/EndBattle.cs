@@ -10,6 +10,7 @@ public class EndBattle : BattleState
     public override void EnterState(BattleStateManager battleState)
     {
         Debug.Log("You have exited battle.");
+        enemyReference = playerManager.Enemyencounter.GetComponent<Enemy>();
         battleEnd?.Invoke(); // Starts playing music
         ExitState(battleState);
         
@@ -28,6 +29,7 @@ public class EndBattle : BattleState
         enemyReference.gameObject.SetActive(false);
         enemyReference.currentHealth = enemyReference.maxHealth;
         playerManager.currentHealth = playerManager.maxHealth;
+        enemyReference = null;
         spiritBattleHandler.FlushTokens();
         // (Testing only)
         /*
