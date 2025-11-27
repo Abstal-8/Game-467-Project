@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class NoteInteractUI : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class NoteInteractUI : MonoBehaviour
     public GameObject canvasContainer;
 
     [Header("Light Source (child to toggle on/off)")]
-    public GameObject objectGlow;
+    public Light2D Glow;
     // public string closingTrigger = "PlayClosing";
     // public string openingTrigger = "PlayOpening";
     // public string stopAnimation = "PlayNothing";
@@ -16,9 +17,9 @@ public class NoteInteractUI : MonoBehaviour
     private bool show = false;
     private NoteInfoSwitcher infoSwitcher;
     private SpriteRenderer sr;
-    private string closing = "BookClosing";
-    private string opening = "BookOpening";
-    private Animation anim;
+    // private string closing = "BookClosing";
+    // private string opening = "BookOpening";
+    // private Animation anim;
     // private Animator anim;
     
 
@@ -28,20 +29,15 @@ public class NoteInteractUI : MonoBehaviour
         if (infoSwitcher == null) { Debug.Log("NoteInfoSwitcher Script not found!");}
         sr = GetComponent<SpriteRenderer>();
         if (sr == null) { Debug.Log("SpriteRenderer Component not found!");}
+        Glow.color = Color.yellow;
 
-        anim = GetComponent<Animation>();
-        if (anim == null) {Debug.Log("anim not picking up component");}
-        else {Debug.Log("animation component found!");}
+        // anim = GetComponent<Animation>();
+        // if (anim == null) {Debug.Log("anim not picking up component");}
+        // else {Debug.Log("animation component found!");}
 
         if (canvasContainer) canvasContainer.SetActive(false);
 
         inRange = true;
-
-        // if (objectGlow != null)
-        // {
-        //     objectGlow.SetActive(false);
-        // }
-        // HideAllChildren();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -50,11 +46,9 @@ public class NoteInteractUI : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             inRange = true;
-            if (objectGlow != null)
+            if (Glow != null)
             {
-                objectGlow.SetActive(true);
-                ItemGlow glowScript = objectGlow.GetComponent<ItemGlow>();
-                glowScript.inInteraction();
+                Glow.enabled = true;
             }
         }
     }
@@ -65,11 +59,9 @@ public class NoteInteractUI : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             inRange = false;
-            if (objectGlow != null)
+            if (Glow != null)
             {
-                ItemGlow glowScript = objectGlow.GetComponent<ItemGlow>();
-                glowScript.TurnLightOff();
-                // objectGlow.SetActive(false);
+                Glow.enabled = false;
             }
         }
     }
@@ -80,7 +72,7 @@ public class NoteInteractUI : MonoBehaviour
         {
             //TODO If animating a book opening ever comes back up again. look here (I am getting logs that it is playing)
             //TODO most likely problem is that the objectinformation sprites dissapear, but still unknown
-            anim.Play(opening);
+            // anim.Play(opening);
             // if (anim[opening] != null)
             // {
             //     // Play the animation from the start
@@ -104,17 +96,10 @@ public class NoteInteractUI : MonoBehaviour
             if (canvasContainer != null) {
                 canvasContainer.SetActive(true);
             }
-            if (objectGlow != null)
+            if (Glow != null)
             {
-                objectGlow.SetActive(true);
-                ItemGlow glowScript = objectGlow.GetComponent<ItemGlow>();
-                if (glowScript != null) {
-                    glowScript.inInteraction();
-                }
-                else
-                {
-                    Debug.Log("glowScript broken");
-                }
+                Glow.color = Color.white;
+                Glow.enabled = false;
             }
         }
         if (show && !inRange)
@@ -128,35 +113,11 @@ public class NoteInteractUI : MonoBehaviour
         }
         if (inRange && show && Input.GetKeyDown(KeyCode.Q))
         {
-            if (objectGlow != null)
-            {
-                // objectGlow.SetActive(true);
-                // ItemGlow glowScript = objectGlow.GetComponent<ItemGlow>();
-                // if (glowScript != null) {
-                //     glowScript.inInteraction();
-                // }
-                // else
-                // {
-                //     Debug.Log("glowScript broken");
-                // }
-                infoSwitcher.PrevPage();
-            }
+            infoSwitcher.PrevPage();
         }
         if (inRange && show && Input.GetKeyDown(KeyCode.E))
         {
-            if (objectGlow != null)
-            {
-                // objectGlow.SetActive(true);
-                // ItemGlow glowScript = objectGlow.GetComponent<ItemGlow>();
-                // if (glowScript != null) {
-                //     glowScript.inInteraction();
-                // }
-                // else
-                // {
-                //     Debug.Log("glowScript broken");
-                // }
-                infoSwitcher.NextPage();
-            }
+            infoSwitcher.NextPage();
         }
         if (inRange && Input.GetKeyDown(KeyCode.Escape))
         {
@@ -183,32 +144,10 @@ public class NoteInteractUI : MonoBehaviour
             if (canvasContainer != null && canvasContainer.activeSelf) {
                 canvasContainer.SetActive(false);
             }
-            if (objectGlow != null)
+            if (Glow != null)
             {
-                ItemGlow glowScript = objectGlow.GetComponent<ItemGlow>();
-                glowScript.outInteraction();
+                Glow.enabled = true;
             }
         }
     }
-
-    // private void HideAllChildren()
-    // {
-    //     foreach (Transform child in transform)
-    //     {
-    //         if (objectGlow != null && child.gameObject == objectGlow)
-    //             continue;   // skip light
-
-    //         child.gameObject.SetActive(false);
-    //     }
-    // }
-    // private void HideRecursively(Transform obj)
-    // {
-    //     if (objectGlow != null && child.gameObject == objectGlow) {}
-    //     else { child.gameObject.SetActive(false); }
-    //     foreach (Transform child in obj)
-    //     {
-    //         HideRecursively(child);
-    //     }
-
-    // }
 }
