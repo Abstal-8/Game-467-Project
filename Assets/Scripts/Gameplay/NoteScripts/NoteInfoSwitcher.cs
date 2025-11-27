@@ -10,9 +10,13 @@ public class NoteInfoSwitcher : MonoBehaviour
 {
     [Header("Page Objects")]
     [SerializeField] private TMP_Text page1Text;
+    [SerializeField] private TMP_Text page1aText;
     [SerializeField] private TMP_Text page2Text;
+    [SerializeField] private TMP_Text page2aText;
     [SerializeField] private TMP_Text page3Text;
+    [SerializeField] private TMP_Text page3aText;
     [SerializeField] private TMP_Text page4Text;
+    [SerializeField] private TMP_Text page4aText;
 
     [Header("Settings")]
     [SerializeField] private int maxCharacters = 333;
@@ -27,6 +31,10 @@ public class NoteInfoSwitcher : MonoBehaviour
         if (page1Text != null) page2Text.gameObject.SetActive(false);
         if (page1Text != null) page3Text.gameObject.SetActive(false);
         if (page1Text != null) page4Text.gameObject.SetActive(false);
+        if (page1Text != null) page1aText.gameObject.SetActive(true);
+        if (page1Text != null) page2aText.gameObject.SetActive(false);
+        if (page1Text != null) page3aText.gameObject.SetActive(false);
+        if (page1Text != null) page4aText.gameObject.SetActive(false);
         showingPage1 = true;
         showingPage2 = false;
         showingPage3 = false;
@@ -38,6 +46,10 @@ public class NoteInfoSwitcher : MonoBehaviour
         if (page1Text != null) page2Text.gameObject.SetActive(false);
         if (page1Text != null) page3Text.gameObject.SetActive(false);
         if (page1Text != null) page4Text.gameObject.SetActive(false);
+        if (page1Text != null) page1aText.gameObject.SetActive(true);
+        if (page1Text != null) page2aText.gameObject.SetActive(false);
+        if (page1Text != null) page3aText.gameObject.SetActive(false);
+        if (page1Text != null) page4aText.gameObject.SetActive(false);
         showingPage1 = true;
         showingPage2 = false;
         showingPage3 = false;
@@ -49,6 +61,10 @@ public class NoteInfoSwitcher : MonoBehaviour
         if (page1Text != null) page2Text.gameObject.SetActive(false);
         if (page1Text != null) page3Text.gameObject.SetActive(false);
         if (page1Text != null) page4Text.gameObject.SetActive(false);
+        if (page1Text != null) page1aText.gameObject.SetActive(false);
+        if (page1Text != null) page2aText.gameObject.SetActive(false);
+        if (page1Text != null) page3aText.gameObject.SetActive(false);
+        if (page1Text != null) page4aText.gameObject.SetActive(false);
         showingPage1 = false;
         showingPage2 = false;
         showingPage3 = false;
@@ -78,6 +94,10 @@ public class NoteInfoSwitcher : MonoBehaviour
                 if (page2Text != null) page2Text.gameObject.SetActive(true);
                 if (page3Text != null) page3Text.gameObject.SetActive(false);
                 if (page4Text != null) page4Text.gameObject.SetActive(false);
+                if (page1Text != null) page1aText.gameObject.SetActive(false);
+                if (page2Text != null) page2aText.gameObject.SetActive(true);
+                if (page3Text != null) page3aText.gameObject.SetActive(false);
+                if (page4Text != null) page4aText.gameObject.SetActive(false);
                 showingPage2 = true;
                 showingPage1 = false;
             }
@@ -91,6 +111,10 @@ public class NoteInfoSwitcher : MonoBehaviour
                 if (page2Text != null) page2Text.gameObject.SetActive(false);
                 if (page3Text != null) page3Text.gameObject.SetActive(true);
                 if (page4Text != null) page4Text.gameObject.SetActive(false);
+                if (page1Text != null) page1aText.gameObject.SetActive(false);
+                if (page2Text != null) page2aText.gameObject.SetActive(false);
+                if (page3Text != null) page3aText.gameObject.SetActive(true);
+                if (page4Text != null) page4aText.gameObject.SetActive(false);
                 showingPage2 = false;
                 showingPage3 = true;
             }
@@ -104,6 +128,10 @@ public class NoteInfoSwitcher : MonoBehaviour
                 if (page2Text != null) page2Text.gameObject.SetActive(false);
                 if (page3Text != null) page3Text.gameObject.SetActive(false);
                 if (page4Text != null) page4Text.gameObject.SetActive(true);
+                if (page1Text != null) page1aText.gameObject.SetActive(false);
+                if (page2Text != null) page2aText.gameObject.SetActive(false);
+                if (page3Text != null) page3aText.gameObject.SetActive(false);
+                if (page4Text != null) page4aText.gameObject.SetActive(true);
                 showingPage3 = false;
                 showingPage4 = true;
             }
@@ -122,6 +150,10 @@ public class NoteInfoSwitcher : MonoBehaviour
                 if (page2Text != null) page2Text.gameObject.SetActive(false);
                 if (page3Text != null) page3Text.gameObject.SetActive(false);
                 if (page4Text != null) page4Text.gameObject.SetActive(false);
+                if (page1Text != null) page1aText.gameObject.SetActive(true);
+                if (page2Text != null) page2aText.gameObject.SetActive(false);
+                if (page3Text != null) page3aText.gameObject.SetActive(false);
+                if (page4Text != null) page4aText.gameObject.SetActive(false);
                 showingPage1 = true;
                 showingPage2 = false;
             }
@@ -135,6 +167,10 @@ public class NoteInfoSwitcher : MonoBehaviour
                 if (page2Text != null) page2Text.gameObject.SetActive(true);
                 if (page3Text != null) page3Text.gameObject.SetActive(false);
                 if (page4Text != null) page4Text.gameObject.SetActive(false);
+                if (page1Text != null) page1aText.gameObject.SetActive(false);
+                if (page2Text != null) page2aText.gameObject.SetActive(true);
+                if (page3Text != null) page3aText.gameObject.SetActive(false);
+                if (page4Text != null) page4aText.gameObject.SetActive(false);
                 showingPage2 = true;
                 showingPage3 = false;
             }
@@ -148,6 +184,10 @@ public class NoteInfoSwitcher : MonoBehaviour
                 if (page2Text != null) page2Text.gameObject.SetActive(false);
                 if (page3Text != null) page3Text.gameObject.SetActive(true);
                 if (page4Text != null) page4Text.gameObject.SetActive(false);
+                if (page1Text != null) page1aText.gameObject.SetActive(false);
+                if (page2Text != null) page2aText.gameObject.SetActive(false);
+                if (page3Text != null) page3aText.gameObject.SetActive(true);
+                if (page4Text != null) page4aText.gameObject.SetActive(false);
                 showingPage3 = true;
                 showingPage4 = false;
             }
