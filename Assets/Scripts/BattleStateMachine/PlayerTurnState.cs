@@ -15,6 +15,7 @@ public class PlayerTurnState : BattleState
     public override void EnterState(BattleStateManager battleState)
     {
         Debug.Log("Player turn start!");
+        enemyReference = playerManager.Enemyencounter.GetComponent<Enemy>();
         uIManager.attackButton.gameObject.SetActive(true);
         uIManager.spiritButton.gameObject.SetActive(true);
     }

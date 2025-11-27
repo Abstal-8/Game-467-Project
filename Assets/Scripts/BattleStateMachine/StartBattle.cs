@@ -25,7 +25,7 @@ public class StartBattle : BattleState
         // Saves player position in previous scene
         //prevPlayerPos = battleState.player.transform.position;
         // Get enemy Reference
-        enemyReference = playerManager.Enemyencounter;
+        enemyReference = playerManager.Enemyencounter.GetComponent<Enemy>();
         enemyReference.gameObject.SetActive(false);
         playerManager.gameObject.SetActive(false);
         battleState.battleToScene = prevScene.name;

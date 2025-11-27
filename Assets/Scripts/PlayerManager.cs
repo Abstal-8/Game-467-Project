@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour, IDamagable
     public int currentHealth;
     public int attackDMG;
 
-    public Enemy Enemyencounter { get; private set; }
+    public GameObject Enemyencounter { get; private set; }
 
 
     void Start()
@@ -27,12 +27,27 @@ public class PlayerManager : MonoBehaviour, IDamagable
 
     }
 
+    void OnEnable()
+    {
+        BattleState.battleEnd += ResetEnemy;
+    }
+
+    void OnDisable()
+    {
+        BattleState.battleEnd -= ResetEnemy;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent<Enemy>(out Enemy enemy))
+        if (other.GetComponent<Enemy>())
         {
-            Enemyencounter = enemy;
+            Enemyencounter = other.gameObject;
             BattleState.battleStartEvent?.Invoke();
         }
+    }
+
+    public void ResetEnemy()
+    {
+        Enemyencounter = null;
     }
 }

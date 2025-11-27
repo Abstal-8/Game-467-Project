@@ -27,8 +27,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] Image playerHealthBar;
     [SerializeField] GameObject playerBattleSprite;
     [SerializeField] GameObject enemyBattleSprite;
-
-    [SerializeField] string enemyName;
     [SerializeField] TextMeshProUGUI enemyNameText;
 
     public Button attackButton;
@@ -86,6 +84,8 @@ public class UIManager : MonoBehaviour
 
     public void InitializeBattleScreen()
     {
+        enemy = playerManager.Enemyencounter.GetComponent<Enemy>();
+        
         playerHealthText.text = playerManager.currentHealth + "/" + playerManager.maxHealth;
         enemyHealthText.text = enemyHealth + "/" + enemyMaxHealth;
 
@@ -95,8 +95,8 @@ public class UIManager : MonoBehaviour
         playerPanel.SetActive(true);
         enemyPanel.SetActive(true);
 
-       // enemyBattleSprite.gameObject.GetComponent<Image>().sprite = enemy.sprite;
-        enemyNameText.text = enemyName;
+        enemyBattleSprite.GetComponent<Image>().sprite = enemy.enemySprite;
+        enemyNameText.text = enemy.enemyName;
         playerBattleSprite.SetActive(true);
         enemyBattleSprite.SetActive(true);
 
