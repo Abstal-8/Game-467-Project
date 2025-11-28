@@ -18,8 +18,8 @@ public class NoteInfoSwitcher : MonoBehaviour
     [SerializeField] private TMP_Text page4Text;
     [SerializeField] private TMP_Text page4aText;
 
-    [Header("Settings")]
-    [SerializeField] private int maxCharacters = 333;
+    // [Header("Settings")]
+    // [SerializeField] private int maxCharacters = 333;
     private bool showingPage1;
     private bool showingPage2;
     private bool showingPage3;
@@ -28,13 +28,13 @@ public class NoteInfoSwitcher : MonoBehaviour
     private void Start()
     {
         if (page1Text != null) page1Text.gameObject.SetActive(true);
-        if (page1Text != null) page2Text.gameObject.SetActive(false);
-        if (page1Text != null) page3Text.gameObject.SetActive(false);
-        if (page1Text != null) page4Text.gameObject.SetActive(false);
-        if (page1Text != null) page1aText.gameObject.SetActive(true);
-        if (page1Text != null) page2aText.gameObject.SetActive(false);
-        if (page1Text != null) page3aText.gameObject.SetActive(false);
-        if (page1Text != null) page4aText.gameObject.SetActive(false);
+        if (page2Text != null) page2Text.gameObject.SetActive(false);
+        if (page3Text != null) page3Text.gameObject.SetActive(false);
+        if (page4Text != null) page4Text.gameObject.SetActive(false);
+        if (page1aText != null) page1aText.gameObject.SetActive(true);
+        if (page2aText != null) page2aText.gameObject.SetActive(false);
+        if (page3aText != null) page3aText.gameObject.SetActive(false);
+        if (page4aText != null) page4aText.gameObject.SetActive(false);
         showingPage1 = true;
         showingPage2 = false;
         showingPage3 = false;
@@ -43,13 +43,13 @@ public class NoteInfoSwitcher : MonoBehaviour
     public void Show()
     {
         if (page1Text != null) page1Text.gameObject.SetActive(true);
-        if (page1Text != null) page2Text.gameObject.SetActive(false);
-        if (page1Text != null) page3Text.gameObject.SetActive(false);
-        if (page1Text != null) page4Text.gameObject.SetActive(false);
-        if (page1Text != null) page1aText.gameObject.SetActive(true);
-        if (page1Text != null) page2aText.gameObject.SetActive(false);
-        if (page1Text != null) page3aText.gameObject.SetActive(false);
-        if (page1Text != null) page4aText.gameObject.SetActive(false);
+        if (page2Text != null) page2Text.gameObject.SetActive(false);
+        if (page3Text != null) page3Text.gameObject.SetActive(false);
+        if (page4Text != null) page4Text.gameObject.SetActive(false);
+        if (page1aText != null) page1aText.gameObject.SetActive(true);
+        if (page2aText != null) page2aText.gameObject.SetActive(false);
+        if (page3aText != null) page3aText.gameObject.SetActive(false);
+        if (page4aText != null) page4aText.gameObject.SetActive(false);
         showingPage1 = true;
         showingPage2 = false;
         showingPage3 = false;
@@ -58,13 +58,13 @@ public class NoteInfoSwitcher : MonoBehaviour
     public void Hide()
     {
         if (page1Text != null) page1Text.gameObject.SetActive(false);
-        if (page1Text != null) page2Text.gameObject.SetActive(false);
-        if (page1Text != null) page3Text.gameObject.SetActive(false);
-        if (page1Text != null) page4Text.gameObject.SetActive(false);
-        if (page1Text != null) page1aText.gameObject.SetActive(false);
-        if (page1Text != null) page2aText.gameObject.SetActive(false);
-        if (page1Text != null) page3aText.gameObject.SetActive(false);
-        if (page1Text != null) page4aText.gameObject.SetActive(false);
+        if (page2Text != null) page2Text.gameObject.SetActive(false);
+        if (page3Text != null) page3Text.gameObject.SetActive(false);
+        if (page4Text != null) page4Text.gameObject.SetActive(false);
+        if (page1aText != null) page1aText.gameObject.SetActive(false);
+        if (page2aText != null) page2aText.gameObject.SetActive(false);
+        if (page3aText != null) page3aText.gameObject.SetActive(false);
+        if (page4aText != null) page4aText.gameObject.SetActive(false);
         showingPage1 = false;
         showingPage2 = false;
         showingPage3 = false;

@@ -54,7 +54,7 @@ public class SequentialMusicTeacher : MonoBehaviour
                 src.Stop();
                 src.time = 0f;
 
-                Debug.Log($"[Teacher] Playing {src.gameObject.name}");
+                // Debug.Log($"[Teacher] Playing {src.gameObject.name}");
 
                 src.Play();
 

@@ -2289,9 +2289,7 @@ GameObject:
   - component: {fileID: 7068016899116412789}
   - component: {fileID: 966176505843259461}
   - component: {fileID: 7693131087305590492}
-  - component: {fileID: 909606016802488252}
   - component: {fileID: 1275134912379631918}
-  - component: {fileID: 3843175353650956611}
   m_Layer: 0
   m_Name: ObjectInformation
   m_TagString: Untagged
@@ -2409,7 +2407,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 3.199997
+  m_Radius: 2.199997
 --- !u!114 &966176505843259461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2446,19 +2444,6 @@ MonoBehaviour:
   playerTag: Player
   canvasContainer: {fileID: 3191949484607725014}
   Glow: {fileID: 7988471058865399807}
---- !u!114 &909606016802488252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7915289040218828267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 353276dfab30871449472839594b0bef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemGlow
-  myLight: {fileID: 0}
 --- !u!95 &1275134912379631918
 Animator:
   serializedVersion: 7
@@ -2481,24 +2466,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!111 &3843175353650956611
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7915289040218828267}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Animation: {fileID: 7400000, guid: f94f73d7636ca4a40a75f8ba9fd58526, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: f94f73d7636ca4a40a75f8ba9fd58526, type: 2}
-  - {fileID: 7400000, guid: 8d2e98d5f0a3def4d828fda879e8f117, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_UpdateMode: 0
-  m_CullingType: 0
 --- !u!1 &8641004130945200063
 GameObject:
   m_ObjectHideFlags: 0

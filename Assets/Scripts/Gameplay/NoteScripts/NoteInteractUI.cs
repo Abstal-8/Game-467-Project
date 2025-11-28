@@ -29,6 +29,7 @@ public class NoteInteractUI : MonoBehaviour
         if (infoSwitcher == null) { Debug.Log("NoteInfoSwitcher Script not found!");}
         sr = GetComponent<SpriteRenderer>();
         if (sr == null) { Debug.Log("SpriteRenderer Component not found!");}
+        Glow.enabled = false;
         Glow.color = Color.yellow;
 
         // anim = GetComponent<Animation>();
@@ -37,7 +38,7 @@ public class NoteInteractUI : MonoBehaviour
 
         if (canvasContainer) canvasContainer.SetActive(false);
 
-        inRange = true;
+        inRange = false;
     }
 
     void OnTriggerEnter2D(Collider2D other)

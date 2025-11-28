@@ -27,7 +27,7 @@ public class MusicalPadInteract : MonoBehaviour
     {
         if (glowObject)
         {
-            Debug.Log($"[Pad {padId}] Glow = {on}");
+            // Debug.Log($"[Pad {padId}] Glow = {on}");
             glowObject.SetActive(on);
         }
     }
@@ -56,7 +56,7 @@ public class MusicalPadInteract : MonoBehaviour
         if (!other.CompareTag(playerTag)) return;
 
         inRange = true;
-        Debug.Log($"[Pad {padId}] Player entered trigger");
+        // Debug.Log($"[Pad {padId}] Player entered trigger");
 
         if (promptText)
         {
@@ -70,7 +70,7 @@ public class MusicalPadInteract : MonoBehaviour
         if (!other.CompareTag(playerTag)) return;
 
         inRange = false;
-        Debug.Log($"[Pad {padId}] Player left trigger");
+        // Debug.Log($"[Pad {padId}] Player left trigger");
 
         if (promptText)
             promptText.gameObject.SetActive(false);
@@ -80,7 +80,7 @@ public class MusicalPadInteract : MonoBehaviour
     {
         if (Input.GetKeyDown(interactKey))
         {
-            Debug.Log($"[Pad {padId}] E pressed, inRange={inRange}");
+            // Debug.Log($"[Pad {padId}] E pressed, inRange={inRange}");
 
             if (!inRange) return;
 
@@ -96,7 +96,7 @@ public class MusicalPadInteract : MonoBehaviour
 
     private void PlayNote()
     {
-        Debug.Log($"[Pad {padId}] Playing note");
+        // Debug.Log($"[Pad {padId}] Playing note");
         audioSource.PlayOneShot(noteClip);
     }
 }
