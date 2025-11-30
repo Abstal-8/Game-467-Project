@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using TMPro;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class SpiritBattleHandler : MonoBehaviour
 {
@@ -44,8 +46,11 @@ public class SpiritBattleHandler : MonoBehaviour
     Enemy enemy;
     UIManager uIManager;
     [SerializeField] List<Image> spiritTokens;
+    [SerializeField] GameObject buffPanel;
+    [SerializeField] GameObject buffToolTip;
 
     public CurrentForm currentForm;
+    public Stage stage;
     int tokenIndex = 0;
     public int tokensFilled = 0;
     public bool inSpiritForm;
@@ -64,56 +69,55 @@ public class SpiritBattleHandler : MonoBehaviour
     {
         FlushTokens();
         currentForm = CurrentForm.HUMAN;
+        stage = Stage.NONE;
+
+        EventTrigger eventTrigger = buffPanel.AddComponent<EventTrigger>();
+        EventTrigger.Entry buffHover = new EventTrigger.Entry() { eventID = EventTriggerType.PointerEnter };
+        EventTrigger.Entry buffHoverExit = new EventTrigger.Entry() { eventID = EventTriggerType.PointerExit };
+
+        buffHover.callback.AddListener((BaseEventData) => { buffToolTip.SetActive(true); });
+        buffHoverExit.callback.AddListener((BaseEventData) => { buffToolTip.SetActive(false); });
+
+        eventTrigger.triggers.Add(buffHover);
+        eventTrigger.triggers.Add(buffHoverExit);
     }
 
 
-    void Update()
-    {
-        switch(currentForm)
-        {
-            case CurrentForm.HUMAN:
-                HumanState();
-                break;
-            case CurrentForm.SPIRIT:
-                SpiritState();
-                break;
-        }
-        
-    }
-
-
-    void HumanState()
-    {
-        if (leaveFromSpirit)
-        {
-            // Check which spirit and apply stage of grief buff/debuff
-            // for now, hard-coded buff/debuff
-        }
-    }
 
     public void ChangeForm()
     {
-        if (currentForm == CurrentForm.HUMAN)
+        if (currentForm == CurrentForm.HUMAN) // going INTO spirit form
         {
             leaveFromSpirit = false;
             currentForm = CurrentForm.SPIRIT;
+            stage = Stage.NONE;
+            RemoveStage();
             inSpiritForm = true;
         }
-        else
+        else // LEAVING spirit form
         {
             inSpiritForm = false;
             currentForm = CurrentForm.HUMAN;
+            stage = Stage.DEPRESSION;
+            ApplyStage();
             leaveFromSpirit = true;
         }
     }
 
-    void SpiritState()
+    void ApplyStage()
     {
-        if (inSpiritForm)
-        {
-
-        }
+        // For now buff text is hard-coded, will change later (maybe)
+        buffToolTip.GetComponentInChildren<TextMeshProUGUI>().text = "Stage: DEPRESSION\nApplies a 5% DMG increase to player and a 20% DMG increase to enemy.";
+        buffPanel.SetActive(true);
     }
+
+    void RemoveStage()
+    {
+        // Removing text for potential change in selected spirit
+        buffPanel.SetActive(false);
+        buffToolTip.GetComponentInChildren<TextMeshProUGUI>().text = "";
+    }
+
 
     public void ChargeToken(int charge)
     {
@@ -176,6 +180,12 @@ public class SpiritBattleHandler : MonoBehaviour
     {
         HUMAN,
         SPIRIT
+    }
+
+    public enum Stage
+    {
+        NONE,
+        DEPRESSION
     }
 
 }
