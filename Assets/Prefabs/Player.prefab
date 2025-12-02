@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa2e56aad35f5a4d85ec1e80cf5ea5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpiritFormController
-  spiritTutorialPanel: {fileID: 0}
+  Panel: {fileID: 0}
   lockBodyAtStart: 0
   currentState: 1
   toggleSpiritKey: 116
@@ -306,3 +306,6 @@ MonoBehaviour:
   controller: {fileID: 2850247562058986173}
   spawner: {fileID: 1675795560340349025}
   swapKey: 102
+  spiritForm: {fileID: 0}
+  audioSource: {fileID: 0}
+  swapSound: {fileID: 0}

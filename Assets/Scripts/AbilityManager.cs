@@ -9,6 +9,9 @@ public class AbilityManager : MonoBehaviour
 {
     public GameObject toolTip;
     public TextMeshProUGUI toolText;
+    public GameObject spiritBattleHandlerOBJ;
+    SpiritBattleHandler sbh;    
+    int multipliedAbilityDMG;
     public List<Ability> playerAbilities = new List<Ability>();
     public List<Button> abillityButtons = new List<Button>();
     
@@ -17,6 +20,7 @@ public class AbilityManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        sbh = spiritBattleHandlerOBJ.GetComponent<SpiritBattleHandler>();
         foreach (Button btn in abillityButtons)
         {
             EventTrigger eventTrigger = btn.gameObject.AddComponent<EventTrigger>();
@@ -38,5 +42,7 @@ public class AbilityManager : MonoBehaviour
         }
     }
 
-    
+
+
+
 }

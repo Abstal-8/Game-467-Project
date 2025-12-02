@@ -55,6 +55,8 @@ public class SpiritBattleHandler : MonoBehaviour
     public int tokensFilled = 0;
     public bool inSpiritForm;
     public bool leaveFromSpirit;
+    public float dmgMultiplier;
+    int spiritBuff;
 
 
     void Awake()
@@ -68,8 +70,6 @@ public class SpiritBattleHandler : MonoBehaviour
     void Start()
     {
         FlushTokens();
-        currentForm = CurrentForm.HUMAN;
-        stage = Stage.NONE;
 
         EventTrigger eventTrigger = buffPanel.AddComponent<EventTrigger>();
         EventTrigger.Entry buffHover = new EventTrigger.Entry() { eventID = EventTriggerType.PointerEnter };
@@ -107,8 +107,9 @@ public class SpiritBattleHandler : MonoBehaviour
     void ApplyStage()
     {
         // For now buff text is hard-coded, will change later (maybe)
-        buffToolTip.GetComponentInChildren<TextMeshProUGUI>().text = "Stage: DEPRESSION\nApplies a 5% DMG increase to player and a 20% DMG increase to enemy.";
+        buffToolTip.GetComponentInChildren<TextMeshProUGUI>().text = "Stage: DEPRESSION\nApplies a 5% DMG increase for player and a 50% DMG increase for enemy.";
         buffPanel.SetActive(true);
+        playerManager.attackDMG -= spiritBuff;
     }
 
     void RemoveStage()
@@ -116,6 +117,7 @@ public class SpiritBattleHandler : MonoBehaviour
         // Removing text for potential change in selected spirit
         buffPanel.SetActive(false);
         buffToolTip.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        playerManager.attackDMG += spiritBuff;
     }
 
 
@@ -174,6 +176,10 @@ public class SpiritBattleHandler : MonoBehaviour
         leaveFromSpirit = false;
         inSpiritForm = false;
         currentForm = CurrentForm.HUMAN;
+        stage = Stage.NONE;
+        buffPanel.SetActive(false);
+        buffToolTip.GetComponentInChildren<TextMeshProUGUI>().text = "";
+
     }
 
     public enum CurrentForm
@@ -186,6 +192,12 @@ public class SpiritBattleHandler : MonoBehaviour
     {
         NONE,
         DEPRESSION
+    }
+
+    public enum Spirit
+    {
+        NONE,
+        CAT
     }
 
 }
