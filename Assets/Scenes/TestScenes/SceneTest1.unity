@@ -4301,6 +4301,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   playerManager: {fileID: 1440731697}
   enemy: {fileID: 2093296715}
+  sbh: {fileID: 1874772628}
   playerPanel: {fileID: 1648602919}
   enemyPanel: {fileID: 943218243}
   playerHealthText: {fileID: 1199176303}
@@ -4311,8 +4312,12 @@ MonoBehaviour:
   playerBattleSprite: {fileID: 480487672}
   enemyBattleSprite: {fileID: 62713984}
   enemyNameText: {fileID: 432432939}
+  abilityPanel: {fileID: 1838203703}
+  optionPanel: {fileID: 916932153}
   attackButton: {fileID: 1395381325}
   spiritButton: {fileID: 1242682934}
+  spiritSprite: {fileID: -1878829162656583296, guid: a5113708d1eda5c4c8c3ee62b9fe2b8c, type: 3}
+  humanSprite: {fileID: 4308641811109011813, guid: 4469171860cee9049861094bc43e0eb5, type: 3}
 --- !u!1 &1510242040
 GameObject:
   m_ObjectHideFlags: 0
@@ -5855,7 +5860,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AbilityManager
   toolTip: {fileID: 1415335105}
   toolText: {fileID: 568363548}
-  spiritBattleHandlerOBJ: {fileID: 0}
+  spiritBattleHandlerOBJ: {fileID: 1874772625}
+  uiOBJ: {fileID: 1509123591}
+  bsmOBJ: {fileID: 1874772625}
   playerAbilities:
   - {fileID: 11400000, guid: e128acdb5f7ba124c89e4fe7a1ef534d, type: 2}
   - {fileID: 11400000, guid: 600b42ab57cd17f42a3d1fcdcf40e7ea, type: 2}

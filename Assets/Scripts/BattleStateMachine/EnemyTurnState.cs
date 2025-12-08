@@ -8,10 +8,12 @@ public class EnemyTurnState : BattleState
     {
     }
 
-    public override void EnterState(BattleStateManager battleState)
+    public override async void EnterState(BattleStateManager battleState)
     {
         Debug.Log("Enemy turn start!");
         enemyReference = playerManager.Enemyencounter.GetComponent<Enemy>();
+        await Awaitable.WaitForSecondsAsync(2);
+        EnemyAttack();
         
     }
 
@@ -35,10 +37,7 @@ public class EnemyTurnState : BattleState
         {
             ExitState(battleState);
         }
-        else
-        {
-            EnemyAttack();
-        }
+
     }
 
     void EnemyAttack()

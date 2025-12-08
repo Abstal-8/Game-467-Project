@@ -10,10 +10,14 @@ public class AbilityManager : MonoBehaviour
     public GameObject toolTip;
     public TextMeshProUGUI toolText;
     public GameObject spiritBattleHandlerOBJ;
-    SpiritBattleHandler sbh;    
+    public GameObject uiOBJ;
+    public GameObject bsmOBJ;
+    SpiritBattleHandler sbh;   
+    UIManager uIManager; 
     int multipliedAbilityDMG;
     public List<Ability> playerAbilities = new List<Ability>();
     public List<Button> abillityButtons = new List<Button>();
+    BattleStateManager bsm;
     
     
     
@@ -21,6 +25,8 @@ public class AbilityManager : MonoBehaviour
     void Start()
     {
         sbh = spiritBattleHandlerOBJ.GetComponent<SpiritBattleHandler>();
+        uIManager = uiOBJ.GetComponent<UIManager>();
+        bsm = this.GetComponent<BattleStateManager>();
         foreach (Button btn in abillityButtons)
         {
             EventTrigger eventTrigger = btn.gameObject.AddComponent<EventTrigger>();
@@ -36,6 +42,11 @@ public class AbilityManager : MonoBehaviour
             });
 
             exitHover.callback.AddListener((BaseEventData) => { toolTip.SetActive(false); });
+            btn.onClick.AddListener(() => 
+            {
+                BattleStateManager.playerAttack?.Invoke(playerAbilities[abillityButtons.IndexOf(btn)].abilityDMG);
+                uIManager.HideAbilities();
+            });
 
             eventTrigger.triggers.Add(onHover);
             eventTrigger.triggers.Add(exitHover);

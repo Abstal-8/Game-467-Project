@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public abstract class BattleState
 {
     // Variables needed: player reference, enemy reference, booleans: (_isFighting, _hasEnded),
