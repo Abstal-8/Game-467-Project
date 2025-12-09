@@ -6,6 +6,7 @@ public class ShowTutorialAfterIntro : MonoBehaviour
     [Header("UI")]
     public GameObject tutorialCanvas;   // your TutorialCanvas
     public GameObject Panel;    // Tutorial_Panel
+    public GameObject SwapPanel;
 
     [Header("Dialogue")]
     public PopupManager popup;
@@ -22,6 +23,7 @@ public class ShowTutorialAfterIntro : MonoBehaviour
 
         if (Panel != null)
             Panel.SetActive(false);
+            SwapPanel.SetActive(false);
 
         if (popup != null)
         {
@@ -48,9 +50,10 @@ public class ShowTutorialAfterIntro : MonoBehaviour
         Debug.Log("[ShowTutorialAfterIntro] Showing tutorial panel (first time only).");
 
         if (tutorialCanvas != null)
-        Panel.GetComponent<SetText>().SetMessage("Tutorial: press T to enter Spirit Form");
+        Panel.GetComponent<SetText>().SetMessage("Tutorial: press R to enter Spirit Form");
         tutorialCanvas.SetActive(true);
         Panel.SetActive(true);
+        SwapPanel.SetActive(true);
 
        
 

@@ -6,6 +6,8 @@ public class DialogueTrigger : MonoBehaviour
     public PopupManager popupManager;      // assign in Inspector
     public TextAsset inkJSON;             // your Ink .json for THIS NPC
 
+    public GameObject promptPanel;
+
     private bool playerInRange = false;
 
     void Update()
@@ -14,6 +16,7 @@ public class DialogueTrigger : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             StartConversation();
+            promptPanel.SetActive(false);
         }
     }
 
@@ -34,7 +37,7 @@ public class DialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
-            // (Optional: show 'Press E to talk' prompt here)
+            promptPanel.SetActive(true);
         }
     }
 
@@ -43,7 +46,7 @@ public class DialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            // (Optional: hide prompt)
+            promptPanel.SetActive(false);
         }
     }
 }

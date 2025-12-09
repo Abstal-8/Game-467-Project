@@ -109,7 +109,7 @@ public class SpiritBattleHandler : MonoBehaviour
         // For now buff text is hard-coded, will change later (maybe)
         buffToolTip.GetComponentInChildren<TextMeshProUGUI>().text = "Stage: DEPRESSION\nApplies a 5% DMG increase for player and a 50% DMG increase for enemy.";
         buffPanel.SetActive(true);
-        playerManager.attackDMG -= spiritBuff;
+        AbilityManager.abilityReset(2);
     }
 
     void RemoveStage()
@@ -117,7 +117,7 @@ public class SpiritBattleHandler : MonoBehaviour
         // Removing text for potential change in selected spirit
         buffPanel.SetActive(false);
         buffToolTip.GetComponentInChildren<TextMeshProUGUI>().text = "";
-        playerManager.attackDMG += spiritBuff;
+        AbilityManager.abilityBuff(2);
     }
 
 

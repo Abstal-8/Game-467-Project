@@ -38,6 +38,7 @@ public class PopupManager : MonoBehaviour
     private bool isChoosing = false;
     private int currentLineIndex = 0;
     private Story currentStory;
+    private string storyState;
 
     void Start()
     {
@@ -70,14 +71,15 @@ public class PopupManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && choicePanel.activeInHierarchy)
-        {
-            dialoguePanel.SetActive(false);
-            choicePanel.SetActive(false);
-            isTyping = false;
-            isChoosing = false;
-            dialogueText.text = "";
-        }
+        // if (Input.GetKeyDown(KeyCode.Escape) && choicePanel.activeInHierarchy)
+        // {
+        //     dialoguePanel.SetActive(false);
+        //     choicePanel.SetActive(false);
+        //     isTyping = false;
+        //     isChoosing = false;
+        //     dialogueText.text = "";
+        //     currentStory.state.LoadJson(storyState);
+        // }
     }
 
     public void InitializeDialogue(TextAsset JSON)
@@ -117,6 +119,7 @@ public class PopupManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
+            storyState = currentStory.state.ToJson();
             string line = currentStory.Continue();
             if (currentStory.currentTags.Contains("UNLOCK_SECRET_AREA"))
             {

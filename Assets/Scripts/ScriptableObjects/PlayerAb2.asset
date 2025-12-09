@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7e73d3e65de9548a91e97f8524c702, type: 3}
   m_Name: PlayerAb2
   m_EditorClassIdentifier: Assembly-CSharp::Ability
-  abilityName: Kick
-  abilityDescription: Filler
-  baseDMG: 0
+  abilityName: Soul Pierce
+  abilityDescription: Deal <color=red>{0}</color> DMG, piercing an enemy's soul.
+  baseDMG: 10

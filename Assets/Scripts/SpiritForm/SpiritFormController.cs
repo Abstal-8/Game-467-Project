@@ -13,9 +13,6 @@ public class SpiritFormController : MonoBehaviour
 {
     //State Machine for spirit form
 
-    [Header("UI")]
-    public GameObject Panel;
-
     [Header("Initial Setup")]
     [Tooltip("Should the body start chained/immobilized on the table?")]
     public bool lockBodyAtStart = true;
@@ -34,13 +31,13 @@ public class SpiritFormController : MonoBehaviour
     public bool HasMovementUnlocked { get; private set; } = false; 
 
     //checks if you can swap places yet, currently unlocked right after you free yourself may change later
-    public bool HasSwapUnlocked { get; private set; } = true;
+    public bool HasSwapUnlocked { get; private set; } = false;
     //Lets other scripts subscribe to spiritstate youtube channel so they can know when currentstate changes
     public event Action<SpiritState> OnStateChanged;
     //Just used for error handling
     [Header("Debug/Input")]
     [Tooltip("Key to toggle spirit on/off while testing.")]
-    public KeyCode toggleSpiritKey = KeyCode.T;
+    public KeyCode toggleSpiritKey = KeyCode.R;
     void Start()
     {
         //deciding the starting state for spirit form
@@ -83,10 +80,6 @@ public class SpiritFormController : MonoBehaviour
             return;
 
         SetState(SpiritState.SpiritActive);
-
-        // HIDE TUTORIAL once we successfully enter spirit form
-        if (Panel != null)
-            Panel.SetActive(false);
     }
 
 
@@ -105,6 +98,7 @@ public class SpiritFormController : MonoBehaviour
     public void UnlockMovement()
     {
         HasMovementUnlocked = true;
+        HasSwapUnlocked = true;
 
         
         if (currentState == SpiritState.BodyLocked)
@@ -123,11 +117,6 @@ public class SpiritFormController : MonoBehaviour
         if (newState == currentState) return;
 
         currentState = newState;
-
-        if (newState == SpiritState.SpiritActive)
-            if (Panel != null)
-                Panel.GetComponent<SetText>().SetMessage("whatever text you want");
-                Panel.SetActive(false);
 
         OnStateChanged?.Invoke(currentState);
     }
