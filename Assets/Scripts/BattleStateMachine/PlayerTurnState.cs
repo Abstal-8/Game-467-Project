@@ -1,28 +1,27 @@
 using System;
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class PlayerTurnState : BattleState
 {
-    public static Action<BattleStateManager> playerTurnEndEvent;
     bool _isPlayerTurnOver;
     public PlayerTurnState(PlayerManager player, UIManager UI, Enemy enemy, SpiritBattleHandler sbh) : base(player, UI, enemy, sbh)
     {
-        uIManager.attackButton.onClick?.AddListener(Attack);
+        uIManager.attackButton.onClick?.AddListener(UI.ShowAbilities);
         uIManager.spiritButton.onClick?.AddListener(spiritBattleHandler.ChangeForm);
+        BattleStateManager.playerAttack += Attack;
         uIManager.spiritButton.interactable = false;
     }
 
     public override void EnterState(BattleStateManager battleState)
     {
-        Debug.Log("Player turn start!");
         enemyReference = playerManager.Enemyencounter.GetComponent<Enemy>();
         uIManager.attackButton.gameObject.SetActive(true);
         uIManager.spiritButton.gameObject.SetActive(true);
     }
 
-    public override void ExitState(BattleStateManager battleState)
+    public override async void ExitState(BattleStateManager battleState)
     {
-        Debug.Log("Player turn end!");
         uIManager.attackButton.gameObject.SetActive(false);
         uIManager.spiritButton.gameObject.SetActive(false);
         _isPlayerTurnOver = false;
@@ -65,11 +64,11 @@ public class PlayerTurnState : BattleState
 
     }
 
-    void Attack()
+    void Attack(int dmg)
     {
-        enemyReference.TakeDamage(playerManager.attackDMG); // arbitrary number
+        enemyReference.TakeDamage(dmg); // arbitrary number
         spiritBattleHandler.ChargeToken(30);
-        uIManager.UpdateHealth(playerManager.attackDMG, enemyReference);
+        uIManager.UpdateHealth(dmg, enemyReference);
         _isPlayerTurnOver = true;
     }
 }

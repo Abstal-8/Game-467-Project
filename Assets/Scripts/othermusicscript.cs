@@ -1,69 +1,98 @@
 ﻿using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class SequentialMusicTeacher : MonoBehaviour
 {
     [Header("Sources in order")]
-    public AudioSource[] sources;          // 0 = Flute, 1 = Harp, 2 = Piano, 3 = Violin
+    public AudioSource[] sources;
 
     [Header("Timings (seconds)")]
-    public float pauseBetweenNotes = 1f;   // gap between instruments
-    public float pauseBetweenLoops = 2f;   // gap after the full pattern
+    public float pauseBetweenNotes = 1f;
 
-    public bool playOnStart = true;
+    [Header("Interaction")]
+    public string playerTag = "Player";
+    public KeyCode interactKey = KeyCode.E;
 
-    private Coroutine loopRoutine;
+    [Header("UI")]
+    public GameObject promptUI;   // e.g., “Press E to Play”
+
+    private bool inRange = false;
+    private Coroutine playRoutine;
 
     private void Start()
     {
-        if (playOnStart)
+        if (promptUI)
+            promptUI.SetActive(false);
+    }
+
+    private void Update()
+    {
+        // Manage prompt visibility
+        UpdatePrompt();
+
+        if (!inRange) return;
+
+        // Only start if not already playing
+        if (Input.GetKeyDown(interactKey) && playRoutine == null)
         {
-            StartTeaching();
+            PlaySequenceOnce();
         }
     }
 
-    public void StartTeaching()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (loopRoutine != null)
-            StopCoroutine(loopRoutine);
-
-        loopRoutine = StartCoroutine(PlaySequenceLoop());
+        if (other.CompareTag(playerTag))
+            inRange = true;
     }
 
-    public void StopTeaching()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (loopRoutine != null)
+        if (other.CompareTag(playerTag))
         {
-            StopCoroutine(loopRoutine);
-            loopRoutine = null;
+            inRange = false;
+            UpdatePrompt(); // hide immediately
         }
     }
 
-    private IEnumerator PlaySequenceLoop()
+    private void UpdatePrompt()
     {
-        while (true)
+        if (!promptUI) return;
+
+        // Show prompt ONLY when:
+        // - Player is in range
+        // - Music is NOT playing
+        bool shouldShow = inRange && playRoutine == null;
+
+        promptUI.SetActive(shouldShow);
+    }
+
+    public void PlaySequenceOnce()
+    {
+        if (playRoutine != null) return;
+        playRoutine = StartCoroutine(PlaySequence());
+        UpdatePrompt(); // hide while playing
+    }
+
+    private IEnumerator PlaySequence()
+    {
+        foreach (var src in sources)
         {
-            // go through the list: Flute → Harp → Piano → Violin
-            foreach (var src in sources)
-            {
-                if (src == null || src.clip == null)
-                    continue;
+            if (src == null || src.clip == null)
+                continue;
 
-                // make sure it starts from the beginning and is not looping
-                src.loop = false;
-                src.Stop();
-                src.time = 0f;
+            src.loop = false;
+            src.Stop();
+            src.time = 0f;
 
-                // Debug.Log($"[Teacher] Playing {src.gameObject.name}");
+            src.Play();
 
-                src.Play();
-
-                // wait for this note to finish + a small pause
-                yield return new WaitForSeconds(src.clip.length + pauseBetweenNotes);
-            }
-
-            // pause before starting over
-            yield return new WaitForSeconds(pauseBetweenLoops);
+            yield return new WaitForSeconds(src.clip.length + pauseBetweenNotes);
         }
+
+        // Finished → allow another interaction
+        playRoutine = null;
+
+        UpdatePrompt(); // show prompt again if player is still nearby
     }
 }

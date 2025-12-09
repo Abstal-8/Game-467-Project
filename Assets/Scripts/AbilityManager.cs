@@ -4,16 +4,23 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System;
 
 public class AbilityManager : MonoBehaviour
 {
     public GameObject toolTip;
     public TextMeshProUGUI toolText;
     public GameObject spiritBattleHandlerOBJ;
-    SpiritBattleHandler sbh;    
-    int multipliedAbilityDMG;
+    public GameObject uiOBJ;
+    public GameObject bsmOBJ;
+    SpiritBattleHandler sbh;   
+    UIManager uIManager; 
+    int originalDMG;
+    public static Action<int> abilityBuff;
+    public static Action<int> abilityReset;
     public List<Ability> playerAbilities = new List<Ability>();
     public List<Button> abillityButtons = new List<Button>();
+    BattleStateManager bsm;
     
     
     
@@ -21,6 +28,8 @@ public class AbilityManager : MonoBehaviour
     void Start()
     {
         sbh = spiritBattleHandlerOBJ.GetComponent<SpiritBattleHandler>();
+        uIManager = uiOBJ.GetComponent<UIManager>();
+        bsm = this.GetComponent<BattleStateManager>();
         foreach (Button btn in abillityButtons)
         {
             EventTrigger eventTrigger = btn.gameObject.AddComponent<EventTrigger>();
@@ -28,6 +37,7 @@ public class AbilityManager : MonoBehaviour
             EventTrigger.Entry exitHover = new EventTrigger.Entry() { eventID = EventTriggerType.PointerExit };
 
             btn.GetComponentInChildren<TextMeshProUGUI>().text = playerAbilities[abillityButtons.IndexOf(btn)].abilityName;
+            
             onHover.callback.AddListener((BaseEventData) =>
             {
                 toolText.text = string.Format(playerAbilities[abillityButtons.IndexOf(btn)].abilityDescription, 
@@ -36,9 +46,42 @@ public class AbilityManager : MonoBehaviour
             });
 
             exitHover.callback.AddListener((BaseEventData) => { toolTip.SetActive(false); });
+            btn.onClick.AddListener(() => 
+            {
+                BattleStateManager.playerAttack?.Invoke(playerAbilities[abillityButtons.IndexOf(btn)].abilityDMG);
+                uIManager.HideAbilities();
+            });
 
             eventTrigger.triggers.Add(onHover);
             eventTrigger.triggers.Add(exitHover);
+        }
+    }
+
+    void OnEnable()
+    {
+        abilityBuff += AbilityIncrease;
+        abilityReset += AbilityReset;
+    }
+
+    void OnDisable()
+    {
+        abilityBuff -= AbilityIncrease;
+        abilityReset -= AbilityReset;
+    }
+
+    void AbilityIncrease(int dmg)
+    {
+        foreach (Button btn in abillityButtons)
+        {
+            playerAbilities[abillityButtons.IndexOf(btn)].abilityDMG *= dmg;
+        }
+    }
+
+    void AbilityReset(int dmg)
+    {
+        foreach (Button btn in abillityButtons)
+        {
+            playerAbilities[abillityButtons.IndexOf(btn)].abilityDMG /= dmg;
         }
     }
 

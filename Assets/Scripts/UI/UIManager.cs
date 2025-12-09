@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] PlayerManager playerManager;
     [SerializeField] Enemy enemy;
+    [SerializeField] SpiritBattleHandler sbh;
     int playerHealth;
     int playerMaxHealth;
     int enemyHealth;
@@ -28,9 +29,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject playerBattleSprite;
     [SerializeField] GameObject enemyBattleSprite;
     [SerializeField] TextMeshProUGUI enemyNameText;
+    [SerializeField] GameObject abilityPanel;
+    [SerializeField] GameObject optionPanel;
 
     public Button attackButton;
     public Button spiritButton;
+    public Sprite spiritSprite;
+    public Sprite humanSprite;
 
     // -----------------------------------
 
@@ -41,6 +46,19 @@ public class UIManager : MonoBehaviour
 
         enemyHealth = enemy.currentHealth;
         enemyMaxHealth = enemy.maxHealth;
+    }
+
+    void Update()
+    {
+        if (sbh.inSpiritForm)
+        {
+            playerBattleSprite.GetComponent<Image>().sprite = spiritSprite;
+        }
+        else
+        {
+            playerBattleSprite.GetComponent<Image>().sprite = humanSprite;
+        }
+        
     }
 
 
@@ -119,6 +137,19 @@ public class UIManager : MonoBehaviour
         playerHealthBar.fillAmount = playerMaxHealth;
         enemyHealthBar.fillAmount = enemyMaxHealth;
     }
+
+    public void ShowAbilities()
+    {
+        optionPanel.SetActive(false);
+        abilityPanel.SetActive(true);
+    }
+
+    public void HideAbilities()
+    {
+        optionPanel.SetActive(true);
+        abilityPanel.SetActive(false);
+    }
+
 
 
 

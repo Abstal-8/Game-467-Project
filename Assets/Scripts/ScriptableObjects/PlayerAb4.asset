@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7e73d3e65de9548a91e97f8524c702, type: 3}
   m_Name: PlayerAb4
   m_EditorClassIdentifier: Assembly-CSharp::Ability
-  abilityName: Cry
-  abilityDescription: Filler
-  baseDMG: 0
+  abilityName: Clear Fate
+  abilityDescription: Fate has already been decided. Deal <color=red>{0}</color>
+    DMG.
+  baseDMG: 12

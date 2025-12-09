@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class BattleStateManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class BattleStateManager : MonoBehaviour
     [SerializeField] UIManager uIManager;
     Enemy enemyReference;
     [SerializeField] SpiritBattleHandler sbh;
+    public static Action<int> playerAttack;
 
     protected BattleState currentState;
 

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f7e73d3e65de9548a91e97f8524c702, type: 3}
   m_Name: PlayerAb1
   m_EditorClassIdentifier: Assembly-CSharp::Ability
-  abilityName: Punch
-  abilityDescription: Punch a spirit and deal {0} DMG
+  abilityName: Spirit Punch
+  abilityDescription: Punch a spirit and deal <color=red>{0}</color> DMG
   baseDMG: 5
