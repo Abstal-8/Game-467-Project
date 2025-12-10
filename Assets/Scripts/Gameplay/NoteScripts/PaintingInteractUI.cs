@@ -69,6 +69,14 @@ public class PaintingInteractUI : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            sr.enabled = true;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            sr.enabled = false;
+        }
         if (inRange && Input.GetKeyDown(KeyCode.E) && !show)
         {
             //TODO If animating a book opening ever comes back up again. look here (I am getting logs that it is playing)
