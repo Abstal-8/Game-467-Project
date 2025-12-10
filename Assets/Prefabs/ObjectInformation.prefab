@@ -1162,7 +1162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8352362204621136114
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2428,7 +2428,6 @@ MonoBehaviour:
   page3aText: {fileID: 8501071766639838814}
   page4Text: {fileID: 1052675760932637434}
   page4aText: {fileID: 4097387676498388049}
-  maxCharacters: 333
 --- !u!114 &7693131087305590492
 MonoBehaviour:
   m_ObjectHideFlags: 0

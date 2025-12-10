@@ -86,8 +86,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 2068671669
+  m_SortingLayer: 4
   m_SortingOrder: 5
   m_Sprite: {fileID: 4308641811109011813, guid: 4469171860cee9049861094bc43e0eb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -241,7 +241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa2e56aad35f5a4d85ec1e80cf5ea5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpiritFormController
-  Panel: {fileID: 0}
   lockBodyAtStart: 0
   currentState: 1
   toggleSpiritKey: 116
