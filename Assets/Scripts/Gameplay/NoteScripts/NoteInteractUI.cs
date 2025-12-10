@@ -13,7 +13,7 @@ public class NoteInteractUI : MonoBehaviour
     // public string openingTrigger = "PlayOpening";
     // public string stopAnimation = "PlayNothing";
 
-    private bool inRange;
+    public bool inRange;
     private bool show = false;
     private NoteInfoSwitcher infoSwitcher;
     private SpriteRenderer sr;
@@ -69,14 +69,14 @@ public class NoteInteractUI : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            sr.enabled = false;
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            sr.enabled = true;
-        }
+        // if (Input.GetKeyDown(KeyCode.E))
+        // {
+        //     sr.enabled = false;
+        // }
+        // if (Input.GetKeyDown(KeyCode.Escape))
+        // {
+        //     sr.enabled = true;
+        // }
         if (inRange && Input.GetKeyDown(KeyCode.E) && !show)
         {
             //TODO If animating a book opening ever comes back up again. look here (I am getting logs that it is playing)
@@ -98,36 +98,36 @@ public class NoteInteractUI : MonoBehaviour
             // anim.SetTrigger(openingTrigger);
             // Debug.Log("Triggered animation: " + openingTrigger);
             // anim.SetTrigger(stopAnimation);
-            infoSwitcher.Show();
-            show = true;
-            sr.enabled = false;
+            // infoSwitcher.Show();
+            // show = true;
+            // // sr.enabled = false;
 
-            if (canvasContainer != null) {
-                canvasContainer.SetActive(true);
-            }
+            // if (canvasContainer != null) {
+            //     canvasContainer.SetActive(true);
+            // }
             if (Glow != null)
             {
                 Glow.color = Color.white;
                 Glow.enabled = false;
             }
         }
-        if (show && !inRange)
-        {
-            infoSwitcher.Hide();
-            show = false;
+        // if (show && !inRange)
+        // {
+        //     infoSwitcher.Hide();
+        //     show = false;
 
-            if (canvasContainer != null) {
-                canvasContainer.SetActive(false);
-            }
-        }
-        if (inRange && show && Input.GetKeyDown(KeyCode.Q))
-        {
-            infoSwitcher.PrevPage();
-        }
-        if (inRange && show && Input.GetKeyDown(KeyCode.E))
-        {
-            infoSwitcher.NextPage();
-        }
+        //     if (canvasContainer != null) {
+        //         canvasContainer.SetActive(false);
+        //     }
+        // }
+        // if (inRange && show && Input.GetKeyDown(KeyCode.Q))
+        // {
+        //     infoSwitcher.PrevPage();
+        // }
+        // if (inRange && show && Input.GetKeyDown(KeyCode.E))
+        // {
+        //     infoSwitcher.NextPage();
+        // }
         if (inRange && Input.GetKeyDown(KeyCode.Escape))
         {
             //TODO If animating a book opening ever comes back up again. look here (I am getting logs that it is playing)
@@ -147,12 +147,12 @@ public class NoteInteractUI : MonoBehaviour
             // anim.SetTrigger(closingTrigger);
             // Debug.Log("Triggered animation: " + closingTrigger);
             // anim.SetTrigger(stopAnimation);
-            infoSwitcher.Hide();
-            sr.enabled = true;
+            // infoSwitcher.Hide();
+            // // sr.enabled = true;
 
-            if (canvasContainer != null && canvasContainer.activeSelf) {
-                canvasContainer.SetActive(false);
-            }
+            // if (canvasContainer != null && canvasContainer.activeSelf) {
+            //     canvasContainer.SetActive(false);
+            // }
             if (Glow != null)
             {
                 Glow.enabled = true;
