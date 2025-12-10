@@ -69,14 +69,6 @@ public class PaintingInteractUI : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            sr.enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            sr.enabled = false;
-        }
         if (inRange && Input.GetKeyDown(KeyCode.E) && !show)
         {
             //TODO If animating a book opening ever comes back up again. look here (I am getting logs that it is playing)
@@ -100,7 +92,7 @@ public class PaintingInteractUI : MonoBehaviour
             // anim.SetTrigger(stopAnimation);
             paintingSwitcher.Show();
             show = true;
-            sr.enabled = false;
+            // sr.enabled = false;
 
             if (canvasContainer != null) {
                 canvasContainer.SetActive(true);
@@ -148,7 +140,7 @@ public class PaintingInteractUI : MonoBehaviour
             // Debug.Log("Triggered animation: " + closingTrigger);
             // anim.SetTrigger(stopAnimation);
             paintingSwitcher.Hide();
-            sr.enabled = true;
+            // sr.enabled = true;
 
             if (canvasContainer != null && canvasContainer.activeSelf) {
                 canvasContainer.SetActive(false);
