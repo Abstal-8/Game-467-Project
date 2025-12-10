@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class MusicalPuzzleManager : MonoBehaviour
 {
@@ -12,13 +13,15 @@ public class MusicalPuzzleManager : MonoBehaviour
 
     [Header("Optional Feedback")]
     public AudioSource audioSource;
-    public AudioClip successClip;
-    public AudioClip failClip;
+    public GameObject successPanel;
+    public GameObject failPanel;
+    public GameObject notificationPanel;
 
     [Header("What to unlock on success")]
     public GameObject doorToUnlock;
     public Collider2D colliderToDisable;
     public GameObject extraFX;
+    public GameObject enemySpawn;
 
     private void Awake()
     {
@@ -81,9 +84,7 @@ public class MusicalPuzzleManager : MonoBehaviour
     {
         isSolved = true;
         Debug.Log("[Puzzle] SOLVED!");
-
-        if (audioSource && successClip)
-            audioSource.PlayOneShot(successClip);
+        StartCoroutine("Success");
 
         if (doorToUnlock)
             doorToUnlock.SetActive(false);
@@ -93,16 +94,34 @@ public class MusicalPuzzleManager : MonoBehaviour
 
         if (extraFX)
             extraFX.SetActive(true);
+
+        if (enemySpawn)
+            enemySpawn.SetActive(true);
     }
 
     private void PuzzleFailed()
     {
         Debug.Log("[Puzzle] Wrong order, resetting.");
-
-        if (audioSource && failClip)
-            audioSource.PlayOneShot(failClip);
-
         currentStep = 0;
+        StartCoroutine("Failure");
         ResetGlows();
+    }
+
+    IEnumerator Success()
+    {
+        successPanel.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        successPanel.SetActive(false);
+
+        notificationPanel.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        notificationPanel.SetActive(false);
+    }
+
+    IEnumerator Failure()
+    {
+        failPanel.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        failPanel.SetActive(false);
     }
 }

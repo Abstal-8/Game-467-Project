@@ -13,7 +13,7 @@ public class NoteInteractUI : MonoBehaviour
     // public string openingTrigger = "PlayOpening";
     // public string stopAnimation = "PlayNothing";
 
-    private bool inRange;
+    public bool inRange;
     private bool show = false;
     private NoteInfoSwitcher infoSwitcher;
     private SpriteRenderer sr;
