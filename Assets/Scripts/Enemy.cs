@@ -11,33 +11,12 @@ public class Enemy : MonoBehaviour, IDamagable
     public Sprite enemySprite;
     public string enemyName;
 
-    public bool respawn;
-    private static Enemy enemy;
-
-    void Awake()
-    {
-        if (enemy == null)
-        {
-            enemy = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-        
-    }
-
 
     void Start()
     {
         currentHealth = maxHealth;
         spriteRenderer = this.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = enemySprite;
-        if (respawn == false)
-        {
-            this.gameObject.SetActive(false);
-        }
     }
 
     public void TakeDamage(int damage)
@@ -51,14 +30,6 @@ public class Enemy : MonoBehaviour, IDamagable
             currentHealth = 0;
         }
         
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.GetComponent<PlayerManager>())
-        {
-            respawn = false;
-        }
     }
 
 }

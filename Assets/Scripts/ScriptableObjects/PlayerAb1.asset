@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ability
   abilityName: Spirit Punch
   abilityDescription: Punch a spirit and deal <color=red>{0}</color> DMG
+  abilityDMG: 5
   baseDMG: 5

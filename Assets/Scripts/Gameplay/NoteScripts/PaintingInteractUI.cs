@@ -90,36 +90,36 @@ public class PaintingInteractUI : MonoBehaviour
             // anim.SetTrigger(openingTrigger);
             // Debug.Log("Triggered animation: " + openingTrigger);
             // anim.SetTrigger(stopAnimation);
-            paintingSwitcher.Show();
-            show = true;
+            // paintingSwitcher.Show();
+            // show = true;
             // sr.enabled = false;
 
-            if (canvasContainer != null) {
-                canvasContainer.SetActive(true);
-            }
+            // if (canvasContainer != null) {
+            //     canvasContainer.SetActive(true);
+            // }
             if (Glow != null)
             {
                 Glow.color = Color.white;
                 Glow.enabled = false;
             }
         }
-        if (show && !inRange)
-        {
-            paintingSwitcher.Hide();
-            show = false;
+        // if (show && !inRange)
+        // {
+        //     paintingSwitcher.Hide();
+        //     show = false;
 
-            if (canvasContainer != null) {
-                canvasContainer.SetActive(false);
-            }
-        }
+        //     if (canvasContainer != null) {
+        //         canvasContainer.SetActive(false);
+        //     }
+        // }
         // if (inRange && show && Input.GetKeyDown(KeyCode.Q))
         // {
         //     paintingSwitcher.PrevPage();
         // }
-        if (inRange && show && Input.GetKeyDown(KeyCode.Space))
-        {
-            paintingSwitcher.NextPage();
-        }
+        // if (inRange && show && Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     paintingSwitcher.NextPage();
+        // }
         if (inRange && Input.GetKeyDown(KeyCode.Escape))
         {
             //TODO If animating a book opening ever comes back up again. look here (I am getting logs that it is playing)
@@ -139,12 +139,12 @@ public class PaintingInteractUI : MonoBehaviour
             // anim.SetTrigger(closingTrigger);
             // Debug.Log("Triggered animation: " + closingTrigger);
             // anim.SetTrigger(stopAnimation);
-            paintingSwitcher.Hide();
+            // paintingSwitcher.Hide();
             // sr.enabled = true;
 
-            if (canvasContainer != null && canvasContainer.activeSelf) {
-                canvasContainer.SetActive(false);
-            }
+            // if (canvasContainer != null && canvasContainer.activeSelf) {
+            //     canvasContainer.SetActive(false);
+            // }
             if (Glow != null)
             {
                 Glow.enabled = true;

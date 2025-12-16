@@ -15,4 +15,5 @@ MonoBehaviour:
   abilityName: Banish
   abilityDescription: Banish a spirit from whence they came, dealing <color=red>{0}</color>
     DMG.
+  abilityDMG: 15
   baseDMG: 15

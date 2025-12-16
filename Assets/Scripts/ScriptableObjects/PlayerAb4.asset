@@ -15,4 +15,5 @@ MonoBehaviour:
   abilityName: Clear Fate
   abilityDescription: Fate has already been decided. Deal <color=red>{0}</color>
     DMG.
+  abilityDMG: 12
   baseDMG: 12

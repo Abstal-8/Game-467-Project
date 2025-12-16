@@ -385,7 +385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -595,6 +595,8 @@ MonoBehaviour:
   characterPortraits:
   - {fileID: -6727601324172495697, guid: 0f3410a0196a39844bb2bf2d56755aec, type: 3}
   - {fileID: 4131224390281329484, guid: 243ec5a2c48daa14cb80b43348a97c11, type: 3}
+  - {fileID: 7595084884772122045, guid: 854d0a93ec6938d4fae624a764a6a0a5, type: 3}
+  - {fileID: -3409768233304408113, guid: 65091230cacbc3d49b85c3b42ed30a46, type: 3}
   typingSpeed: 0.1
   dialogueLines:
   - line: plz

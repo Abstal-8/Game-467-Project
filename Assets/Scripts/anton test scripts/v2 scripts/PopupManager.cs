@@ -143,6 +143,14 @@ public class PopupManager : MonoBehaviour
             {
                 UpdatePortrait(1);
             }
+            else if (currentStory.currentTags.Contains("speaker:Painting1"))
+            {
+                UpdatePortrait(2);
+            }
+            else if (currentStory.currentTags.Contains("speaker:Painting2"))
+            {
+                UpdatePortrait(3);
+            }
 
             StartCoroutine(TypeLine(line));
         }

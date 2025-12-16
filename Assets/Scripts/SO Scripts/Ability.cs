@@ -11,12 +11,12 @@ public class Ability : ScriptableObject
     [TextArea]
     public string abilityDescription;
 
-    [NonSerialized]
+    [SerializeField]
     public int abilityDMG;
 
     // Value to set in inspector
     [SerializeField]
-    private int baseDMG;
+    public int baseDMG;
 
     void OnValidate()
     {

@@ -15,7 +15,7 @@ public class PaintingDialogue : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && (this.gameObject.GetComponent<NoteInteractUI>().inRange || this.gameObject.GetComponent<PaintingInteractUI>().inRange ))
+        if (Input.GetKeyDown(KeyCode.E) && (this.gameObject.GetComponent<PaintingInteractUI>().inRange ))
         {
             popupManager.InitializeDialogue(json);
             popupManager.StartDialogue();

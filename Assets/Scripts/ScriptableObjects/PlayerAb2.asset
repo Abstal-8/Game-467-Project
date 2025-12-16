@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ability
   abilityName: Soul Pierce
   abilityDescription: Deal <color=red>{0}</color> DMG, piercing an enemy's soul.
+  abilityDMG: 10
   baseDMG: 10

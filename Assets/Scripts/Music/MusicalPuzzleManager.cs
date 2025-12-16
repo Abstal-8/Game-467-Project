@@ -22,6 +22,7 @@ public class MusicalPuzzleManager : MonoBehaviour
     public Collider2D colliderToDisable;
     public GameObject extraFX;
     public GameObject enemySpawn;
+    public GameObject levelChanger;
 
     private void Awake()
     {
@@ -97,6 +98,8 @@ public class MusicalPuzzleManager : MonoBehaviour
 
         if (enemySpawn)
             enemySpawn.SetActive(true);
+
+        levelChanger.SetActive(true);
     }
 
     private void PuzzleFailed()

@@ -18,7 +18,8 @@ public class AbilityManager : MonoBehaviour
     int originalDMG;
     public static Action<int> abilityBuff;
     public static Action<int> abilityReset;
-    public List<Ability> playerAbilities = new List<Ability>();
+    
+    [SerializeField] List<Ability> playerAbilities = new List<Ability>();
     public List<Button> abillityButtons = new List<Button>();
     BattleStateManager bsm;
     
@@ -27,6 +28,15 @@ public class AbilityManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        #if UNITY_EDITOR
+        foreach (Ability obj in playerAbilities)
+        {
+            UnityEditor.EditorUtility.SetDirty(obj);
+        }
+        UnityEditor.AssetDatabase.SaveAssets(); 
+        #endif
+
+
         sbh = spiritBattleHandlerOBJ.GetComponent<SpiritBattleHandler>();
         uIManager = uiOBJ.GetComponent<UIManager>();
         bsm = this.GetComponent<BattleStateManager>();
@@ -41,14 +51,14 @@ public class AbilityManager : MonoBehaviour
             onHover.callback.AddListener((BaseEventData) =>
             {
                 toolText.text = string.Format(playerAbilities[abillityButtons.IndexOf(btn)].abilityDescription, 
-                playerAbilities[abillityButtons.IndexOf(btn)].abilityDMG);
+                playerAbilities[abillityButtons.IndexOf(btn)].baseDMG);
                 toolTip.SetActive(true);
             });
 
             exitHover.callback.AddListener((BaseEventData) => { toolTip.SetActive(false); });
             btn.onClick.AddListener(() => 
             {
-                BattleStateManager.playerAttack?.Invoke(playerAbilities[abillityButtons.IndexOf(btn)].abilityDMG);
+                BattleStateManager.playerAttack?.Invoke(playerAbilities[abillityButtons.IndexOf(btn)].baseDMG);
                 uIManager.HideAbilities();
             });
 
