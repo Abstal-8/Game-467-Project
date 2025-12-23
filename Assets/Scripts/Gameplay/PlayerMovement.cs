@@ -9,6 +9,10 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     Vector2 input;
     Vector2 lastDir = new Vector2(0, -1);  // default: facing down
+    //inserting a flag to stop or start this script from updating based on user wasd that can be called from any file
+    private bool movementLocked = false;
+    public void LockMovement() => movementLocked = true;
+    public void UnlockMovement() => movementLocked = false;
 
     void Start()
     {
@@ -27,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (movementLocked) return;   //if movement bool has been locked by another file do not read anything else in "update()"
+
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
         input.Normalize();
@@ -57,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (movementLocked) return;
         rb.linearVelocity = input * moveSpeed;
-        
     }
 }

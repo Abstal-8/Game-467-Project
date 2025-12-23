@@ -4,37 +4,29 @@ using UnityEngine.Rendering.Universal;
 public class PaintingInteractUI : MonoBehaviour
 {
     [Header("Containers")]
-    public string playerTag = "Player";      // tag on your spirit prefab
+    public string playerTag = "Player"; //will find player so future scripts that rely on enabling or disabling player scripts can be called directly in file
+    private PlayerMovement playerCon;
     public GameObject canvasContainer;
 
     [Header("Light Source (child to toggle on/off)")]
     public Light2D Glow;
-    // public string closingTrigger = "PlayClosing";
-    // public string openingTrigger = "PlayOpening";
-    // public string stopAnimation = "PlayNothing";
 
     public bool inRange;
     private bool show = false;
     private PaintingInfoSwitcher paintingSwitcher;
     private SpriteRenderer sr;
-    // private string closing = "BookClosing";
-    // private string opening = "BookOpening";
-    // private Animation anim;
-    // private Animator anim;
     
 
     void Start()
     {
+        playerCon = GameObject.FindGameObjectWithTag(playerTag).GetComponent<PlayerMovement>();
+        if (playerCon == null) { Debug.Log("SpiritFormController Script not found on Player!");}
         paintingSwitcher = GetComponent<PaintingInfoSwitcher>();
         if (paintingSwitcher == null) { Debug.Log("PaintingInfoSwitcher Script not found!");}
         sr = GetComponent<SpriteRenderer>();
         if (sr == null) { Debug.Log("SpriteRenderer Component not found!");}
         Glow.enabled = false;
         Glow.color = Color.yellow;
-
-        // anim = GetComponent<Animation>();
-        // if (anim == null) {Debug.Log("anim not picking up component");}
-        // else {Debug.Log("animation component found!");}
 
         if (canvasContainer) canvasContainer.SetActive(false);
 
@@ -69,30 +61,21 @@ public class PaintingInteractUI : MonoBehaviour
 
     void Update()
     {
+        // these two statements are fail safes in case for any reason the e or escape is triggered when "show" or "inRange" have not
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            sr.enabled = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            sr.enabled = true;
+        }
         if (inRange && Input.GetKeyDown(KeyCode.E) && !show)
         {
-            //TODO If animating a book opening ever comes back up again. look here (I am getting logs that it is playing)
-            //TODO most likely problem is that the objectinformation sprites dissapear, but still unknown
-            // anim.Play(opening);
-            // if (anim[opening] != null)
-            // {
-            //     // Play the animation from the start
-            //     anim[opening].wrapMode = WrapMode.Once; // play only once
-            //     anim.Play(opening);
-            //     Debug.Log("Animation " + opening + " Playing");
-            // }
-            // else
-            // {
-            //     Debug.LogWarning("Animation not found: " + opening);
-            // }
-
-            // anim.ResetTrigger(closingTrigger);
-            // anim.SetTrigger(openingTrigger);
-            // Debug.Log("Triggered animation: " + openingTrigger);
-            // anim.SetTrigger(stopAnimation);
             paintingSwitcher.Show();
             show = true;
-            // sr.enabled = false;
+            playerCon.LockMovement();
+            sr.enabled = false;
 
             if (canvasContainer != null) {
                 canvasContainer.SetActive(true);
@@ -103,6 +86,7 @@ public class PaintingInteractUI : MonoBehaviour
                 Glow.enabled = false;
             }
         }
+        // if the player walks out of the range of the painting (whether with keys or by psotion placement for any reason) it is as if the "esc" was hit
         if (show && !inRange)
         {
             paintingSwitcher.Hide();
@@ -112,35 +96,16 @@ public class PaintingInteractUI : MonoBehaviour
                 canvasContainer.SetActive(false);
             }
         }
-        // if (inRange && show && Input.GetKeyDown(KeyCode.Q))
-        // {
-        //     paintingSwitcher.PrevPage();
-        // }
         if (inRange && show && Input.GetKeyDown(KeyCode.Space))
         {
             paintingSwitcher.NextPage();
         }
         if (inRange && Input.GetKeyDown(KeyCode.Escape))
         {
-            //TODO If animating a book opening ever comes back up again. look here (I am getting logs that it is playing)
-            //TODO most likely problem is that the objectinformation sprites dissapear, but still unknown
-            // if (anim[closing] != null)
-            // {
-            //     // Play the animation from the start
-            //     anim[closing].wrapMode = WrapMode.Once; // play only once
-            //     anim.Play(closing);
-            // }
-            // else
-            // {
-            //     Debug.LogWarning("Animation not found: " + closing);
-            // }
-
-            // anim.ResetTrigger(openingTrigger);
-            // anim.SetTrigger(closingTrigger);
-            // Debug.Log("Triggered animation: " + closingTrigger);
-            // anim.SetTrigger(stopAnimation);
             paintingSwitcher.Hide();
-            // sr.enabled = true;
+            show = false;
+            playerCon.UnlockMovement();
+            sr.enabled = true;
 
             if (canvasContainer != null && canvasContainer.activeSelf) {
                 canvasContainer.SetActive(false);

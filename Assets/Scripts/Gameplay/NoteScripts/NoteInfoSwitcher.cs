@@ -27,11 +27,11 @@ public class NoteInfoSwitcher : MonoBehaviour
 
     private void Start()
     {
-        if (page1Text != null) page1Text.gameObject.SetActive(true);
+        if (page1Text != null) page1Text.gameObject.SetActive(false);
         if (page2Text != null) page2Text.gameObject.SetActive(false);
         if (page3Text != null) page3Text.gameObject.SetActive(false);
         if (page4Text != null) page4Text.gameObject.SetActive(false);
-        if (page1aText != null) page1aText.gameObject.SetActive(true);
+        if (page1aText != null) page1aText.gameObject.SetActive(false);
         if (page2aText != null) page2aText.gameObject.SetActive(false);
         if (page3aText != null) page3aText.gameObject.SetActive(false);
         if (page4aText != null) page4aText.gameObject.SetActive(false);
@@ -70,17 +70,6 @@ public class NoteInfoSwitcher : MonoBehaviour
         showingPage3 = false;
         showingPage4 = false;
     }
-    // private void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.E))
-    //     {
-    //         NextPage();
-    //     }
-    //     else if (Input.GetKeyDown(KeyCode.Q))
-    //     {
-    //         PrevPage();
-    //     }
-    // }
     public void NextPage()
     {
         if (showingPage4) return;
