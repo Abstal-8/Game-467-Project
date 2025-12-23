@@ -6,7 +6,7 @@ public class SafeCrackUI : MonoBehaviour
 {
     [Header("Containers")]
     public string playerTag = "Player"; //will find player so future scripts that rely on enabling or disabling player scripts can be called directly in file
-    private SpiritFormController playerCon;
+    private PlayerMovement playerCon;
     public GameObject canvasContainer;
 
     [Header("Light Source (child to toggle on/off)")]
@@ -33,7 +33,7 @@ public class SafeCrackUI : MonoBehaviour
 
     void Start()
     {
-        playerCon = GameObject.FindGameObjectWithTag(playerTag).GetComponent<SpiritFormController>();
+        playerCon = GameObject.FindGameObjectWithTag(playerTag).GetComponent<PlayerMovement>();
         if (playerCon == null) { Debug.Log("SpiritFormController Script not found on Player!");}
         na = GetComponent<NumAdjuster>();
         if (na == null) Debug.Log("NumAdjuster Component not found!");
@@ -56,7 +56,6 @@ public class SafeCrackUI : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Debug.Log($"[Sigil] OnTriggerEnter2D with {other.name} (tag={other.tag})");
         if (other.CompareTag(playerTag))
         {
             inRange = true;
@@ -117,14 +116,15 @@ public class SafeCrackUI : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            sr.enabled = false;
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            sr.enabled = true;
-        }
+        //when not inRange we still want them to dissapear
+        // if (Input.GetKeyDown(KeyCode.E))
+        // {
+        //     sr.enabled = false;
+        // }
+        // if (Input.GetKeyDown(KeyCode.Escape))
+        // {
+        //     sr.enabled = true;
+        // }
         if (na.GetNum(objectNum1) == 23 && na.GetNum(objectNum2) == 35 && na.GetNum(objectNum3) == 9)
         {
             cracked = true;
@@ -137,12 +137,19 @@ public class SafeCrackUI : MonoBehaviour
                 Glow.enabled = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            sr.enabled = false;
-        }
+        // if (Input.GetKeyDown(KeyCode.Return))
+        // {
+        //     sr.enabled = false;
+        // }
         if (inRange && Input.GetKeyDown(KeyCode.E) && !show)
         {
+            show = true;
+            playerCon.LockMovement();
+            sr.enabled = false;
+
+            if (canvasContainer != null) {
+                canvasContainer.SetActive(true);
+            }
             if (Glow != null)
             {
                 Glow.color = Color.white;
@@ -151,6 +158,10 @@ public class SafeCrackUI : MonoBehaviour
         }
         if (inRange && Input.GetKeyDown(KeyCode.Escape))
         {
+            playerCon.UnlockMovement();
+            show = false;
+            sr.enabled = true;
+
             if (canvasContainer != null && canvasContainer.activeSelf) {
                 canvasContainer.SetActive(false);
             }

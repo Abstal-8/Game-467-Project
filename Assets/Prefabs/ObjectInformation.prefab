@@ -1918,7 +1918,7 @@ MonoBehaviour:
   m_Intensity: 70
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 79dc164629848290977e55c60000000055e64c5dcd2674b1e32b3e66b56c4d7b912f5583
+  m_ApplyToSortingLayers: 79dc164629848290977e55c60000000055e64c5dcd2674b1e32b3e66
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2358,8 +2358,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1247392611
-  m_SortingLayer: 6
+  m_SortingLayerID: 2068671669
+  m_SortingLayer: 4
   m_SortingOrder: 3
   m_Sprite: {fileID: -173530099807541425, guid: 99c5b3cacf5955b428902a2b88539473, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2443,6 +2443,7 @@ MonoBehaviour:
   playerTag: Player
   canvasContainer: {fileID: 3191949484607725014}
   Glow: {fileID: 7988471058865399807}
+  inRange: 0
 --- !u!95 &1275134912379631918
 Animator:
   serializedVersion: 7

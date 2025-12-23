@@ -3,7 +3,7 @@ using TMPro;
 
 public class NumAdjuster : MonoBehaviour
 {
-    public TextMeshProUGUI number;
+    private TextMeshProUGUI number;
 
     public void Increase(GameObject parent) {
         // Pull references from the parent object
