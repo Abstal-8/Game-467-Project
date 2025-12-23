@@ -19,6 +19,13 @@ public class SafeCrackUI : MonoBehaviour
     public int Num1 = 20;
     public int Num2 = 30;
     public int Num3 = 12;
+    public GameObject up1outline;
+    public GameObject down1outline;
+    public GameObject up2outline;
+    public GameObject down2outline;
+    public GameObject up3outline;
+    public GameObject down3outline;
+
 
 
     private SpriteRenderer sr;
@@ -26,6 +33,8 @@ public class SafeCrackUI : MonoBehaviour
     public bool inRange;
 
     [HideInInspector]
+    private bool numPosNeg = true;
+    private int numNum = 1;
     public bool cracked;
     public bool hasLibKey;
     private bool show = false;
@@ -33,6 +42,12 @@ public class SafeCrackUI : MonoBehaviour
 
     void Start()
     {
+        if (up1outline) up1outline.enabled(false);
+        if (down1outline) down1outline.enabled(false);
+        if (up2outline) up2outline.enabled(false);
+        if (down2outline) down2outline.enabled(false);
+        if (up3outline) up3outline.enabled(false);
+        if (down3outline) down3outline.enabled(false);
         playerCon = GameObject.FindGameObjectWithTag(playerTag).GetComponent<PlayerMovement>();
         if (playerCon == null) { Debug.Log("SpiritFormController Script not found on Player!");}
         na = GetComponent<NumAdjuster>();
@@ -80,6 +95,7 @@ public class SafeCrackUI : MonoBehaviour
 
     void OnMouseDown()
     {
+        Debug.Log("OnMouseDown fired on SafeCrackUI");
         if (!show) return;
 
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -90,41 +106,39 @@ public class SafeCrackUI : MonoBehaviour
         GameObject clickedObj = hit.collider.gameObject;
         if (clickedObj == objectNum1.transform.Find("Up").gameObject)
         {
+            Debug.Log("up1 hit");
             na.Increase(objectNum1.transform.Find("Up").gameObject);
+            
         }
-        else if (clickedObj == objectNum1.transform.Find("Down").gameObject)
+        if (clickedObj == objectNum1.transform.Find("Down").gameObject)
         {
             na.Decrease(objectNum1.transform.Find("Down").gameObject);
+            Debug.Log("down1 hit");
         }
-        else if (clickedObj == objectNum2.transform.Find("Up").gameObject)
+        if (clickedObj == objectNum2.transform.Find("Up").gameObject)
         {
             na.Increase(objectNum2.transform.Find("Up").gameObject);
+            Debug.Log("up2 hit");
         }
-        else if (clickedObj == objectNum2.transform.Find("Down").gameObject)
+        if (clickedObj == objectNum2.transform.Find("Down").gameObject)
         {
             na.Decrease(objectNum2.transform.Find("Down").gameObject);
+            Debug.Log("down2 hit");
         }
-        else if (clickedObj == objectNum3.transform.Find("Up").gameObject)
+        if (clickedObj == objectNum3.transform.Find("Up").gameObject)
         {
             na.Increase(objectNum3.transform.Find("Up").gameObject);
+            Debug.Log("up3 hit");
         }
-        else if (clickedObj == objectNum3.transform.Find("Down").gameObject)
+        if (clickedObj == objectNum3.transform.Find("Down").gameObject)
         {
             na.Decrease(objectNum3.transform.Find("Down").gameObject);
+            Debug.Log("down3 hit");
         }
     }
 
     void Update()
     {
-        //when not inRange we still want them to dissapear
-        // if (Input.GetKeyDown(KeyCode.E))
-        // {
-        //     sr.enabled = false;
-        // }
-        // if (Input.GetKeyDown(KeyCode.Escape))
-        // {
-        //     sr.enabled = true;
-        // }
         if (na.GetNum(objectNum1) == 23 && na.GetNum(objectNum2) == 35 && na.GetNum(objectNum3) == 9)
         {
             cracked = true;
@@ -141,6 +155,51 @@ public class SafeCrackUI : MonoBehaviour
         // {
         //     sr.enabled = false;
         // }
+
+        if (inRange && show)
+        {
+            if (Inputer.GetKeyDown(Keycode.W))
+            {
+                if (numPosNeg)
+                {
+                    if (numNum == 1)
+                    {
+                        if (up1outline) {
+                            up1outline.enabled(true);
+                            up1outline.effectColor = Color.white;
+                            }
+                    }
+                    if (numNum == 2)
+                    {
+                        if (up2outline) up2outline.enabled(true);
+                    }
+                    else
+                    {
+                        if (up3outline) up3outline.enabled(true);
+                    }
+                }
+                else
+                {
+                    if (numNum == 1)
+                    {
+                        if (down1outline) down1outline.enabled(true);
+                    }
+                    if (numNum == 2)
+                    {
+                        if (down2outline) down2outline.enabled(true);
+                    }
+                    else
+                    {
+                        if (down3outline) down3outline.enabled(true);
+                    }
+                }
+            }
+        }
+        if (inRange && show && Input.GetKeyDown(KeyCode.E))
+        {
+            
+        }
+
         if (inRange && Input.GetKeyDown(KeyCode.E) && !show)
         {
             show = true;
