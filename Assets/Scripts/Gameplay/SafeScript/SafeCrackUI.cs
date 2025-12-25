@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UI;
 using TMPro;
 
 public class SafeCrackUI : MonoBehaviour
@@ -8,6 +9,7 @@ public class SafeCrackUI : MonoBehaviour
     public string playerTag = "Player"; //will find player so future scripts that rely on enabling or disabling player scripts can be called directly in file
     private PlayerMovement playerCon;
     public GameObject canvasContainer;
+    public GameObject CrackedSafeScreen;
 
     [Header("Light Source (child to toggle on/off)")]
     public Light2D Glow;
@@ -19,21 +21,15 @@ public class SafeCrackUI : MonoBehaviour
     public int Num1 = 20;
     public int Num2 = 30;
     public int Num3 = 12;
-    public GameObject up1outline;
-    public GameObject down1outline;
-    public GameObject up2outline;
-    public GameObject down2outline;
-    public GameObject up3outline;
-    public GameObject down3outline;
-
-
-
+    public GameObject num1Outline;
+    public GameObject num2Outline;
+    public GameObject num3Outline;
+    public bool selected = false;
     private SpriteRenderer sr;
     private NumAdjuster na; 
     public bool inRange;
 
     [HideInInspector]
-    private bool numPosNeg = true;
     private int numNum = 1;
     public bool cracked;
     public bool hasLibKey;
@@ -42,12 +38,9 @@ public class SafeCrackUI : MonoBehaviour
 
     void Start()
     {
-        if (up1outline) up1outline.enabled(false);
-        if (down1outline) down1outline.enabled(false);
-        if (up2outline) up2outline.enabled(false);
-        if (down2outline) down2outline.enabled(false);
-        if (up3outline) up3outline.enabled(false);
-        if (down3outline) down3outline.enabled(false);
+        if (!num1Outline) Debug.Log("num1Outline Missing on SafeCrack");
+        if (!num2Outline) Debug.Log("num2Outline Missing on SafeCrack");
+        if (!num3Outline) Debug.Log("num3Outline Missing on SafeCrack");
         playerCon = GameObject.FindGameObjectWithTag(playerTag).GetComponent<PlayerMovement>();
         if (playerCon == null) { Debug.Log("SpiritFormController Script not found on Player!");}
         na = GetComponent<NumAdjuster>();
@@ -61,6 +54,7 @@ public class SafeCrackUI : MonoBehaviour
         Glow.color = Color.yellow;
 
         if (canvasContainer) canvasContainer.SetActive(false);
+        if (CrackedSafeScreen) CrackedSafeScreen.SetActive(false);
         if (!objectNum1) Debug.Log("objectNum1 gameObject not found!");
         if (!objectNum2) Debug.Log("objectNum2 gameObject not found!");
         if (!objectNum3) Debug.Log("objectNum3 gameObject not found!");
@@ -139,63 +133,114 @@ public class SafeCrackUI : MonoBehaviour
 
     void Update()
     {
-        if (na.GetNum(objectNum1) == 23 && na.GetNum(objectNum2) == 35 && na.GetNum(objectNum3) == 9)
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            cracked = true;
-            hasLibKey = true;
-            if (canvasContainer != null && canvasContainer.activeSelf) {
-                canvasContainer.SetActive(false);
-            }
-            if (Glow != null)
+            if (na.GetNum(objectNum1) == 23 && na.GetNum(objectNum2) == 35 && na.GetNum(objectNum3) == 9)
             {
-                Glow.enabled = true;
+                cracked = true;
+                hasLibKey = true;
+                if (canvasContainer != null && canvasContainer.activeSelf) {
+                    canvasContainer.SetActive(false);
+                }
+                CrackedSafeScreen.SetActive(true);
             }
         }
-        // if (Input.GetKeyDown(KeyCode.Return))
-        // {
-        //     sr.enabled = false;
-        // }
 
-        if (inRange && show)
-        {
-            if (Inputer.GetKeyDown(Keycode.W))
-            {
-                if (numPosNeg)
+        // allows the user to use arrow keys to switch between the up and down arrows on the safe
+        if (inRange && show) {
+            if (!selected) {
+                if (Input.GetKeyDown(KeyCode.A))
                 {
-                    if (numNum == 1)
+                    if (numNum == 3)
                     {
-                        if (up1outline) {
-                            up1outline.enabled(true);
-                            up1outline.effectColor = Color.white;
-                            }
+                        return;
                     }
-                    if (numNum == 2)
+                    else if (numNum == 2)
                     {
-                        if (up2outline) up2outline.enabled(true);
+                        numNum = 3;
+                        num2Outline.SetActive(false);
+                        num3Outline.SetActive(true);
+                        // num1Outline.effectColor = Color.white;
                     }
-                    else
+                    else if (numNum == 1)
                     {
-                        if (up3outline) up3outline.enabled(true);
+                        numNum = 2;
+                        num1Outline.SetActive(false);
+                        num2Outline.SetActive(true);
+                        // num2Outline.effectColor = Color.white;
+                    }
+                    
+                }
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+                    if (numNum == 3)
+                    {
+                        numNum = 2;
+                        num3Outline.SetActive(false);
+                        num2Outline.SetActive(true);
+                        // num2Outline.effectColor = Color.white;
+                    }
+                    else if (numNum == 2)
+                    {
+                        numNum = 1;
+                        num2Outline.SetActive(false);
+                        num1Outline.SetActive(true);
+                        // num3Outline.effectColor = Color.white;
+                    }
+                    else if (numNum == 1) 
+                    {
+                        return;
                     }
                 }
-                else
+            }
+            else {
+                if (Input.GetKeyDown(KeyCode.W))
                 {
-                    if (numNum == 1)
-                    {
-                        if (down1outline) down1outline.enabled(true);
+                    if (numNum == 1) {
+                        na.Increase(objectNum1);
                     }
-                    if (numNum == 2)
-                    {
-                        if (down2outline) down2outline.enabled(true);
+                    if (numNum == 2) {
+                        na.Increase(objectNum2);
                     }
-                    else
-                    {
-                        if (down3outline) down3outline.enabled(true);
+                    if (numNum == 3) {
+                        na.Increase(objectNum3);
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.S))
+                {
+                    if (numNum == 1) {
+                        na.Decrease(objectNum1);
+                    }
+                    if (numNum == 2) {
+                        na.Decrease(objectNum2);
+                    }
+                    if (numNum == 3) {
+                        na.Decrease(objectNum3);
                     }
                 }
             }
         }
-        if (inRange && show && Input.GetKeyDown(KeyCode.E))
+        if (show && Input.GetKeyDown(KeyCode.E))
+        {
+            selected = !selected;
+            if (numNum == 1)
+            {
+                if (selected) {num1Outline.GetComponent<Outline>().effectColor = Color.yellow; }
+                else {num1Outline.GetComponent<Outline>().effectColor = Color.white;}
+            }
+            else if (numNum == 2)
+            {
+                if (selected) {num2Outline.GetComponent<Outline>().effectColor = Color.yellow;}
+                else {num2Outline.GetComponent<Outline>().effectColor = Color.white;}
+            }
+            else if (numNum == 3)
+            {
+                if (selected) {num3Outline.GetComponent<Outline>().effectColor = Color.yellow;}
+                else {num3Outline.GetComponent<Outline>().effectColor = Color.white;}
+            }
+        }
+
+        if (show && cracked)
         {
             
         }
@@ -207,13 +252,20 @@ public class SafeCrackUI : MonoBehaviour
             sr.enabled = false;
 
             if (canvasContainer != null) {
-                canvasContainer.SetActive(true);
+                if (cracked)
+                {
+                    CrackedSafeScreen.SetActive(true);
+                }
+                else {canvasContainer.SetActive(true);}
             }
             if (Glow != null)
             {
                 Glow.color = Color.white;
                 Glow.enabled = false;
             }
+            num3Outline.SetActive(false);
+            num2Outline.SetActive(false);
+            num1Outline.SetActive(true);
         }
         if (inRange && Input.GetKeyDown(KeyCode.Escape))
         {
@@ -223,6 +275,7 @@ public class SafeCrackUI : MonoBehaviour
 
             if (canvasContainer != null && canvasContainer.activeSelf) {
                 canvasContainer.SetActive(false);
+                CrackedSafeScreen.SetActive(false);
             }
             if (Glow != null)
             {
