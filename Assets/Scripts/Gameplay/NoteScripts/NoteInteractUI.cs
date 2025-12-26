@@ -22,7 +22,6 @@ public class NoteInteractUI : MonoBehaviour
     void Start()
     {
         playerCon = GameObject.FindGameObjectWithTag(playerTag).GetComponent<PlayerMovement>();
-        Debug.Log($"NoteInteractUI found playerCon: {playerCon} on {playerCon.gameObject.name}");
         if (playerCon == null) { Debug.Log("PlayerMovementScript not found on Player!");}
         infoSwitcher = GetComponent<NoteInfoSwitcher>();
         if (infoSwitcher == null) { Debug.Log("NoteInfoSwitcher Script not found!");}

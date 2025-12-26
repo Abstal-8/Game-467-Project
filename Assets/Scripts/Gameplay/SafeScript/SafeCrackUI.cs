@@ -10,7 +10,6 @@ public class SafeCrackUI : MonoBehaviour
     private PlayerMovement playerCon;
     public GameObject canvasContainer;
     public GameObject CrackedSafeScreen;
-    public GameObject KeyRequired;
 
     [Header("Light Source (child to toggle on/off)")]
     public Light2D Glow;
@@ -29,10 +28,10 @@ public class SafeCrackUI : MonoBehaviour
     private SpriteRenderer sr;
     private NumAdjuster na; 
     public bool inRange;
+    public bool cracked;
 
     [HideInInspector]
     private int numNum = 1;
-    public bool cracked;
     public bool triggerKeyPopUp = false;
     private bool show = false;
     
@@ -51,7 +50,6 @@ public class SafeCrackUI : MonoBehaviour
         Glow.enabled = false;
         inRange = false;
         cracked = false;
-        hasLibKey = false;
         Glow.color = Color.yellow;
 
         if (canvasContainer) canvasContainer.SetActive(false);
@@ -139,7 +137,6 @@ public class SafeCrackUI : MonoBehaviour
             if (na.GetNum(objectNum1) == 23 && na.GetNum(objectNum2) == 35 && na.GetNum(objectNum3) == 9)
             {
                 cracked = true;
-                hasLibKey = true;
                 if (canvasContainer != null && canvasContainer.activeSelf) {
                     canvasContainer.SetActive(false);
                 }
@@ -150,49 +147,7 @@ public class SafeCrackUI : MonoBehaviour
         // allows the user to use arrow keys to switch between the up and down arrows on the safe
         if (inRange && show) {
             if (!selected) {
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    if (numNum == 3)
-                    {
-                        return;
-                    }
-                    else if (numNum == 2)
-                    {
-                        numNum = 3;
-                        num2Outline.SetActive(false);
-                        num3Outline.SetActive(true);
-                        // num1Outline.effectColor = Color.white;
-                    }
-                    else if (numNum == 1)
-                    {
-                        numNum = 2;
-                        num1Outline.SetActive(false);
-                        num2Outline.SetActive(true);
-                        // num2Outline.effectColor = Color.white;
-                    }
-                    
-                }
-                if (Input.GetKeyDown(KeyCode.D))
-                {
-                    if (numNum == 3)
-                    {
-                        numNum = 2;
-                        num3Outline.SetActive(false);
-                        num2Outline.SetActive(true);
-                        // num2Outline.effectColor = Color.white;
-                    }
-                    else if (numNum == 2)
-                    {
-                        numNum = 1;
-                        num2Outline.SetActive(false);
-                        num1Outline.SetActive(true);
-                        // num3Outline.effectColor = Color.white;
-                    }
-                    else if (numNum == 1) 
-                    {
-                        return;
-                    }
-                }
+                CheckSelected();
             }
             else {
                 if (Input.GetKeyDown(KeyCode.W))
@@ -239,12 +194,6 @@ public class SafeCrackUI : MonoBehaviour
                 if (selected) {num3Outline.GetComponent<Outline>().effectColor = Color.yellow;}
                 else {num3Outline.GetComponent<Outline>().effectColor = Color.white;}
             }
-        }
-        
-        if (triggerKeyPopUp)
-        {
-            triggerKeyPopUp = !triggerKeyPopUp;
-
         }
 
         if (inRange && Input.GetKeyDown(KeyCode.E) && !show)
@@ -293,5 +242,51 @@ public class SafeCrackUI : MonoBehaviour
         // int.TryParse(userInput.text, out number);
         // number = newNum;
         userInput.text = newNum.ToString();
+    }
+    private void CheckSelected()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (numNum == 3)
+            {
+                return;
+            }
+            else if (numNum == 2)
+            {
+                numNum = 3;
+                num2Outline.SetActive(false);
+                num3Outline.SetActive(true);
+                // num1Outline.effectColor = Color.white;
+            }
+            else if (numNum == 1)
+            {
+                numNum = 2;
+                num1Outline.SetActive(false);
+                num2Outline.SetActive(true);
+                // num2Outline.effectColor = Color.white;
+            }
+            
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (numNum == 3)
+            {
+                numNum = 2;
+                num3Outline.SetActive(false);
+                num2Outline.SetActive(true);
+                // num2Outline.effectColor = Color.white;
+            }
+            else if (numNum == 2)
+            {
+                numNum = 1;
+                num2Outline.SetActive(false);
+                num1Outline.SetActive(true);
+                // num3Outline.effectColor = Color.white;
+            }
+            else if (numNum == 1) 
+            {
+                return;
+            }
+        }
     }
 }

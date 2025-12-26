@@ -13,14 +13,11 @@ public class LevelChanger : MonoBehaviour {
 
     [SerializeField]
     private Transform _spawnPoint;
-
-    // [SerializeField]
     private PlayerIdentities player;
-
+    private SafeCrackUI safeCrackUI;
 
     private void Start()
     {
-
         if (_connection == LevelConnection.ActiveConnection)
         {
             player.transform.position = _spawnPoint.position;
@@ -63,16 +60,12 @@ public class LevelChanger : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D other) {
         var player = other.collider.GetComponent<PlayerIdentities>();
-        // if (cracked && key != null) {
-        //     Debug.Log("Key required to pass");
-        //     return;
-        // }
         if (player != null) {
             LevelConnection.ActiveConnection = _connection;
             // SceneSwitch switcher = FindFirstObjectByType<SceneSwitch>(); if "sceneswitch.instance" doesn't work replace all with "switcher" and uncomment this code
             if (SceneSwitch.instance != null)
             {
-                if (_targetSceneName == "RecRoom")
+                if (_targetSceneName == "EndingScreen" && !safeCrackUI.cracked)
                 {
                     Debug.Log("Key required to pass");
                     return;
@@ -89,5 +82,3 @@ public class LevelChanger : MonoBehaviour {
         }
     }
 } 
-
-//Luke Bonniwell Code
