@@ -63,11 +63,20 @@ public class LevelChanger : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D other) {
         var player = other.collider.GetComponent<PlayerIdentities>();
+        // if (cracked && key != null) {
+        //     Debug.Log("Key required to pass");
+        //     return;
+        // }
         if (player != null) {
             LevelConnection.ActiveConnection = _connection;
             // SceneSwitch switcher = FindFirstObjectByType<SceneSwitch>(); if "sceneswitch.instance" doesn't work replace all with "switcher" and uncomment this code
             if (SceneSwitch.instance != null)
             {
+                if (_targetSceneName == "RecRoom")
+                {
+                    Debug.Log("Key required to pass");
+                    return;
+                }
                 SceneSwitch.instance.SetScene(_targetSceneName);
                 SceneSwitch.instance.SwitchScene();
                 UnityEngine.Debug.Log("Switched to scene: " + _targetSceneName);

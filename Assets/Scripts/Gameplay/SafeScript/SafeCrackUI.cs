@@ -10,6 +10,7 @@ public class SafeCrackUI : MonoBehaviour
     private PlayerMovement playerCon;
     public GameObject canvasContainer;
     public GameObject CrackedSafeScreen;
+    public GameObject KeyRequired;
 
     [Header("Light Source (child to toggle on/off)")]
     public Light2D Glow;
@@ -32,7 +33,7 @@ public class SafeCrackUI : MonoBehaviour
     [HideInInspector]
     private int numNum = 1;
     public bool cracked;
-    public bool hasLibKey;
+    public bool triggerKeyPopUp = false;
     private bool show = false;
     
 
@@ -239,10 +240,11 @@ public class SafeCrackUI : MonoBehaviour
                 else {num3Outline.GetComponent<Outline>().effectColor = Color.white;}
             }
         }
-
-        if (show && cracked)
+        
+        if (triggerKeyPopUp)
         {
-            
+            triggerKeyPopUp = !triggerKeyPopUp;
+
         }
 
         if (inRange && Input.GetKeyDown(KeyCode.E) && !show)
@@ -272,11 +274,10 @@ public class SafeCrackUI : MonoBehaviour
             playerCon.UnlockMovement();
             show = false;
             sr.enabled = true;
-
             if (canvasContainer != null && canvasContainer.activeSelf) {
                 canvasContainer.SetActive(false);
-                CrackedSafeScreen.SetActive(false);
             }
+            CrackedSafeScreen.SetActive(false);
             if (Glow != null)
             {
                 Glow.enabled = true;
