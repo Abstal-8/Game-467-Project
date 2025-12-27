@@ -16677,7 +16677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1709665676100367062, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_text
-      value: CouchBook
+      value: "\n\n\n\n\n\n\n\n\t\t\t..."
       objectReference: {fileID: 0}
     - target: {fileID: 1721028296640585952, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_UiScaleMode
@@ -16693,11 +16693,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2612412701755313254, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_text
-      value: kiytitutitiugi
+      value: '
+
+
+
+
+
+        The second session began under a dim light. The subject
+        played until his fingers bled and the doctor remarked that true devotion
+        lies in perfect rhythm. I marked the time thirty five minutes past the hour.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3191949484607725014, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633634287891034188, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_text
@@ -17225,10 +17235,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 300369277}
     m_Modifications:
+    - target: {fileID: 1052675760932637434, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n\n4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1326074580873237798, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n\n2"
+      objectReference: {fileID: 0}
     - target: {fileID: 1377126477564430529, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -9180411478695779327, guid: 8ac434b9ec0c9cd41bfb989363fb1742, type: 3}
+    - target: {fileID: 1709665676100367062, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n\n1"
+      objectReference: {fileID: 0}
     - target: {fileID: 1721028296640585952, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -17241,9 +17263,32 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 2612412701755313254, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: '
+
+
+
+
+        The second session began under a dim light. The subject
+        played until his fingers bled and the doctor remarked that true devotion
+        lies in perfect rhythm. I marked the time thirty five minutes past the hour.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3191949484607725014, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097387676498388049, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n\n4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633634287891034188, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n\n2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649821692932198166, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n\n3"
       objectReference: {fileID: 0}
     - target: {fileID: 6017789702137185304, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17296,6 +17341,10 @@ PrefabInstance:
     - target: {fileID: 7915289040218828267, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501071766639838814, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n\n3"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17354,7 +17403,7 @@ MonoBehaviour:
   m_Intensity: 20
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 79dc16462984829055e64c5dcd2674b1e32b3e66b56c4d7b912f55839d4ca6b5977e55c6
+  m_ApplyToSortingLayers: 79dc16462984829055e64c5dcd2674b1e32b3e66912f55839d4ca6b5977e55c6
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -17370,8 +17419,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0060499907, y: 0.67849994, z: 0}
-    m_Extent: {x: 1.48795, y: 1.6668, z: 0}
+    m_Center: {x: 0.002550006, y: 0.7592, z: 0}
+    m_Extent: {x: 1.49915, y: 1.5861, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -17382,9 +17431,9 @@ MonoBehaviour:
   m_ShapeLightFalloffSize: 0.5
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.9821472, y: -0.48731184, z: 0}
+  - {x: -0.99681854, y: -0.32590008, z: 0}
   - {x: 0.023597717, y: 0.6542549, z: 0}
-  - {x: 0.94408417, y: -0.42387152, z: 0}
+  - {x: 1.0027847, y: -0.32115364, z: 0}
   - {x: 0.9948425, y: 1.8449395, z: 0}
   - {x: -0.9821472, y: 1.8322513, z: 0}
 --- !u!1 &840572551
@@ -19180,7 +19229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3191949484607725014, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4097387676498388049, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_text
@@ -31195,9 +31244,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 300369277}
     m_Modifications:
+    - target: {fileID: 1052675760932637434, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n4"
+      objectReference: {fileID: 0}
     - target: {fileID: 1326074580873237798, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_text
-      value: Chessboard
+      value: "\n\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n2"
       objectReference: {fileID: 0}
     - target: {fileID: 1377126477564430529, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_Sprite
@@ -31223,6 +31276,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.049
       objectReference: {fileID: 0}
+    - target: {fileID: 1709665676100367062, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n                                                                                               
+        \t\t\t...\n\n\n\n\n\n\n\n\n\n1"
+      objectReference: {fileID: 0}
     - target: {fileID: 1721028296640585952, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
@@ -31235,13 +31293,55 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 2561988113664168404, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2591010093959398474, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612412701755313254, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\nThe doctor summoned me for the first trial this evening.
+        The subject\u2019s hands trembled as he played the opening melody. The dosage
+        was administered at twenty three minutes past the hour."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2674823977824777821, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2709585348003769573, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2884803276876270258, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3191949484607725014, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4097387676498388049, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n4"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888464901919264496, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5633634287891034188, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_text
-      value: Chessboard
+      value: "\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n\n2"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649821692932198166, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n3"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5878636648265468240, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6017789702137185304, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31283,6 +31383,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6255012161397325821, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7889951199424494276, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -31302,6 +31406,14 @@ PrefabInstance:
     - target: {fileID: 7988471058865399807, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
       propertyPath: m_PointLightOuterAngle
       value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 8501071766639838814, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_text
+      value: "\n\n\n\n\n\n\n\n\n\t\t\t...\n\n\n\n\n\n\n\n3"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8641004130945200063, guid: 1c7186319c952bb46bd6f739e2b4476d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
