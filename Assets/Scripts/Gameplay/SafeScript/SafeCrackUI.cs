@@ -214,9 +214,21 @@ public class SafeCrackUI : MonoBehaviour
                 Glow.color = Color.white;
                 Glow.enabled = false;
             }
-            num3Outline.SetActive(false);
-            num2Outline.SetActive(false);
-            num1Outline.SetActive(true);
+            if (numNum == 3) {
+                num3Outline.SetActive(true);
+                num2Outline.SetActive(false);
+                num1Outline.SetActive(false);
+            }
+            else if (numNum == 2) {
+                num3Outline.SetActive(false);
+                num2Outline.SetActive(true);
+                num1Outline.SetActive(false);
+            }
+            else if (numNum == 1) {
+                num3Outline.SetActive(false);
+                num2Outline.SetActive(false);
+                num1Outline.SetActive(true);
+            }
         }
         if (inRange && Input.GetKeyDown(KeyCode.Escape))
         {

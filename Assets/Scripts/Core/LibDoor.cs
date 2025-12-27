@@ -8,13 +8,15 @@ public class LibDoor : MonoBehaviour
     [Header("Light Object")]
     public Light2D glow;
 
-    private SafeCrackUI safeCrackUI;
+    public SafeCrackUI safeCrackUI;
 
     [HideInInspector]
     public string playerTag = "Player";
 
     void Start()
     {
+        safeCrackUI = FindObjectOfType<SafeCrackUI>();
+        if (!safeCrackUI) Debug.Log("SafeCrackUI script reference not found");
         if (!glow) Debug.Log("LibDoor Light Required");
         if (!hint) Debug.Log("LibDoor Hint Canvas Required (check children)");
         hint.SetActive(false);
