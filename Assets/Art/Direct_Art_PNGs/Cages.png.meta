@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 86064c7c888a9a44c9dda7f0fcf90d5f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5142680576319301452
+    second: Cages_0
+  - first:
+      213: -3259496145330136322
+    second: Cages_1
+  - first:
+      213: 3711549692574787701
+    second: Cages_2
+  - first:
+      213: -5458195700259016025
+    second: Cages_3
+  - first:
+      213: -1051424980379432511
+    second: Cages_4
+  - first:
+      213: -6509299237395522977
+    second: Cages_5
+  - first:
+      213: 1322430388441854856
+    second: Cages_6
+  - first:
+      213: -5475548479369013201
+    second: Cages_7
+  - first:
+      213: 8874197128205245217
+    second: Cages_8
+  - first:
+      213: -4887305537244972508
+    second: Cages_9
+  - first:
+      213: 9129945917834742253
+    second: Cages_10
+  - first:
+      213: 6011257732697411387
+    second: Cages_11
+  - first:
+      213: -6078666871502216718
+    second: Cages_12
+  - first:
+      213: -4650773875813764001
+    second: Cages_13
+  - first:
+      213: 5904512048555127283
+    second: Cages_14
+  - first:
+      213: 4406992430890565547
+    second: Cages_15
+  - first:
+      213: -1855294214196117514
+    second: Cages_16
+  - first:
+      213: -7633823865287541818
+    second: Cages_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cages_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 205
+        width: 23
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8df2f434781a8b0800000000000000
+      internalID: -5142680576319301452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 253
+        width: 23
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efa97de7681f3c2d0800000000000000
+      internalID: -3259496145330136322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_2
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 205
+        width: 23
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5786120e7c2128330800000000000000
+      internalID: 3711549692574787701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 253
+        width: 23
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a23f7bede79044b0800000000000000
+      internalID: -5458195700259016025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_4
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 205
+        width: 23
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c903801d869861f0800000000000000
+      internalID: -1051424980379432511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_5
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 253
+        width: 23
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a9152d4d25aa5a0800000000000000
+      internalID: -6509299237395522977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 197
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88332478e673a5210800000000000000
+      internalID: 1322430388441854856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 195
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2897c03ba1f204b0800000000000000
+      internalID: -5475548479369013201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_8
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 197
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b1775454b772b70800000000000000
+      internalID: 8874197128205245217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_9
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 195
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ab6b7028dcc2cb0800000000000000
+      internalID: -4887305537244972508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_10
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 197
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de94113907514be70800000000000000
+      internalID: 9129945917834742253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_11
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 195
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3fcfb21f074c6350800000000000000
+      internalID: 6011257732697411387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_12
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 165
+        width: 55
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1ec20cfac34aba0800000000000000
+      internalID: -6078666871502216718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_13
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 57
+        width: 23
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5434710dc1257fb0800000000000000
+      internalID: -4650773875813764001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_14
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 105
+        width: 23
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1742abc6a01f150800000000000000
+      internalID: 5904512048555127283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_15
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 49
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf31134448c82d30800000000000000
+      internalID: 4406992430890565547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_16
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 47
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ffb001fdbba046e0800000000000000
+      internalID: -1855294214196117514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cages_17
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 11
+        width: 55
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbf2a7e3a53f0690800000000000000
+      internalID: -7633823865287541818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cages_0: -5142680576319301452
+      Cages_1: -3259496145330136322
+      Cages_10: 9129945917834742253
+      Cages_11: 6011257732697411387
+      Cages_12: -6078666871502216718
+      Cages_13: -4650773875813764001
+      Cages_14: 5904512048555127283
+      Cages_15: 4406992430890565547
+      Cages_16: -1855294214196117514
+      Cages_17: -7633823865287541818
+      Cages_2: 3711549692574787701
+      Cages_3: -5458195700259016025
+      Cages_4: -1051424980379432511
+      Cages_5: -6509299237395522977
+      Cages_6: 1322430388441854856
+      Cages_7: -5475548479369013201
+      Cages_8: 8874197128205245217
+      Cages_9: -4887305537244972508
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

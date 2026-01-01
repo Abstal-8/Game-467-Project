@@ -18,9 +18,9 @@ public class SafeCrackUI : MonoBehaviour
     public GameObject objectNum1;
     public GameObject objectNum2;
     public GameObject objectNum3;
-    public int Num1 = 20;
+    public int Num1 = 12;
     public int Num2 = 30;
-    public int Num3 = 12;
+    public int Num3 = 20;
     public GameObject num1Outline;
     public GameObject num2Outline;
     public GameObject num3Outline;
@@ -134,7 +134,7 @@ public class SafeCrackUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (na.GetNum(objectNum1) == 23 && na.GetNum(objectNum2) == 35 && na.GetNum(objectNum3) == 9)
+            if (na.GetNum(objectNum1) == 9 && na.GetNum(objectNum2) == 35 && na.GetNum(objectNum3) == 23)
             {
                 cracked = true;
                 if (canvasContainer != null && canvasContainer.activeSelf) {
